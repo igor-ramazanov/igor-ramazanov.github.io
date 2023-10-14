@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kakoune design :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Kakoune</a></li>
+    <li><a href="design.html">Design</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/design.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Kakoune design</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#interactivity">1. Interactivity</a></li>
+<li><a href="#limited-scope">2. Limited scope</a></li>
+<li><a href="#composability">3. Composability</a></li>
+<li><a href="#orthogonality">4. Orthogonality</a></li>
+<li><a href="#speed">5. Speed</a></li>
+<li><a href="#simplicity">6. Simplicity</a></li>
+<li><a href="#unified-interactive-use-and-scripting">7. Unified interactive use and scripting</a></li>
+<li><a href="#language-agnostic">8. Language-agnostic</a></li>
+<li><a href="#self-documenting">9. Self-documenting</a></li>
+<li><a href="#vim-compatibility">10. Vim compatibility</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document describes the design goals for Kakoune, including rationale.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interactivity"><a class="anchor" href="#interactivity"></a><a class="link" href="#interactivity">1. Interactivity</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unlike Vim, Kakoune does not have an underlying line-oriented editor. It is
+always expected to be used in an interactive fashion, displaying edited text in
+real time. That should not prevent Kakoune from being used non-interactively
+(executing a macro for example), but priority should be given to ease of
+interactive use.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="limited-scope"><a class="anchor" href="#limited-scope"></a><a class="link" href="#limited-scope">2. Limited scope</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune is a code editor. It is not an IDE, not a file browser, not a word
+processor and not a window manager. It should be very efficient at editing code.
+As a side effect, it should be very efficient at editing text in general.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="composability"><a class="anchor" href="#composability"></a><a class="link" href="#composability">3. Composability</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Being limited in scope to code editing should not isolate Kakoune from its
+environment. On the contrary, Kakoune is expected to run on a Unix-like
+system alongside a lot of text-based tools, and should make it easy to
+interact with these tools.</p>
+</div>
+<div class="paragraph">
+<p>For example, sorting lines should be done using the Unix sort command, not
+with an internal implementation. Kakoune should make it easy to do that,
+hence the <code>|</code> command for piping selected text through a filter.</p>
+</div>
+<div class="paragraph">
+<p>The modern Unix environment is not limited to text filters. Most people use
+a graphical interface nowadays, and Kakoune should be able to take advantage
+of that without hindering text mode support. For example, Kakoune enables
+multiple windows by supporting many clients on the same editing session,
+not by reimplementing tiling and tabbing. Those responsibilities are left
+to the system window manager.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="orthogonality"><a class="anchor" href="#orthogonality"></a><a class="link" href="#orthogonality">4. Orthogonality</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune features should be as orthogonal as possible. For example, in Vim,
+there are many ways to modify the buffer: Through normal/insert
+mode, command mode, and Vim scripts. In Kakoune, modifying the buffer is
+only the job of normal/insert mode.</p>
+</div>
+<div class="paragraph">
+<p>That means there should be clear separation of concerns between modes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>normal mode is for manipulating the selection and the selection contents.</p>
+</li>
+<li>
+<p>insert mode is for interactive insertion into the buffer.</p>
+</li>
+<li>
+<p>command mode is for non-editing features (opening a file, setting
+options&#8230;&#8203;).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Orthogonality is an ideal; it should not forbid common sense pragmatism.
+The <code>gf</code> and <code>ga</code> commands are not strictly selection manipulation commands,
+but they do fit nicely with other <code>goto</code> commands, so they are acceptable in
+normal mode even though they could arguably be moved to command mode.</p>
+</div>
+<div class="paragraph">
+<p>Modes should be orthogonal, as should commands within modes. For
+example, Vim uses both <code>d</code> and <code>x</code> to delete text, with minor differences. In
+Kakoune only <code>d</code> exists, and the design ensures that <code>x</code> is not needed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="speed"><a class="anchor" href="#speed"></a><a class="link" href="#speed">5. Speed</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune should be fast&#8201;&#8212;&#8201;fast to use, as in a lot of editing in a few
+keystrokes, and fast to execute.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Vim is the benchmark here. Most editing tasks should be doable in fewer
+or the same number of keystrokes as Vim.</p>
+</li>
+<li>
+<p>Kakoune is designed with asynchronicity in mind. Launching a background
+process and using its result when available should not block the editor.</p>
+</li>
+<li>
+<p>Kakoune should be implemented with speed in mind. A slow editor is a
+useless one.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="simplicity"><a class="anchor" href="#simplicity"></a><a class="link" href="#simplicity">6. Simplicity</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Simplicity is nice. Simplicity correlates with orthogonality and speed. It makes
+things easier to understand, bugs easier to fix, and code easier to change.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>No threading</strong>: multithreading is a hard problem and is not well suited
+to a text editor:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When we want a direct result, we need to be synchronous with
+the user. A 4x speed improvement is meaningless; we need to have an
+algorithm which appears instantaneous to the user.</p>
+</li>
+<li>
+<p>When we want an asynchronous result, the processing is best left
+to a helper command which can be reused with other Unix tools.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>No binary plugins</strong>: shared objects by themselves add a lot of
+complexity. Plugins add another interface to Kakoune and go against
+orthogonality. The <code>%sh{ &#8230;&#8203; }</code> and socket interfaces should be made good
+enough for most plugin use cases.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Rather than writing a plugin for intelligent code completion or source
+code navigation, it is better to write an independent helper tool that can
+interact with Kakoune through the shell.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>No integrated scripting language</strong>: for the same reason as binary plugins.</p>
+</li>
+<li>
+<p><strong>Limited smartness</strong>: Kakoune should not try to be too smart. Being smart
+is often unpredictable for the user and makes things context-dependent.
+When Kakoune tries to be smart, it should provide the alternative,
+<em>non-smart</em> version. For instance, <code>*</code> tries to detect word boundaries on
+the selection, but <code>alt-*</code> opts out of this behavior.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unified-interactive-use-and-scripting"><a class="anchor" href="#unified-interactive-use-and-scripting"></a><a class="link" href="#unified-interactive-use-and-scripting">7. Unified interactive use and scripting</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an effect of both Orthogonality and Simplicity, normal mode is not
+a layer of keys bound to a text editing language layer. Normal mode <strong>is</strong>
+the text editing language.</p>
+</div>
+<div class="paragraph">
+<p>That means there is no <code>delete-selected-text</code> command that <code>d</code> is bound
+to. <code>d</code> <strong>is</strong> the <code>delete selected text</code> command.</p>
+</div>
+<div class="paragraph">
+<p>This permits both scripting and interactive use cases to share the same text
+editing language. Both use normal mode to express complex editing.</p>
+</div>
+<div class="paragraph">
+<p>Besides promoting simplicity by avoiding the introduction of another
+layer, this helps ensure the interactive editing language is expressive
+enough to handle complex use cases, such as indentation hooks.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="language-agnostic"><a class="anchor" href="#language-agnostic"></a><a class="link" href="#language-agnostic">8. Language-agnostic</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune should not be tailored for writing in a specific programming
+language. Support for different languages should be provided by a kak script
+file. Built-in language support should be avoided.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="self-documenting"><a class="anchor" href="#self-documenting"></a><a class="link" href="#self-documenting">9. Self-documenting</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune should be able to document its features. Live documentation, along
+with an extensive suggestion/completion system, provides the discoverability
+which is often lacking in non-GUI tools. As much as possible, documentation
+should be integrated with the code so that it stays up to date.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vim-compatibility"><a class="anchor" href="#vim-compatibility"></a><a class="link" href="#vim-compatibility">10. Vim compatibility</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune is inspired by Vim and should try to keep its commands similar to
+Vim&#8217;s if there are no compelling reasons to deviate. However, self-consistency
+is more important than Vim compatibility.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

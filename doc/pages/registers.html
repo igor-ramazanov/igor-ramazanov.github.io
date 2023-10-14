@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registers :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="registers.html">Registers</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/registers.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Registers</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#description">1. Description</a></li>
+<li><a href="#interacting">2. Interacting</a></li>
+<li><a href="#alternate-names">3. Alternate names</a></li>
+<li><a href="#default-registers">4. Default registers</a></li>
+<li><a href="#special-registers">5. Special registers</a></li>
+<li><a href="#integer-registers">6. Integer registers</a></li>
+<li><a href="#marks">7. Marks</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">1. Description</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Registers are named lists of text -instead of simply text- in order to interact
+well with multiselection. They are used for various purposes, like storing
+yanked text, the locations of selections in a buffer, or groups captured by a
+regular expression.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interacting"><a class="anchor" href="#interacting"></a><a class="link" href="#interacting">2. Interacting</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;c-r&gt;&lt;c&gt;</strong></dt>
+<dd>
+<p>when in insert mode or in a prompt, insert the value stored in the
+<strong>c</strong> register (single character)</p>
+</dd>
+<dt class="hdlist1"><strong>"&lt;c&gt;</strong></dt>
+<dd>
+<p>in normal mode, select the <strong>&lt;c&gt;</strong> register (single character)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="alternate-names"><a class="anchor" href="#alternate-names"></a><a class="link" href="#alternate-names">3. Alternate names</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Non alphanumeric registers have an alternative name that can be used
+in contexts where only alphanumeric identifiers are possible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-registers"><a class="anchor" href="#default-registers"></a><a class="link" href="#default-registers">4. Default registers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All normal-mode commands using a register default to a specific one if not specified:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"</strong> (dquote)</dt>
+<dd>
+<p>default delete / copy / paste / replace register, used by:
+<strong>c</strong>, <strong>d</strong>, <strong>y</strong>, <strong>p</strong>, <strong>&lt;a-p&gt;</strong>, <strong>&lt;P&gt;</strong>, <strong>&lt;a-P&gt;</strong>, <strong>R</strong> and <strong>&lt;a-R&gt;</strong>
+(see <a href="keys.html#changes" class="xref page"><code>:doc keys changes</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>/</strong> (slash)</dt>
+<dd>
+<p>default search / regex register, used by:
+<strong>/</strong>, <strong>&lt;a-/&gt;</strong>, <strong>?</strong>, <strong>&lt;a-?&gt;</strong>, <strong>n</strong>, <strong>&lt;a-n&gt;</strong>, <strong>N</strong>, <strong>&lt;a-N&gt;</strong>, <strong><strong>, *&lt;a-</strong></strong>&gt;*,
+<strong>s</strong>, <strong>S</strong>, <strong>&lt;a-k&gt;</strong> and <strong>&lt;a-K&gt;</strong>
+(see <a href="keys.html#searching" class="xref page"><code>:doc keys searching</code></a>).
+This is a prompt history register, holding the last 100 commands entered
+at an interactive regex prompt.</p>
+</dd>
+<dt class="hdlist1"><strong>@</strong> (arobase)</dt>
+<dd>
+<p>default macro register, used by:
+<strong>q</strong> and <strong>Q</strong>
+(see <a href="keys.html#macros" class="xref page"><code>:doc keys macros</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>^</strong> (caret)</dt>
+<dd>
+<p>default mark register, used by:
+<strong>z</strong>, <strong>&lt;a-z&gt;</strong>, <strong>Z</strong> and <strong>&lt;a-Z&gt;</strong>
+(see <a href="keys.html#marks" class="xref page"><code>:doc keys marks</code></a>
+and <a href="#marks"><code>:doc registers marks</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>|</strong> (pipe)</dt>
+<dd>
+<p>default shell command register, used by commands that spawn a subshell:
+<strong>|</strong>, <strong>&lt;a-|&gt;</strong>, <strong>!</strong> and <strong>&lt;a-!&gt;</strong>
+(see <a href="keys.html#changes-through-external-programs" class="xref page"><code>:doc keys changes-through-external-programs</code></a>).
+This is a prompt history register, holding the last 100 commands entered
+at interactive shell command prompts, except for commands starting with
+a space.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="special-registers"><a class="anchor" href="#special-registers"></a><a class="link" href="#special-registers">5. Special registers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some registers are not general purposes, they cannot be written to, but they
+contain some special data</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>%</strong> (percent)</dt>
+<dd>
+<p>current buffer name</p>
+</dd>
+<dt class="hdlist1"><strong>.</strong> (dot)</dt>
+<dd>
+<p>current selection contents</p>
+</dd>
+<dt class="hdlist1"><strong>#</strong> (hash)</dt>
+<dd>
+<p>selection indices (first selection has 1, second has 2, &#8230;&#8203;)</p>
+</dd>
+<dt class="hdlist1"><strong>_</strong> (underscore)</dt>
+<dd>
+<p>null register, always empty</p>
+</dd>
+<dt class="hdlist1"><strong>:</strong> (colon)</dt>
+<dd>
+<p>prompt history register holding the last 100 commands entered at the
+interactive prompt, except for commands starting with a space.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="integer-registers"><a class="anchor" href="#integer-registers"></a><a class="link" href="#integer-registers">6. Integer registers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Registers <strong>1</strong> to <strong>9</strong> hold the grouped sub-matches of the regular
+expression used to make the last selection. Example: applying the
+following regular expression to the date of the day would put the day of
+the week in register <strong>1</strong>, the month in register <strong>2</strong>, and the day of the
+month in register <strong>3</strong>, but select the entire date:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>(\w+) (\w+) (\d+) .+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="marks"><a class="anchor" href="#marks"></a><a class="link" href="#marks">7. Marks</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a register is used to store a set of selections with the <strong>Z</strong> key (see
+<a href="keys.html#marks" class="xref page"><code>:doc keys marks</code></a>), the selections are stored as a list of
+spans, in a format similar to <code>%val{selections_desc}</code> (see
+<a href="expansions.html#value-expansions" class="xref page"><code>:doc expansions value-expansions</code></a>). However,
+the very first item of the list is of the form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;buffer name&gt;@&lt;timestamp&gt;@&lt;main sel index&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>buffer name</strong></dt>
+<dd>
+<p><code>%val{buffile}</code> of the buffer selections relate to</p>
+</dd>
+<dt class="hdlist1"><strong>timestamp</strong></dt>
+<dd>
+<p><code>%val{timestamp}</code> at which the selection applies to</p>
+</dd>
+<dt class="hdlist1"><strong>main sel index</strong></dt>
+<dd>
+<p>0-based index of the main selection</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>C++ Coding Style :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Design</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Kakoune</a></li>
+    <li><a href="coding-style.html">Coding Style</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/coding-style.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">C++ Coding Style</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune is written in C++14, here are the main coding style points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Avoid external dependencies besides posix/stdc++</p>
+</li>
+<li>
+<p>4 spaces for indentation, no tabs</p>
+</li>
+<li>
+<p>public interface before private methods/data when defining a class</p>
+</li>
+<li>
+<p>use <code>override</code> keyword for overridden virtual methods</p>
+</li>
+<li>
+<p>opening brackets on their own lines by default, except when declaring
+an object where the opening bracket follows the equal sign.</p>
+</li>
+<li>
+<p>use alternative logical operator names (and, or, not instead of &amp;&amp;, ||, !)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>int func()
+{
+    if (condition)
+    {
+        ...
+    }
+    else
+        statement;
+}
+
+int array[] = {
+...
+};</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>End lines with an operator when continuing on the next line</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>if (condition1 or
+    condition2)</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Try to keep under 80 columns, even though this is not a strict limit.</p>
+</li>
+<li>
+<p>CamelCase for types, snake_case for variables/function names</p>
+</li>
+<li>
+<p>prefix fields with m_, static ones with ms_ except for dumb structs
+(struct with every field public) where these prefixes can be dropped.</p>
+</li>
+<li>
+<p>use const and constexpr liberally</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

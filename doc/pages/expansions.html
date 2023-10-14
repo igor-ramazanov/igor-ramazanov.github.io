@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Expansions :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="expansions.html">Expansions</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/expansions.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Expansions</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#argument-expansions">1. Argument expansions</a></li>
+<li><a href="#option-expansions">2. Option expansions</a></li>
+<li><a href="#register-expansions">3. Register expansions</a></li>
+<li><a href="#shell-expansions">4. Shell expansions</a>
+<ul class="sectlevel2">
+<li><a href="#command-and-response-fifo">4.1. Command and Response fifo</a></li>
+</ul>
+</li>
+<li><a href="#file-expansions">5. File expansions</a></li>
+<li><a href="#value-expansions">6. Value expansions</a></li>
+<li><a href="#recursive-expansions">7. Recursive Expansions</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>While parsing a command (see <a href="command-parsing.html" class="xref page"><code>:doc command-parsing</code></a>),
+Kakoune recognises certain patterns and will replace them with their
+associated value before executing the command. These patterns are called
+expansions.</p>
+</div>
+<div class="paragraph">
+<p>Every expansion consists of a <code>%</code>, followed by the expansion <em>type</em> (one
+or more alphabetic characters), a quoting character, and then all the text
+up to and including its matching character.</p>
+</div>
+<div class="paragraph">
+<p>If a nestable punctuation character (<code>(</code>, <code>[</code>, <code>{</code>, or <code>&lt;</code>) is used as the
+opening quoting character, the expansion will end at its matching opposite
+(<code>)</code>, <code>]</code>, <code>}</code>, or <code>&gt;</code>). Nested pairs of the braces used in the expansion are
+allowed, but they must be balanced. Braces other than the ones used in the
+expansion need not be balanced, however. For example, <code>%{nest{ed} non[nested}</code>
+is valid and expands to <code>nest{ed} non[nested</code>.</p>
+</div>
+<div class="paragraph">
+<p>If any other character is used, the expansion will end at the next occurrence of
+that character. The quoting character can be escaped inside the expansion if it
+is doubled-up. For example, <code>%|abc||def|</code> expands to the text <code>abc|def</code>.</p>
+</div>
+<div class="paragraph">
+<p>It doesn&#8217;t matter which character is used, but <code>{}</code> are most common.</p>
+</div>
+<div class="paragraph">
+<p>There are 2 types of quoting which can be used to group together words separated
+by whitespace into a single argument or prevent expansions from expanding:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">"double quoted strings"</dt>
+<dd>
+<p>Double quoted strings are mainly for grouping multiple <code>%</code> expansions or
+<code>%</code> expansions and regular text as a single argument. <code>%</code> and <code>"</code> can be
+escaped by doubling the characters (i.e. <code>%%</code> and <code>""</code>).</p>
+</dd>
+<dt class="hdlist1">'single quoted strings'</dt>
+<dd>
+<p>Expansions are not processed inside single quoted strings. Single quotes can
+be escaped by doubling up (i.e. <code>''</code>).</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Expansions are processed when unquoted and anywhere inside double-quoted
+strings, but not inside unquoted words, inside single-quoted strings, or
+inside %-strings or other expansions (see
+<a href="command-parsing.html#typed-expansions" class="xref page"><code>:doc command-parsing typed-expansions</code></a>
+for full details). For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>echo %val{session}</code> echoes the current session ID</p>
+</li>
+<li>
+<p><code>echo x%val{session}x</code> echoes the literal text <code>x%val{session}x</code></p>
+</li>
+<li>
+<p><code>echo '%val{session}'</code> echoes the literal text <code>%val{session}</code></p>
+</li>
+<li>
+<p><code>echo "x%val{session}x"</code> echoes the current session ID, surrounded by <code>x</code></p>
+</li>
+<li>
+<p><code>echo %{%val{session}}</code> echoes the the literal text <code>%val{session}</code></p>
+</li>
+<li>
+<p><code>echo %sh{ echo %val{session} }</code> echoes the literal text <code>%val{session}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Like "variable expansion" and "command substitution" in shell programming,
+Kakoune expansions can expand to multiple "words" - that is, separate
+arguments on the resulting command-line. However, unlike shell programming,
+Kakoune expansions cannot <em>accidentally</em> expand to multiple words because they
+contain whitespace or other special characters. Only expansions which
+semantically contain a list of values (list-type options, registers, selections,
+etc.) expand to multiple arguments. While in shell-programming it&#8217;s good
+practice to always wrap expansions in double-quotes, in Kakoune it&#8217;s perfectly
+safe to leave expansions unquoted.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="argument-expansions"><a class="anchor" href="#argument-expansions"></a><a class="link" href="#argument-expansions">1. Argument expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>arg</code> can only be used inside the "commands" parameter
+of the <code>define-command</code> command (See <a href="commands.html#declaring-new-commands" class="xref page"><code>:doc
+commands declaring-new-commands</code></a>).</p>
+</div>
+<div class="paragraph">
+<p>The following expansions are available:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>%arg{n}</strong></dt>
+<dd>
+<p>(where <em>n</em> is a decimal number)<br>
+expands to argument number <em>n</em> of the current command</p>
+</dd>
+<dt class="hdlist1"><strong>%arg{@}</strong></dt>
+<dd>
+<p>expands to all the arguments of the current command, as individual words</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="option-expansions"><a class="anchor" href="#option-expansions"></a><a class="link" href="#option-expansions">2. Option expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>opt</code> expand to the value associated with the named
+option in the current scope (See <a href="options.html" class="xref page"><code>:doc options</code></a>).</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>%opt{BOM}</code> expands to <code>utf8</code> or to <code>none</code>, according to the
+current state of the <code>BOM</code> option.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="register-expansions"><a class="anchor" href="#register-expansions"></a><a class="link" href="#register-expansions">3. Register expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>reg</code> expand to the contents of the named
+register. For registers named after symbols (like the search register
+<code>/</code>), the expansion can use either the symbol or the alphabetic name (See
+<a href="registers.html" class="xref page"><code>:doc registers</code></a>).</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>%reg{/}</code> expands to the content of the <code>/</code> register, and so does
+<code>%reg{slash}</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="shell-expansions"><a class="anchor" href="#shell-expansions"></a><a class="link" href="#shell-expansions">4. Shell expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>sh</code> are executed as shell-scripts, and whatever
+the script prints to standard output replaces the expansion. For example,
+the command <code>echo %sh{date}</code> will echo the output of the <code>date</code> command.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If a shell expansion writes to standard error, that output is appended to
+Kakoune&#8217;s <code>*debug*</code> buffer. If you&#8217;re trying to debug a shell expansion,
+check the debug buffer with <code>:buffer *debug*</code> to see if anything shows up.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Because Kakoune does not expand expansions inside the text of an expansion,
+you can&#8217;t use normal expansions inside <code>%sh{}</code>. Instead, Kakoune can export
+expansions as environment variables to make them available to the shell.
+Here&#8217;s how expansion patterns map to variable names:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>%arg{n}</strong></dt>
+<dd>
+<p>(where <em>n</em> is a decimal number)<br>
+becomes <code>$<em>n</em></code>. For example, <code>%arg{3}</code> becomes <code>$3</code>.</p>
+</dd>
+<dt class="hdlist1"><strong>%arg{@}</strong></dt>
+<dd>
+<p>becomes <code>$@</code></p>
+</dd>
+<dt class="hdlist1"><strong>%opt{x}</strong></dt>
+<dd>
+<p>becomes <code>$kak_opt_x</code></p>
+</dd>
+<dt class="hdlist1"><strong>%reg{x}</strong></dt>
+<dd>
+<p>(where <em>x</em> is the alphabetic name of a register)<br>
+<code>$kak_reg_x</code> contains all the selections in register <em>x</em><br>
+<code>$kak_main_reg_x</code> contains only the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>%val{x}</strong></dt>
+<dd>
+<p>becomes <code>$kak_x</code></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Values can be quoted with a shell compatible quoting by using <code>$kak_quoted_</code>
+as a prefix, this is mostly useful for list-type options and registers, as
+it allows to correctly work with lists where elements might contains
+whitespaces:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>eval set -- "$kak_quoted_selections"
+while [ $# -gt 0 ]; do
+    # ... do a thing with $1 ...
+    shift
+done</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>eval</code> command will take the expanded <code>$kak_quoted_selections</code>
+and unquote them, then execute the resulting <code>set</code> command, which sets
+the shell&#8217;s argument variables to the items from <code>$kak_selections</code>. The
+<code>while</code> loop with <code>shift</code> iterates through the arguments one by one.</p>
+</div>
+<div class="paragraph">
+<p>Only variables actually mentioned in the body of the shell expansion will
+be exported into the shell&#8217;s environment. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo %sh{ env | grep ^kak_ }</pre>
+</div>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>will find none of Kakoune&#8217;s special environment variables, but:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo %sh{ env | grep ^kak_ # kak_session }</pre>
+</div>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>will find the <code>$kak_session</code> variable because it was mentioned by name
+in a comment, even though it wasn&#8217;t directly used.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+These environment variables are also available in other contexts where
+Kakoune uses a shell command, such as the <code>|</code>, <code>!</code> or <code>$</code> normal mode commands
+(See <a href="keys.html" class="xref page"><code>:doc keys</code></a>).
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="command-and-response-fifo"><a class="anchor" href="#command-and-response-fifo"></a><a class="link" href="#command-and-response-fifo">4.1. Command and Response fifo</a></h3>
+<div class="paragraph">
+<p>Inside shell expansions, <code>$kak_command_fifo</code> refers to a named pipe that
+accepts Kakoune commands to be executed as soon as the fifo is closed. This
+named pipe can be opened and closed multiple times which makes it possible
+to interleave shell and Kakoune commands. <code>$kak_response_fifo</code> refers to
+a named pipe that can be used to return data from Kakoune.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>%sh{
+    echo "write $kak_response_fifo" &gt; $kak_command_fifo
+    content="$(cat $kak_response_fifo)"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This also makes it possible to pass data bigger than the system environment
+size limit.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="file-expansions"><a class="anchor" href="#file-expansions"></a><a class="link" href="#file-expansions">5. File expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>file</code> will expand to the content of the filename
+given in argument as read from the host filesystem.</p>
+</div>
+<div class="paragraph">
+<p>For example, this command stores the entire content of <code>/etc/passwd</code> into the
+<code>a</code> register.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>set-register a %file{/etc/passwd}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="value-expansions"><a class="anchor" href="#value-expansions"></a><a class="link" href="#value-expansions">6. Value expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>val</code> give access to Kakoune internal data that is
+not stored in an option or a register. Some value expansions can only be used
+in certain contexts, like <code>%val{hook_param}</code> that expands to the parameter
+string of the currently-executing hook, and is not available outside a hook.</p>
+</div>
+<div class="paragraph">
+<p>The following expansions are supported (with required context <em>in italics</em>):</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>%val{buffile}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+full path of the file or same as <code>%val{bufname}</code> when there’s no
+associated file</p>
+</dd>
+<dt class="hdlist1"><strong>%val{buf_line_count}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+number of lines in the current buffer</p>
+</dd>
+<dt class="hdlist1"><strong>%val{buflist}</strong></dt>
+<dd>
+<p>quoted list of the names of currently-open buffers (as seen in
+<code>%val{bufname}</code>)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{bufname}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+name of the current buffer</p>
+</dd>
+<dt class="hdlist1"><strong>%val{client_env_X}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+value of the <code>$X</code> environment variable in the client displaying the current
+window (e.g. <code>%val{client_env_SHELL}</code> is <code>$SHELL</code> in the client&#8217;s
+environment)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{client_list}</strong></dt>
+<dd>
+<p>unquoted list of the names of clients (as seen in <code>%val{client}</code>)
+connected to the current session</p>
+</dd>
+<dt class="hdlist1"><strong>%val{client}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+name of the client displaying the current window</p>
+</dd>
+<dt class="hdlist1"><strong>%val{client_pid}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+process id of the client displaying the current window</p>
+</dd>
+<dt class="hdlist1"><strong>%val{config}</strong></dt>
+<dd>
+<p>directory containing the user configuration</p>
+</dd>
+<dt class="hdlist1"><strong>%val{count}</strong></dt>
+<dd>
+<p><em>in <code>map</code> command &lt;keys&gt; parameter and <code>&lt;a-;&gt;</code> from object menu</em><br>
+current count when the mapping was triggered, defaults to 0 if no
+count given</p>
+</dd>
+<dt class="hdlist1"><strong>%val{cursor_byte_offset}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+offset of the main cursor from the beginning of the buffer (in bytes)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{cursor_char_column}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+1-based offset from the start of the line to the cursor position in
+Unicode codepoints, which may differ from visible columns if the document
+contains full-width codepoints (which occupy two columns) or zero-width
+codepoints</p>
+</dd>
+<dt class="hdlist1"><strong>%val{cursor_display_column}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+1-based offset from the start of the line to the cursor position in
+display column, taking into account tabs and character width.</p>
+</dd>
+<dt class="hdlist1"><strong>%val{cursor_char_value}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+unicode value of the codepoint under the main cursor</p>
+</dd>
+<dt class="hdlist1"><strong>%val{cursor_column}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+1-based offset from the start of the line to the first byte of the
+character under the main cursor (in bytes), the fourth component of
+<code>%val{selection_desc}</code></p>
+</dd>
+<dt class="hdlist1"><strong>%val{cursor_line}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+line of the main cursor, the third component of <code>%val{selection_desc}</code></p>
+</dd>
+<dt class="hdlist1"><strong>%val{error}</strong></dt>
+<dd>
+<p><em>in <code>try</code> command&#8217;s &lt;on_error_commands&gt; parameter</em><br>
+the text of the error that cancelled execution of the &lt;commands&gt; parameter
+(or the previous &lt;on_error_commands&gt; parameter)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{history}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+the full change history of the buffer, including undo forks, in terms
+of <code>parent committed redo_child modification0 modification1 &#8230;&#8203;</code>
+entries, where <em>parent</em> is the index of the entry&#8217;s predecessor (entry
+0, which is the root of the history tree, will always have <code>-</code> here),
+<em>committed</em> is a count in seconds from Kakoune&#8217;s steady clock&#8217;s epoch
+of the  creation of the history entry, <em>redo_child</em> is the index of the
+child which will be visited for <code>U</code> (always <code>-</code> at the leaves of the
+history), and each <em>modification</em> is presented as in
+<code>%val{uncommitted_modifications}</code>.</p>
+</dd>
+<dt class="hdlist1"><strong>%val{history_id}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+history id of the current buffer, an integer value which refers to a
+specific buffer version in the undo tree (see also <code>%val{timestamp}</code>)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{hook_param_capture_n}</strong></dt>
+<dd>
+<p><em>in <code>hook</code> command &lt;command&gt; parameter</em><br>
+text captured by capture group <em>n</em>, if the executing hook&#8217;s filter regex
+used capture groups</p>
+</dd>
+<dt class="hdlist1"><strong>%val{hook_param}</strong></dt>
+<dd>
+<p><em>in <code>hook</code> command &lt;command&gt; parameter</em><br>
+the complete parameter string of the executing hook</p>
+</dd>
+<dt class="hdlist1"><strong>%val{modified}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+<code>true</code> if the buffer has modifications not saved, otherwise <code>false</code></p>
+</dd>
+<dt class="hdlist1"><strong>%val{object_flags}</strong></dt>
+<dd>
+<p><em>for commands executed from the object menu&#8217;s <code>&lt;a-;&gt;</code> only</em><br>
+a pipe-separted list of words including <code>inner</code> if the user wants
+an inner selection, <code>to_begin</code> if the user wants to select to the
+beginning, and <code>to_end</code> if the user wants to select to the end</p>
+</dd>
+<dt class="hdlist1"><strong>%val{register}</strong></dt>
+<dd>
+<p><em>in <code>map</code> command &lt;keys&gt; parameter and <code>&lt;a-;&gt;</code> from the object menu</em><br>
+current register when the mapping was triggered</p>
+</dd>
+<dt class="hdlist1"><strong>%val{runtime}</strong></dt>
+<dd>
+<p>the directory containing the kak support files, which is determined from
+Kakoune&#8217;s binary location if <code>$KAKOUNE_RUNTIME</code> is not set</p>
+</dd>
+<dt class="hdlist1"><strong>%val{select_mode}</strong></dt>
+<dd>
+<p><em>for commands executed from the object menu&#8217;s <code>&lt;a-;&gt;</code> only</em><br>
+<code>replace</code> if the new selection should replace the existing, <code>extend</code>
+otherwise</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selection}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+content of the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selections}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+quoted list of the contents of all selections</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selection_desc}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+range of the main selection, represented as <code>a.b,c.d</code> where <em>a</em> is the
+anchor line, <em>b</em> is the number of bytes from the start of the line to the
+anchor, <em>c</em> is the cursor line (like <code>%val{cursor_line}</code>), <em>d</em> is
+the number of bytes from the start of the line to the cursor (like
+<code>%val{cursor_column}</code>), and all are 1-based decimal integers</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selections_char_desc}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+unquoted list of the ranges of all selections, in the same format as
+<code>%val{selection_desc}</code>, except that the columns are in codepoints rather
+than bytes</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selections_display_column_desc}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+unquoted list of the ranges of all selections, in the same format as
+<code>%val{selection_desc}</code>, except that the columns are in display columns rather
+than bytes</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selections_desc}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+unquoted list of the ranges of all selections, in the same format as
+<code>%val{selection_desc}</code></p>
+</dd>
+<dt class="hdlist1"><strong>%val{selection_length}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+length (in codepoints) of the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selections_length}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+unquoted list of the lengths (in codepoints) of the selections</p>
+</dd>
+<dt class="hdlist1"><strong>%val{selection_count}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+the number of selections</p>
+</dd>
+<dt class="hdlist1"><strong>%val{session}</strong></dt>
+<dd>
+<p>name of the current session</p>
+</dd>
+<dt class="hdlist1"><strong>%val{source}</strong></dt>
+<dd>
+<p><em>in <code>.kak</code> file</em><br>
+path of the file currently getting executed (through the source command)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{text}</strong></dt>
+<dd>
+<p><em>in <code>prompt</code> command &lt;command&gt; parameter</em><br>
+the text entered by the user in response to the <code>prompt</code> command</p>
+</dd>
+<dt class="hdlist1"><strong>%val{timestamp}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+timestamp of the current buffer, an integer that increments each time the
+buffer is modified, including undoing and redoing previous modifications
+(see also <code>%val{history_id}</code>)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{uncommitted_modifications}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+a list of quoted insertions (in the format <code>+line.column|text</code>) and
+deletions (<code>-line.column|text</code>) not yet saved to the history (e.g. typing
+in insert mode before pressing <code>&lt;esc&gt;</code>), where <em>line</em> is the 1-based line
+of the change, <em>column</em> is the 1-based <em>byte</em> of the change start (see
+<code>%val{cursor_column}</code>), and <em>text</em> is the content of the insertion or
+deletion (see also <code>%val{history}</code>)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{user_modes}</strong></dt>
+<dd>
+<p>unquoted list of user modes.</p>
+</dd>
+<dt class="hdlist1"><strong>%val{version}</strong></dt>
+<dd>
+<p>version of the current Kakoune server (git hash or release name)</p>
+</dd>
+<dt class="hdlist1"><strong>%val{window_height}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+height of the current Kakoune window</p>
+</dd>
+<dt class="hdlist1"><strong>%val{window_width}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+width of the current Kakoune window</p>
+</dd>
+<dt class="hdlist1"><strong>%val{window_range}</strong></dt>
+<dd>
+<p><em>in window scope</em><br>
+list of coordinates and dimensions of the buffer-space
+available on the current window, in the following format:
+<code>&lt;coord_y&gt; &lt;coord_x&gt; &lt;height&gt; &lt;width&gt;</code></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Values in the above list that do not mention a context are available
+everywhere.</p>
+</div>
+<div class="paragraph">
+<p>A value described as a "quoted list" will follow the rules of Kakoune string
+quoting (See <a href="command-parsing.html" class="xref page"><code>:doc command-parsing</code></a>). An "unquoted list"
+cannot contain any special characters that would require quoting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recursive-expansions"><a class="anchor" href="#recursive-expansions"></a><a class="link" href="#recursive-expansions">7. Recursive Expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Expansions with the type <code>exp</code> expand their content, the same way doubly
+quoted strings do.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

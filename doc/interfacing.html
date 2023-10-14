@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Interfacing Kakoune with external programs :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Kakoune</a></li>
+    <li><a href="interfacing.html">Interfacing</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/interfacing.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Interfacing Kakoune with external programs</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#basic-interaction">1. Basic interaction</a></li>
+<li><a href="#interactive-output">2. Interactive output</a></li>
+<li><a href="#completion-candidates">3. Completion candidates</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to interact with the external world, Kakoune uses the shell, mainly
+through the <code>%sh{ &#8230;&#8203; }</code> string type, and its control socket.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="basic-interaction"><a class="anchor" href="#basic-interaction"></a><a class="link" href="#basic-interaction">1. Basic interaction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For synchronous operations, <code>%sh{ &#8230;&#8203; }</code> blocks are easy to use, they behave
+similarly to <code>$( &#8230;&#8203; )</code> shell construct.</p>
+</div>
+<div class="paragraph">
+<p>For example, one can echo the current time in Kakoune&#8217;s status line using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">:echo %sh{ date }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For asynchronous operations, the Kakoune Unix stream socket can be used. This
+is the same socket that Kakoune clients connect to. It is available through the
+<code>kak_session</code> environment variable: the socket is
+<code>/tmp/kakoune/${username}/${kak_session}</code></p>
+</div>
+<div class="paragraph">
+<p>For example, we can echo a message in Kakoune in 10 seconds with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">:nop %sh{ {
+    sleep 10
+    echo "eval -client '$kak_client' 'echo sleep ended'" |
+        kak -p ${kak_session}
+} &gt; /dev/null 2&gt;&amp;1 &lt; /dev/null &amp; }</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>nop</code> command is used so that any eventual output from the
+<code>%sh{ &#8230;&#8203; }</code> is not interpreted by Kakoune</p>
+</li>
+<li>
+<p>When writing to the socket, Kakoune has no way to guess in which
+client&#8217;s context the command should be evaluated. A temporary
+context is used, which does not have any user interface, so if we want
+to interact with the user, we need to use the <code>eval</code> command, with
+its <code>-client</code> option to send commands to a specific client.</p>
+</li>
+<li>
+<p>For the command to run asynchronously, we wrap it in a sub shell
+with braces, redirect its <code>std{in,err,out}</code> to <code>/dev/null</code>, and
+run it in background with <code>&amp;</code>. Using this pattern, the shell does
+not wait for this sub shell to finish before quitting.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interactive-output"><a class="anchor" href="#interactive-output"></a><a class="link" href="#interactive-output">2. Interactive output</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is a frequent interaction mode to run a program and display its output
+in a Kakoune buffer.</p>
+</div>
+<div class="paragraph">
+<p>The common pattern to do that is to use a fifo buffer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">evaluate-commands %sh{
+     # Create a temporary fifo for communication
+     output=$(mktemp -d -t kak-temp-XXXXXXXX)/fifo
+     mkfifo ${output}
+     # run command detached from the shell
+     { run command here &gt; ${output} } &gt; /dev/null 2&gt;&amp;1 &lt; /dev/null &amp;
+     # Open the file in Kakoune and add a hook to remove the fifo
+     echo "edit! -fifo ${output} *buffer-name*
+           hook buffer BufClose .* %{ nop %sh{ rm -r $(dirname ${output})} }"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a very simple example, most of the time, the echo command will as
+well contain</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>set buffer filetype &lt;...&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and some hooks for this filetype will have been written</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="completion-candidates"><a class="anchor" href="#completion-candidates"></a><a class="link" href="#completion-candidates">3. Completion candidates</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Filetype specific completion should be provided by external programs.</p>
+</div>
+<div class="paragraph">
+<p>External completions are provided using an option to store completion, which
+have the following format.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>line.column[+len]@timestamp candidate1|select1|menu1 candidate2|select2|menu2 ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the first element of this string list specify where and when this completion
+applies, the others are a triplet <code>&lt;completion text&gt;|&lt;select cmd&gt;|&lt;menu text&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>The select command is executed whenever this menu item gets selected, and
+is usually used to display an item specific documentation with
+<code>info -placement menu '&lt;menu item description&gt;'</code></p>
+</div>
+<div class="paragraph">
+<p>The menu text is a markup string (see <a href="#./faces.adoc#markup-strings"><code>:doc faces
+markup-strings</code></a>), so it can contain <code>{face}</code> directives.</p>
+</div>
+<div class="paragraph">
+<p>To effectively use that completion option, it should get added to the completers
+option.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>set -add buffer completers option=my_option_name
+---</p>
+</div>
+<div class="paragraph">
+<p>As a completion program may take some time to compute the candidates, it should
+run asynchronously. In order to do that, the following pattern may be used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Declare the option which will store the temporary filename
+decl str plugin_filename
+# Declare the completion option
+decl completions plugin_completions
+# Add plugin_completions to completers for files of good filetype
+hook global BufSetOption filetype=my_filetype %{
+    set -add buffer completers option=plugin_completions
+}
+evaluate-commands %sh{
+    # ask Kakoune to write current buffer to temporary file
+    filename=$(mktemp -t kak-temp.XXXXXXXX)
+    echo "set buffer plugin_filename '$filename'
+          write '$filename'"
+}
+# End the %sh{} so that its output gets executed by Kakoune.
+# Use a nop so that any eventual output of this %sh does not get interpreted.
+nop %sh{ { # launch a detached shell
+    buffer="${kak_opt_plugin_filename}"
+    line="${kak_cursor_line}"
+    column="${kak_cursor_column}"
+    # run completer program and format the output in a list of completions
+    candidates=$(completer $buffer $line $column | completer_filter)
+    # remove temporary file
+    rm $buffer
+    # generate completion option value
+    completions="$line.$column@$kak_timestamp $candidates"
+    # write to Kakoune socket for the buffer that triggered the completion
+    echo "set buffer=${kak_bufname} plugin_completions $completions" |
+        kak -p ${kak_session}
+} &gt; /dev/null 2&gt;&amp;1 &lt; /dev/null &amp; }</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FAQ :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/faq.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">FAQ</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#the-project">1. The project</a>
+<ul class="sectlevel2">
+<li><a href="#how-to-pronounce-the-name-of-the-project-and-what-does-it-mean">1.1. How to pronounce the name of the project and what does it mean ?</a></li>
+<li><a href="#is-there-going-to-be-a-windows-port-of-kakoune">1.2. Is there going to be a Windows port of Kakoune ?</a></li>
+</ul>
+</li>
+<li><a href="#interfacing">2. Interfacing</a>
+<ul class="sectlevel2">
+<li><a href="#can-i-use-kakoune-as-a-pager">2.1. Can I use Kakoune as a pager ?</a></li>
+<li><a href="#are-there-any-non-console-based-frontends-available">2.2. Are there any non-console based frontends available?</a></li>
+<li><a href="#why-are-colors-misrendered-in-my-kakoune-clients">2.3. Why are colors misrendered in my Kakoune clients?</a></li>
+<li><a href="#im-using-tmux-and-colors-look-weird">2.4. I&#8217;m using <code>tmux</code> and colors look weird</a></li>
+<li><a href="#why-do-i-see-weird-special-characters-tu-around-clippy">2.5. Why do I see weird special characters (<sub>T</sub>@~U) around Clippy?</a></li>
+<li><a href="#why-does-leaving-insert-mode-take-more-than-half-a-second-in-tmux">2.6. Why does leaving insert mode take more than half a second in <code>tmux</code>?</a></li>
+<li><a href="#can-i-split-the-window-to-display-different-buffers-in-them">2.7. Can I split the window to display different buffers in them?</a></li>
+</ul>
+</li>
+<li><a href="#generic-functionalities">3. Generic functionalities</a>
+<ul class="sectlevel2">
+<li><a href="#something-is-wrong-how-can-i-get-more-debug-information">3.1. Something is wrong, how can I get more debug information?</a></li>
+<li><a href="#how-can-i-explore-the-filesystem-the-way-vims-nerdtree-does">3.2. How can I explore the filesystem the way Vim&#8217;s NerdTree does?</a></li>
+<li><a href="#how-do-i-automatically-indent-code-as-vim-does-with">3.3. How do I automatically indent code, as Vim does with <code>=</code>?</a></li>
+<li><a href="#can-kakoune-automatically-complete-the-parameters-of-my-functions">3.4. Can Kakoune automatically complete the parameters of my functions?</a></li>
+<li><a href="#why-arent-widely-known-command-line-shortcuts-such-as-c-w-or-c-u-available-in-kakoune">3.5. Why aren&#8217;t widely known command line shortcuts such as &lt;c-w&gt; or &lt;c-u&gt; available in Kakoune?</a></li>
+<li><a href="#can-i-disable-auto-indentation-completely">3.6. Can I disable auto-indentation completely?</a></li>
+<li><a href="#how-to-enable-syntax-highlighting">3.7. How to enable syntax highlighting?</a></li>
+<li><a href="#my-file-seems-to-be-highlighted-with-the-wrong-colors-i-thought-syntax-highlighting-was-detected-automatically">3.8. My file seems to be highlighted with the wrong colors, I thought syntax highlighting was detected automatically?</a></li>
+<li><a href="#can-i-disable-syntax-highlighting-completely">3.9. Can I disable syntax highlighting completely?</a></li>
+<li><a href="#can-the-cursor-be-rendered-as-a-beam">3.10. Can the cursor be rendered as a beam?</a></li>
+</ul>
+</li>
+<li><a href="#the-editing-language">4. The editing language</a>
+<ul class="sectlevel2">
+<li><a href="#the-scripting-language-lacks-keywords-when-are-you-going-to-expand-it">4.1. The scripting language lacks keywords, when are you going to expand it?</a></li>
+<li><a href="#why-arent-there-other-scopes-similar-to-sh-e-g-python">4.2. Why aren&#8217;t there other scopes similar to <code>%sh{}</code> e.g. python?</a></li>
+<li><a href="#what-shell-is-used-to-expand-sh-scopes">4.3. What shell is used to expand <code>%sh{}</code> scopes?</a></li>
+<li><a href="#why-does-a-dot-in-a-regex-select-newline-characters">4.4. Why does a dot <code>.</code> in a regex select newline characters?</a></li>
+<li><a href="#why-does-a-extend-the-current-selection-but-i-leaves-it-untouched">4.5. Why does <code>a</code> extend the current selection, but <code>i</code> leaves it untouched?</a></li>
+<li><a href="#how-to-apply-changes-to-all-open-buffers">4.6. How to apply changes to all open buffers?</a></li>
+<li><a href="#why-is-the-text-i-pasted-into-a-buffer-completely-mangled">4.7. Why is the text I pasted into a buffer completely mangled?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="the-project"><a class="anchor" href="#the-project"></a><a class="link" href="#the-project">1. The project</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="how-to-pronounce-the-name-of-the-project-and-what-does-it-mean"><a class="anchor" href="#how-to-pronounce-the-name-of-the-project-and-what-does-it-mean"></a><a class="link" href="#how-to-pronounce-the-name-of-the-project-and-what-does-it-mean">1.1. How to pronounce the name of the project and what does it mean ?</a></h3>
+<div class="paragraph">
+<p>The name of the project is pronounced "Kak-oon", and is a word taken from a
+New Caledonian dialect based on French. It means a hard blow, usually a punch,
+but generally refers to a strike into which all of one&#8217;s strength went.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="is-there-going-to-be-a-windows-port-of-kakoune"><a class="anchor" href="#is-there-going-to-be-a-windows-port-of-kakoune"></a><a class="link" href="#is-there-going-to-be-a-windows-port-of-kakoune">1.2. Is there going to be a Windows port of Kakoune ?</a></h3>
+<div class="paragraph">
+<p>As many features provided by UNIX systems are missing or less efficient on
+a Windows system, the incentive to porting the project to this operating
+system is low.</p>
+</div>
+<div class="paragraph">
+<p>Moreover, you can achieve pretty decent performance by using Kakoune on
+Cygwin (which is officially supported).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfacing"><a class="anchor" href="#interfacing"></a><a class="link" href="#interfacing">2. Interfacing</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="can-i-use-kakoune-as-a-pager"><a class="anchor" href="#can-i-use-kakoune-as-a-pager"></a><a class="link" href="#can-i-use-kakoune-as-a-pager">2.1. Can I use Kakoune as a pager ?</a></h3>
+<div class="paragraph">
+<p>Kakoune can be used as a pager, either by setting the <code>PAGER</code> environment
+variable to <code>kak</code>, or by writing data directly to its standard input using a
+shell pipeline.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="are-there-any-non-console-based-frontends-available"><a class="anchor" href="#are-there-any-non-console-based-frontends-available"></a><a class="link" href="#are-there-any-non-console-based-frontends-available">2.2. Are there any non-console based frontends available?</a></h3>
+<div class="paragraph">
+<p>No graphical frontend is currently officially maintained, you can however
+try experimental community-developed ones.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-are-colors-misrendered-in-my-kakoune-clients"><a class="anchor" href="#why-are-colors-misrendered-in-my-kakoune-clients"></a><a class="link" href="#why-are-colors-misrendered-in-my-kakoune-clients">2.3. Why are colors misrendered in my Kakoune clients?</a></h3>
+<div class="paragraph">
+<p>The most probable cause for colors being misrendered is a widespread practice
+that consists in setting the <code>TERM</code> environment variable in the shell&#8217;s
+configuration file. This variable should be set by the terminal emulator,
+and not overridden with an arbitrary value, otherwise it might interfere
+with general UI rendering on the terminal&#8217;s window.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="im-using-tmux-and-colors-look-weird"><a class="anchor" href="#im-using-tmux-and-colors-look-weird"></a><a class="link" href="#im-using-tmux-and-colors-look-weird">2.4. I&#8217;m using <code>tmux</code> and colors look weird</a></h3>
+<div class="paragraph">
+<p>If you&#8217;re using a tool that doesn&#8217;t support "palette switching", colors will
+still be slightly off: they are being rounded down to values supported by the
+regular color palette of Kakoune. Fortunately, on recent versions of <code>tmux</code>
+(&gt;=2.6), you can work around that by using the following configuration
+settings:</p>
+</div>
+<div class="listingblock">
+<div class="title">~/.tmux.conf</div>
+<div class="content">
+<pre>set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*col*:Tc"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: <code>*col*</code> is a regular expression that matches your terminal&#8217;s <code>$TERM</code>
+value, modify it if necessary, e.g. <code>xterm-termite</code>.</p>
+</div>
+<div class="paragraph">
+<p>Next, run the following command to create a local <code>terminfo</code> override:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tic /path/to/kakoune/contrib/tmux-256color.terminfo</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, quit all existing sessions (<code>tmux kill-server</code>), and restart <code>tmux</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-do-i-see-weird-special-characters-tu-around-clippy"><a class="anchor" href="#why-do-i-see-weird-special-characters-tu-around-clippy"></a><a class="link" href="#why-do-i-see-weird-special-characters-tu-around-clippy">2.5. Why do I see weird special characters (<sub>T</sub>@~U) around Clippy?</a></h3>
+<div class="paragraph">
+<p>You need a UTF-8 compliant locale, in order to render special characters.</p>
+</div>
+<div class="paragraph">
+<p>The way to do so might vary from distribution to another, but an easy way
+to verify that your locale is set correctly is to run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ locale</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output should look similar to the following (with your own
+language/country code set, instead of <code>en_US</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>LANG=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also run the project&#8217;s test suite, which should display errors if
+your locale doesn&#8217;t support UTF-8 rendering:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd kakoune
+$ make test</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-does-leaving-insert-mode-take-more-than-half-a-second-in-tmux"><a class="anchor" href="#why-does-leaving-insert-mode-take-more-than-half-a-second-in-tmux"></a><a class="link" href="#why-does-leaving-insert-mode-take-more-than-half-a-second-in-tmux">2.6. Why does leaving insert mode take more than half a second in <code>tmux</code>?</a></h3>
+<div class="paragraph">
+<p>Upon hitting the escape key, <code>tmux</code> waits for a short period of time to
+determine whether it&#8217;s part of a function or a meta key sequence. In order
+to fix this "lag", set the waiting period in your <code>tmux</code> configuration file
+to a short time, e.g. 25ms: <code>set -sg escape-time 25</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="can-i-split-the-window-to-display-different-buffers-in-them"><a class="anchor" href="#can-i-split-the-window-to-display-different-buffers-in-them"></a><a class="link" href="#can-i-split-the-window-to-display-different-buffers-in-them">2.7. Can I split the window to display different buffers in them?</a></h3>
+<div class="paragraph">
+<p>As a fairly compliant follower of the UNIX philosophy, Kakoune does not
+try to implement features that are best handled by separate, dedicated
+tools. Window splitting in terminals is a prime example of that
+concept, where the editor provides commands to interact with several
+terminal multiplexers (e.g. <code>tmux</code>), as opposed to emulating their
+functionalities.</p>
+</div>
+<div class="paragraph">
+<p>In order to open buffers in the same window simultaneously using <code>tmux</code>
+(or one of the supported multiplexers), run Kakoune in a <code>tmux</code> session,
+and simply use the <code>:new</code> command to spawn new clients as you would
+have otherwise in an X11 environment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="generic-functionalities"><a class="anchor" href="#generic-functionalities"></a><a class="link" href="#generic-functionalities">3. Generic functionalities</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="something-is-wrong-how-can-i-get-more-debug-information"><a class="anchor" href="#something-is-wrong-how-can-i-get-more-debug-information"></a><a class="link" href="#something-is-wrong-how-can-i-get-more-debug-information">3.1. Something is wrong, how can I get more debug information?</a></h3>
+<div class="paragraph">
+<p>You can get quite a lot of information out of the editor at runtime. One
+way is through the <code>:debug</code> command, which will print out statistics and
+state data into the <code>*debug*</code> buffer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:debug &lt;command&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Another way is to set flags on the <code>debug</code> option:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:set global debug &lt;flags&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure to read all possible values suggested by the completion engine,
+as you type out both commands in a prompt.</p>
+</div>
+<div class="paragraph">
+<p>If you want to troubleshoot a crash, you need to compile the editor with
+debug symbols enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ make debug=yes</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resulting binary should produce a stacktrace that you can, afterwards,
+post in an issue in unmangled form (c.f. <code>c++filt</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-can-i-explore-the-filesystem-the-way-vims-nerdtree-does"><a class="anchor" href="#how-can-i-explore-the-filesystem-the-way-vims-nerdtree-does"></a><a class="link" href="#how-can-i-explore-the-filesystem-the-way-vims-nerdtree-does">3.2. How can I explore the filesystem the way Vim&#8217;s NerdTree does?</a></h3>
+<div class="paragraph">
+<p>The builtin file completion engine used when opening a file for editing
+(using the <code>:edit</code> command and letting the suggestions pop up in the menu
+beneath) is more convenient than Vim&#8217;s, which should suit basic needs.</p>
+</div>
+<div class="paragraph">
+<p>However, if you need an actual explorer to interact with the editor,
+you can create a Kakoune script that will spawn the tool in question,
+which should in return send an "edit" command followed by the path of the
+file you selected to the current Kakoune session (e.g. <code>echo "eval -client
+$kak_client edit /path/to/file" | kak -p $kak_session</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-do-i-automatically-indent-code-as-vim-does-with"><a class="anchor" href="#how-do-i-automatically-indent-code-as-vim-does-with"></a><a class="link" href="#how-do-i-automatically-indent-code-as-vim-does-with">3.3. How do I automatically indent code, as Vim does with <code>=</code>?</a></h3>
+<div class="paragraph">
+<p>As <code>Kakoune</code> doesn&#8217;t parse the contents of the buffers, there is no builtin
+equivalent for this Vim feature. Use a formatter/prettifier dedicated to
+the language you&#8217;re using with the help of the <code>|</code> key.</p>
+</div>
+<div class="paragraph">
+<p>Example: <code>%|indent&lt;ret&gt;</code> to indent an entire buffer with C code.</p>
+</div>
+<div class="paragraph">
+<p>You can also set the <code>formatcmd</code> option and use the <code>:format</code> command to
+format the entire buffer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="can-kakoune-automatically-complete-the-parameters-of-my-functions"><a class="anchor" href="#can-kakoune-automatically-complete-the-parameters-of-my-functions"></a><a class="link" href="#can-kakoune-automatically-complete-the-parameters-of-my-functions">3.4. Can Kakoune automatically complete the parameters of my functions?</a></h3>
+<div class="paragraph">
+<p>As mentioned in the above question about Vim&#8217;s <code>=</code> key, Kakoune does not
+parse the contents of a buffer by itself, which makes it impossible for
+the editor to propose candidates upon completion.</p>
+</div>
+<div class="paragraph">
+<p>However, support for such a feature can be achieved through the use of a
+dedicated tool, as is the case with <code>clang</code> and C code: you can use the
+<code>clang-enable-autocomplete</code> and <code>clang-complete</code> builtin commands whenever
+editing a C/C++ file, and completion will work on function parameters.</p>
+</div>
+<div class="paragraph">
+<p>Other language-support scripts implement this functionality in a similar way,
+for example the <code>jedi</code> script for Python buffers.</p>
+</div>
+<div class="paragraph">
+<p>Another way to get automatic parameter completion that doesn&#8217;t depend on
+built-in support in Kakoune is through the
+<a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a>,
+for which you can find implementations that interact with the editor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-arent-widely-known-command-line-shortcuts-such-as-c-w-or-c-u-available-in-kakoune"><a class="anchor" href="#why-arent-widely-known-command-line-shortcuts-such-as-c-w-or-c-u-available-in-kakoune"></a><a class="link" href="#why-arent-widely-known-command-line-shortcuts-such-as-c-w-or-c-u-available-in-kakoune">3.5. Why aren&#8217;t widely known command line shortcuts such as &lt;c-w&gt; or &lt;c-u&gt; available in Kakoune?</a></h3>
+<div class="paragraph">
+<p>Despite their widespread availability in multiple tools, those shortcuts do
+not fit the paradigm that Kakoune implements, which is based on selections
+first.</p>
+</div>
+<div class="paragraph">
+<p>However, you can easily declare key mappings in your configuration file
+to be able to use those control-based shortcuts in insert mode.
+(See <a href="mapping.html" class="xref page"><code>:doc mapping</code></a>)</p>
+</div>
+<div class="paragraph">
+<p>Also note that a subset of "readline shortcuts" is implemented for command
+prompts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="can-i-disable-auto-indentation-completely"><a class="anchor" href="#can-i-disable-auto-indentation-completely"></a><a class="link" href="#can-i-disable-auto-indentation-completely">3.6. Can I disable auto-indentation completely?</a></h3>
+<div class="paragraph">
+<p>All the indentation hooks are conventionally named <code>&lt;lang&gt;-indent</code>, which
+allows us to use the <code>disabled_hooks</code> variable to disable indentation
+globally with the following command: <code>set global disabled_hooks '.+-indent'</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-to-enable-syntax-highlighting"><a class="anchor" href="#how-to-enable-syntax-highlighting"></a><a class="link" href="#how-to-enable-syntax-highlighting">3.7. How to enable syntax highlighting?</a></h3>
+<div class="paragraph">
+<p>The MIME type of the files opened in new buffers is detected using the
+<code>file</code> command, and syntax highlighting enabled automatically when
+possible.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="my-file-seems-to-be-highlighted-with-the-wrong-colors-i-thought-syntax-highlighting-was-detected-automatically"><a class="anchor" href="#my-file-seems-to-be-highlighted-with-the-wrong-colors-i-thought-syntax-highlighting-was-detected-automatically"></a><a class="link" href="#my-file-seems-to-be-highlighted-with-the-wrong-colors-i-thought-syntax-highlighting-was-detected-automatically">3.8. My file seems to be highlighted with the wrong colors, I thought syntax highlighting was detected automatically?</a></h3>
+<div class="paragraph">
+<p>The <code>file</code> utility has several shortcomings, such as detecting the
+wrong MIME type for a file containing data with different syntax, e.g.
+a Python script containing hardcoded HTML templates detected as an HTML
+file.</p>
+</div>
+<div class="paragraph">
+<p>Kakoune does its best to detect file types (using known extensions for a
+given format for instance), but not much can be done about those ambiguous
+cases. You might consider writing a custom <code>$HOME/.magic</code> file if needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="can-i-disable-syntax-highlighting-completely"><a class="anchor" href="#can-i-disable-syntax-highlighting-completely"></a><a class="link" href="#can-i-disable-syntax-highlighting-completely">3.9. Can I disable syntax highlighting completely?</a></h3>
+<div class="paragraph">
+<p>Similarly to the indentation hooks, the name format followed by the
+highlighting hooks is <code>&lt;lang&gt;-highlight</code>. You can thus disable syntax
+highlighting using the following command: <code>set global disabled_hooks
+'.+-highlight'</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="can-the-cursor-be-rendered-as-a-beam"><a class="anchor" href="#can-the-cursor-be-rendered-as-a-beam"></a><a class="link" href="#can-the-cursor-be-rendered-as-a-beam">3.10. Can the cursor be rendered as a beam?</a></h3>
+<div class="paragraph">
+<p>Rendering the cursor as a beam is a common feature of other modal editors,
+it however doesn&#8217;t fit within Kakoune&#8217;s selection-first paradigm.</p>
+</div>
+<div class="paragraph">
+<p>There is a selection on screen at all times, containing either data selected
+by the user, or a newline character when the buffer is empty.</p>
+</div>
+<div class="paragraph">
+<p>A selection is bound by an anchor and a cursor. They can overlap, but
+ultimately must both be placed <strong>over</strong> a character. A beam cursor placed
+<strong>between</strong> two characters doesn&#8217;t fulfil that requirement, and is thus
+not allowed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="the-editing-language"><a class="anchor" href="#the-editing-language"></a><a class="link" href="#the-editing-language">4. The editing language</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="the-scripting-language-lacks-keywords-when-are-you-going-to-expand-it"><a class="anchor" href="#the-scripting-language-lacks-keywords-when-are-you-going-to-expand-it"></a><a class="link" href="#the-scripting-language-lacks-keywords-when-are-you-going-to-expand-it">4.1. The scripting language lacks keywords, when are you going to expand it?</a></h3>
+<div class="paragraph">
+<p>The scripting language is the smallest subset of statements/keywords that
+allows users to write plugins, commands, mappings.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s not intended to be a one-stop generic interface, but rather a glue
+between core Kakoune instructions and complex logic.</p>
+</div>
+<div class="paragraph">
+<p>Other editors generally come up with their own language or leverage existing
+ones (for example, VimL, LUA), whereas Kakoune interacts with the shell,
+through <code>%sh{…}</code> scopes.</p>
+</div>
+<div class="paragraph">
+<p>As arbitrary Kakoune data (options, selection etc.) can be shared with
+shell scopes through environment variables, users are free to process this
+data with pure shell scripting, or whatever interpreter they desire.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-arent-there-other-scopes-similar-to-sh-e-g-python"><a class="anchor" href="#why-arent-there-other-scopes-similar-to-sh-e-g-python"></a><a class="link" href="#why-arent-there-other-scopes-similar-to-sh-e-g-python">4.2. Why aren&#8217;t there other scopes similar to <code>%sh{}</code> e.g. python?</a></h3>
+<div class="paragraph">
+<p>Supporting custom scopes would add hard dependencies to the project, which
+is too much of a drawback when balanced against the low cost of using
+an interpreter in a regular shell scope (e.g. <code>%sh{ python -c "&#8230;&#8203;" }</code>).
+The shell scope allows users to spawn any interpreter they want, for a minimal
+cost in terms of performance, it is therefore the reason why it&#8217;s the only
+one available by default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="what-shell-is-used-to-expand-sh-scopes"><a class="anchor" href="#what-shell-is-used-to-expand-sh-scopes"></a><a class="link" href="#what-shell-is-used-to-expand-sh-scopes">4.3. What shell is used to expand <code>%sh{}</code> scopes?</a></h3>
+<div class="paragraph">
+<p>The server expands shell scopes using the <code>sh</code> binary, located in one of
+the directories containing all the POSIX standard utilities. This list of
+directories is stored in a system configuration variable, and queried by
+Kakoune at startup.</p>
+</div>
+<div class="paragraph">
+<p>In most distributions, <code>/bin/sh</code> will end up being used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-does-a-dot-in-a-regex-select-newline-characters"><a class="anchor" href="#why-does-a-dot-in-a-regex-select-newline-characters"></a><a class="link" href="#why-does-a-dot-in-a-regex-select-newline-characters">4.4. Why does a dot <code>.</code> in a regex select newline characters?</a></h3>
+<div class="paragraph">
+<p>Data in buffers is a stream of characters, and newlines do not receive special
+treatment compared to other characters, with regards to regex matching. In
+order to select data in a line without any trailing newline characters, one could
+use the <code>[^\n]+</code> pattern, which is arguably a good compromise when
+balanced against the ability to select data over several lines.</p>
+</div>
+<div class="paragraph">
+<p>You can instruct the regex engine to stop matching newline characters with
+<code>.</code> by disabling the appropriate flag (<code>(?S)</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-does-a-extend-the-current-selection-but-i-leaves-it-untouched"><a class="anchor" href="#why-does-a-extend-the-current-selection-but-i-leaves-it-untouched"></a><a class="link" href="#why-does-a-extend-the-current-selection-but-i-leaves-it-untouched">4.5. Why does <code>a</code> extend the current selection, but <code>i</code> leaves it untouched?</a></h3>
+<div class="paragraph">
+<p>Selections are ranges of characters whose delimiters are an "anchor" and
+a "cursor", and inserting characters is always done before the cursor in
+insert mode.</p>
+</div>
+<div class="paragraph">
+<p>Consequently, using the append primitive (<code>a</code>) nudges the cursor forward to
+make room for characters, effectively extending the current selection since
+the anchor remains immobile, even when the anchor and the cursor are at the
+same location. By opposition, using the insert primitive (<code>i</code>) merely adds
+characters before the cursor, which never modifies the current selection.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-to-apply-changes-to-all-open-buffers"><a class="anchor" href="#how-to-apply-changes-to-all-open-buffers"></a><a class="link" href="#how-to-apply-changes-to-all-open-buffers">4.6. How to apply changes to all open buffers?</a></h3>
+<div class="paragraph">
+<p>The <code>:exec</code> and <code>:eval</code> commands can apply changes to a comma-separated
+list of buffers, passed as argument to the <code>-buffer</code> flag.</p>
+</div>
+<div class="paragraph">
+<p>In order to let the editor figure out which buffers are open, the special
+value <code>*</code> is accepted as a wildcard. For example, in order to reload all
+open buffers:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:eval -buffer * e!</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-is-the-text-i-pasted-into-a-buffer-completely-mangled"><a class="anchor" href="#why-is-the-text-i-pasted-into-a-buffer-completely-mangled"></a><a class="link" href="#why-is-the-text-i-pasted-into-a-buffer-completely-mangled">4.7. Why is the text I pasted into a buffer completely mangled?</a></h3>
+<div class="paragraph">
+<p>In order to assist users with writing code, some buffers come with hooks that
+automatically indent the text inserted. Pasting the contents of the clipboard
+into a buffer in insert mode triggers this indentation functionality,
+resulting into mangled text.</p>
+</div>
+<div class="paragraph">
+<p>To prevent that from happening:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>disable hooks and enter insert mode with <code>\i</code></p>
+</li>
+<li>
+<p>insert text into the buffer (e.g. paste the clipboard&#8217;s contents)</p>
+</li>
+<li>
+<p>exit insert-mode, restoring hooks with <code>&lt;esc&gt;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

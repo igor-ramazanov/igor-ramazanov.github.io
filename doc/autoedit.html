@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Edition auto insertion in Kakoune :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Kakoune</a></li>
+    <li><a href="autoedit.html">Autoedit</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/autoedit.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Edition auto insertion in Kakoune</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#previous-line-indentation">1. Previous line indentation</a></li>
+<li><a href="#increasing-indentation">2. Increasing indentation</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is a quite common feature for a code editor to help the programmer
+by automatically inserting some text in certain contexts. This document
+goal is to explain how this is done in Kakoune.</p>
+</div>
+<div class="paragraph">
+<p>There is no special support in Kakoune for this task, hooks are
+expected to be used in order to manage that, and the normal Kakoune
+editing command are expected to be expressive enough so that relatively
+complex indentation can be written concisely.</p>
+</div>
+<div class="paragraph">
+<p>The main hook is <strong>InsertChar</strong>, which gets called immediately <em>after</em> a
+character has been inserted in insertion mode due to the user pressing
+the corresponding key.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="previous-line-indentation"><a class="anchor" href="#previous-line-indentation"></a><a class="link" href="#previous-line-indentation">1. Previous line indentation</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s see a simple indent hook: preserving the previous line indentation.</p>
+</div>
+<div class="paragraph">
+<p>Here is the Kakoune normal mode key list in order to do that:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>k&lt;a-x&gt;      # 1. go to previous line and select it
+s^\h+&lt;ret&gt;y # 2. select the leading spaces and copy them
+j&lt;a-h&gt;P     # 3. go back to next line start and paste the spaces</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if nothing gets selected on phase <strong>2.</strong>, an error will be raised.</p>
+</div>
+<div class="paragraph">
+<p>We want to do that each time the user jumps a line, just after the new line
+is inserted. So the hook would be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:hook InsertChar \n %{ exec k&lt;a-x&gt; s^\h+&lt;ret&gt;y j&lt;a-h&gt;P }</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(exec concatenates the keys for all argument, so the spaces will be ignored,
+allowing for clearer separation. either use &lt;space&gt; or quote the argument to
+use a space key)</p>
+</div>
+<div class="paragraph">
+<p>That works, however if the phase <strong>2.</strong> raises an error, the <code>:exec</code> will stop
+and the user will get its selections on the previous line. The solution
+is to use a <strong>draft</strong> context, instead of the one the user is interacting with.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:hook InsertChar \n %{ exec -draft k&lt;a-x&gt; s^\h+&lt;ret&gt;y j&lt;a-h&gt;P }</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That way, exec is executed in a <strong>copy</strong> of the user&#8217;s context, which means it
+manipulates a <strong>copy</strong> of the user&#8217;s selections.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="increasing-indentation"><a class="anchor" href="#increasing-indentation"></a><a class="link" href="#increasing-indentation">2. Increasing indentation</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A little bit more complicated is to increase indentation whenever we insert a
+new line after a <code>{</code> or a <code>(</code>.</p>
+</div>
+<div class="paragraph">
+<p>The complexity arises from the presence of a condition. We want to increase
+the indentation <strong>only</strong> if the previous line ends with <code>{</code> or <code>(</code>.</p>
+</div>
+<div class="paragraph">
+<p>Fortunately, Kakoune provides us with a command for that: the <code>&lt;a-k&gt;</code> command,
+which keeps selections where a certain regex can be found.</p>
+</div>
+<div class="paragraph">
+<p>Here is how we can do that:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>k&lt;a-x&gt;             # 1. select the previous line
+&lt;a-k&gt;[{(]\h*$&lt;ret&gt; # 2. keep selections that end with { or ( followed by blanks
+j&lt;a-gt&gt;            # 3. go back to next line and indent it even if it is empty</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if no previous line ends with a <code>{</code> or <code>(</code>, the <code>&lt;a-k&gt;</code> command will
+raise an error, and stop the execution. This is what we want: it is similar to
+what would happen if we would continue with no selections; the following
+commands would have no effects.</p>
+</div>
+<div class="paragraph">
+<p>However, the error would end up being caught by the hook execution code, and
+it will write information about it in the debug buffer, which we do not want,
+as this is actually expected. In order to prevent that, the exec should be
+wrapped in a try command. So we would have:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:hook InsertChar \n %[ try %[ exec -draft k&lt;a-x&gt; &lt;a-k&gt;[{(]\h*$&lt;ret&gt; j&lt;a-gt&gt; ] ]</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

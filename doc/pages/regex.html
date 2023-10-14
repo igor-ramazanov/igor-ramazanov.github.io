@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Regex :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="regex.html">Regex</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/regex.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Regex</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#regex-syntax">1. Regex syntax</a></li>
+<li><a href="#literals">2. Literals</a></li>
+<li><a href="#character-classes">3. Character classes</a></li>
+<li><a href="#any-character">4. Any character</a></li>
+<li><a href="#groups">5. Groups</a></li>
+<li><a href="#alternations">6. Alternations</a></li>
+<li><a href="#quantifier">7. Quantifier</a></li>
+<li><a href="#zero-width-assertions">8. Zero width assertions</a></li>
+<li><a href="#modifiers">9. Modifiers</a></li>
+<li><a href="#quoting">10. Quoting</a></li>
+<li><a href="#compatibility">11. Compatibility</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="regex-syntax"><a class="anchor" href="#regex-syntax"></a><a class="link" href="#regex-syntax">1. Regex syntax</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune&#8217;s regex syntax is inspired by ECMAScript, as defined by the
+ECMA-262 standard (see <a href="#compatibility">:doc regex compatibility</a>).</p>
+</div>
+<div class="paragraph">
+<p>Kakoune&#8217;s regex always runs on Unicode codepoint sequences, not on bytes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="literals"><a class="anchor" href="#literals"></a><a class="link" href="#literals">2. Literals</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every character except the syntax characters <code>\^$.*+?[]{}|().</code> match
+themselves. Syntax characters can be escaped with a backslash so that
+<code>\$</code> will match a literal <code>$</code>, and <code>\\</code> will match a literal <code>\</code>.</p>
+</div>
+<div class="paragraph">
+<p>Some literals are available as escape sequences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\f</code> matches the form feed character.</p>
+</li>
+<li>
+<p><code>\n</code> matches the newline character.</p>
+</li>
+<li>
+<p><code>\r</code> matches the carriage return character.</p>
+</li>
+<li>
+<p><code>\t</code> matches the tabulation character.</p>
+</li>
+<li>
+<p><code>\v</code> matches the vertical tabulation character.</p>
+</li>
+<li>
+<p><code>\0</code> matches the null character.</p>
+</li>
+<li>
+<p><code>\cX</code> matches the control-<code>X</code> character (<code>X</code> can be in <code>[A-Za-z]</code>).</p>
+</li>
+<li>
+<p><code>\xXX</code> matches the character whose codepoint is <code>XX</code> (in hexadecimal).</p>
+</li>
+<li>
+<p><code>\uXXXXXX</code> matches the character whose codepoint is <code>XXXXXX</code> (in hexadecimal).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="character-classes"><a class="anchor" href="#character-classes"></a><a class="link" href="#character-classes">3. Character classes</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>[</code> character introduces a character class, matching one character
+from a set of characters.</p>
+</div>
+<div class="paragraph">
+<p>A character class contains a list of literals, character ranges,
+and character class escapes surrounded by <code>[</code> and <code>]</code>.</p>
+</div>
+<div class="paragraph">
+<p>If the first character inside a character class is <code>^</code>, then the character
+class is negated, meaning that it matches every character not specified
+in the character class.</p>
+</div>
+<div class="paragraph">
+<p>Literals match themselves, including syntax characters, so <code>^</code>
+does not need to be escaped in a character class. <code>[*+]</code> matches both
+the <code>\*</code> character and the <code>+</code> character. Literal escape sequences are
+supported, so <code>[\n\r]</code> matches both the newline and carriage return
+characters.</p>
+</div>
+<div class="paragraph">
+<p>The <code>]</code> character needs to be escaped for it to match a literal <code>]</code>
+instead of closing the character class.</p>
+</div>
+<div class="paragraph">
+<p>Character ranges are written as <code>&lt;start character&gt;-&lt;end character&gt;</code>, so
+<code>[A-Z]</code> matches all uppercase basic letters. <code>[A-Z0-9]</code> will match all
+uppercase basic letters and all basic digits.</p>
+</div>
+<div class="paragraph">
+<p>The <code>-</code> characters in a character class that are not specifying a
+range are treated as literal <code>-</code>, so <code>[A-Z-+]</code> matches all upper case
+characters, the <code>-</code> character, and the <code>+</code> character.</p>
+</div>
+<div class="paragraph">
+<p>Supported character class escapes are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\d</code> which matches digits 0-9.</p>
+</li>
+<li>
+<p><code>\w</code> which matches word characters A-Z, a-z, 0-9 and underscore
+(ignoring the <code>extra_word_chars</code> option).</p>
+</li>
+<li>
+<p><code>\s</code> which matches all Unicode whitespace characters.</p>
+</li>
+<li>
+<p><code>\h</code> which matches whitespace except Vertical Tab and line-breaks.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Using an upper case letter instead of a lower case one will negate
+the character class. For example, <code>\D</code> will match every non-digit
+character.</p>
+</div>
+<div class="paragraph">
+<p>Character class escapes can be used outside of a character class, <code>\d</code>
+is equivalent to <code>[\d]</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="any-character"><a class="anchor" href="#any-character"></a><a class="link" href="#any-character">4. Any character</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>.</code> matches any character, including newlines, by default.
+(see <a href="#modifiers">:doc regex modifiers</a> on how to change it)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="groups"><a class="anchor" href="#groups"></a><a class="link" href="#groups">5. Groups</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Regex atoms can be grouped using <code>(</code> and <code>)</code> or <code>(?:</code> and <code>)</code>. If <code>(</code> is
+used, the group will be a capturing group, which means the positions from
+the subject strings that matched between <code>(</code> and <code>)</code> will be recorded.</p>
+</div>
+<div class="paragraph">
+<p>Capture groups are numbered starting at 1. They are numbered in the
+order of appearance of their <code>(</code> in the regex. A special capture group
+0 is for the whole sequence that matched.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(?:</code> introduces a non capturing group, which will not record the
+matching positions.</p>
+</li>
+<li>
+<p><code>(?&lt;name&gt;</code> introduces a named capturing group, which, in addition to
+being referred by number, can be, in certain contexts, referred by the
+given name.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="alternations"><a class="anchor" href="#alternations"></a><a class="link" href="#alternations">6. Alternations</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>|</code> character introduces an alternation, which will either match
+its left-hand side, or its right-hand side (preferring the left-hand side)</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>foo|bar</code> matches either <code>foo</code> or <code>bar</code>, <code>foo(bar|baz|qux)</code>
+matches <code>foo</code> followed by either <code>bar</code>, <code>baz</code> or <code>qux</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="quantifier"><a class="anchor" href="#quantifier"></a><a class="link" href="#quantifier">7. Quantifier</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Literals, character classes, any characters, and groups can be followed
+by a quantifier, which specifies the number of times they can match.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>?</code> matches zero, or one time.</p>
+</li>
+<li>
+<p><code>*</code> matches zero or more times.</p>
+</li>
+<li>
+<p><code>+</code> matches one or more times.</p>
+</li>
+<li>
+<p><code>{n}</code> matches exactly <code>n</code> times.</p>
+</li>
+<li>
+<p><code>{n,}</code> matches <code>n</code> or more times.</p>
+</li>
+<li>
+<p><code>{n,m}</code> matches <code>n</code> to <code>m</code> times.</p>
+</li>
+<li>
+<p><code>{,m}</code> matches zero to <code>m</code> times.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default, quantifiers are <strong>greedy</strong>, which means they will prefer to
+match more characters if possible. Suffixing a quantifier with <code>?</code> will
+make it non-greedy, meaning it will prefer to match as few characters
+as possible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="zero-width-assertions"><a class="anchor" href="#zero-width-assertions"></a><a class="link" href="#zero-width-assertions">8. Zero width assertions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assertions do not consume any character, but they will prevent the regex
+from matching if not fulfilled.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>^</code> matches at the start of a line; that is, just after a newline
+character, or at the subject&#8217;s beginning (unless it is specified
+that the subject&#8217;s beginning is not a start of line).</p>
+</li>
+<li>
+<p><code>$</code> matches at the end of a line; that is, just before a newline, or
+at the subject end (unless it is specified that the subject&#8217;s end
+is not an end of line).</p>
+</li>
+<li>
+<p><code>\b</code> matches at a word boundary; which is to say that between the
+previous character and the current character, one is a word
+character, and the other is not.</p>
+</li>
+<li>
+<p><code>\B</code> matches at a non-word boundary; meaning, when both the previous
+character and the current character are word characters, or both
+are not.</p>
+</li>
+<li>
+<p><code>\A</code> matches at the subject string&#8217;s beginning.</p>
+</li>
+<li>
+<p><code>\z</code> matches at the subject string&#8217;s end.</p>
+</li>
+<li>
+<p><code>\K</code> matches anything, and resets the start position of capture group
+0 to the current position.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More complex assertions can be expressed with lookarounds:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(?=&#8230;&#8203;)</code> is a lookahead; it will match if its content matches the
+text following the current position.</p>
+</li>
+<li>
+<p><code>(?!&#8230;&#8203;)</code> is a negative lookahead; it will match if its content does
+not match the text following the current position.</p>
+</li>
+<li>
+<p><code>(?&#8656;&#8230;&#8203;)</code> is a lookbehind; it will match if its content matches
+the text preceding the current position.</p>
+</li>
+<li>
+<p><code>(?&lt;!&#8230;&#8203;)</code> is a negative lookbehind; it will match if its content does
+not match the text preceding the current position.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For performance reasons, lookaround contents must be a sequence of
+literals, character classes, or any character (<code>.</code>); quantifiers are not
+supported.</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>(?&lt;!bar)(?=foo).</code> will match any character which is not
+preceded by <code>bar</code> and where <code>foo</code> matches from the current position
+(which means the character has to be an <code>f</code>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="modifiers"><a class="anchor" href="#modifiers"></a><a class="link" href="#modifiers">9. Modifiers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some modifiers can control the matching behavior of the atoms following
+them:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(?i)</code> starts case-insensitive matching.</p>
+</li>
+<li>
+<p><code>(?I)</code> starts case-sensitive matching (default).</p>
+</li>
+<li>
+<p><code>(?s)</code> allows <code>.</code> to match newlines (default).</p>
+</li>
+<li>
+<p><code>(?S)</code> prevents <code>.</code> from matching newlines.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="quoting"><a class="anchor" href="#quoting"></a><a class="link" href="#quoting">10. Quoting</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>\Q</code> will start a quoted sequence, where every character is treated as
+a literal. That quoted sequence will continue until either the end of
+the regex, or the appearance of <code>\E</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>.\Q.^$\E$</code> will match any character followed by the
+literal string <code>.^$</code>, followed by an end of line.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compatibility"><a class="anchor" href="#compatibility"></a><a class="link" href="#compatibility">11. Compatibility</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune&#8217;s syntax tries to follow the ECMAScript regex syntax, as defined
+by &lt;<a href="https://www.ecma-international.org/ecma-262/8.0/&gt;" class="bare">https://www.ecma-international.org/ecma-262/8.0/&gt;</a>; some divergence
+exists for ease of use, or performance reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lookarounds are not arbitrary, but lookbehind is supported.</p>
+</li>
+<li>
+<p><code>\K</code>, <code>\Q..\E</code>, <code>\A</code>, <code>\h</code> and <code>\z</code> are added.</p>
+</li>
+<li>
+<p>Stricter handling of escaping, as we introduce additional escapes;
+identity escapes like <code>\X</code> with <code>X</code> being a non-special character
+are not accepted, to avoid confusions between <code>\h</code> meaning literal
+<code>h</code> in ECMAScript, and horizontal blank in Kakoune.</p>
+</li>
+<li>
+<p><code>\uXXXXXX</code> uses 6 digits to cover all of Unicode, instead of relying
+on ECMAScript UTF-16 surrogate pairs with 4 digits.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

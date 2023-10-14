@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Kakoune   :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Kakoune</a></li>
+    <li><a href="index.html">Getting Started</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page"><span class="image"><a class="image" href="https://kakoune.org"><img src="https://rawgit.com/mawww/kakoune/master/doc/kakoune_logo.svg" alt="K" width="30" height="30" title="Kakoune logo by p0nce"></a></span> Kakoune <span class="image"><a class="image" href="https://cirrus-ci.com/github/mawww/kakoune"><img src="https://api.cirrus-ci.com/github/mawww/kakoune.svg" alt="kakoune"></a></span> <span class="image"><a class="image" href="https://web.libera.chat/?channels=kakoune"><img src="https://img.shields.io/badge/IRC-%23kakoune-blue.svg" alt="IRC %23kakoune blue"></a></span></h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#tldr">1. TL;DR</a></li>
+<li><a href="#introduction">2. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#features">2.1. Features</a></li>
+<li><a href="#screenshots">2.2. Screenshots</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">3. Getting started</a>
+<ul class="sectlevel2">
+<li><a href="#building">3.1. Building</a></li>
+<li><a href="#installing">3.2. Installing</a></li>
+<li><a href="#running">3.3. Running</a>
+<ul class="sectlevel3">
+<li><a href="#configuration">3.3.1. Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#basic-interaction">4. Basic Interaction</a>
+<ul class="sectlevel2">
+<li><a href="#selections">4.1. Selections</a></li>
+<li><a href="#normal-mode">4.2. Normal Mode</a></li>
+<li><a href="#insert-mode">4.3. Insert Mode</a></li>
+<li><a href="#movement">4.4. Movement</a></li>
+<li><a href="#appending">4.5. Appending</a></li>
+<li><a href="#using-counts">4.6. Using Counts</a></li>
+<li><a href="#disabling-hooks">4.7. Disabling Hooks</a></li>
+<li><a href="#changes">4.8. Changes</a></li>
+<li><a href="#goto-commands">4.9. Goto Commands</a></li>
+<li><a href="#view-commands">4.10. View commands</a></li>
+<li><a href="#marks">4.11. Marks</a></li>
+<li><a href="#jump-list">4.12. Jump list</a></li>
+<li><a href="#multi-selection">4.13. Multi Selection</a></li>
+<li><a href="#object-selection">4.14. Object Selection</a></li>
+</ul>
+</li>
+<li><a href="#commands">5. Commands</a>
+<ul class="sectlevel2">
+<li><a href="#basic-commands">5.1. Basic Commands</a></li>
+<li><a href="#multiple-commands">5.2. Multiple commands</a>
+<ul class="sectlevel3">
+<li><a href="#string-syntax-and-expansions">5.2.1. String syntax and expansions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#configuration-autoloading">6. Configuration &amp; Autoloading</a>
+<ul class="sectlevel2">
+<li><a href="#kakrc">6.1. Kakrc</a></li>
+<li><a href="#color-schemes">6.2. Color Schemes</a></li>
+</ul>
+</li>
+<li><a href="#options">7. Options</a></li>
+<li><a href="#advanced-topics">8. Advanced topics</a>
+<ul class="sectlevel2">
+<li><a href="#faces">8.1. Faces</a></li>
+<li><a href="#registers">8.2. Registers</a></li>
+<li><a href="#macros">8.3. Macros</a></li>
+<li><a href="#search-selection">8.4. Search selection</a></li>
+<li><a href="#regex-syntax">8.5. Regex syntax</a></li>
+<li><a href="#exec-and-eval">8.6. Exec and Eval</a></li>
+<li><a href="#insert-mode-completion">8.7. Insert mode completion</a></li>
+<li><a href="#escape-to-normal-mode">8.8. Escape to normal mode</a></li>
+<li><a href="#highlighters">8.9. Highlighters</a></li>
+<li><a href="#hooks">8.10. Hooks</a></li>
+<li><a href="#key-mapping">8.11. Key Mapping</a></li>
+<li><a href="#defining-commands-and-aliases">8.12. Defining Commands and Aliases</a></li>
+<li><a href="#fifo-buffers">8.13. FIFO Buffers</a></li>
+<li><a href="#menus">8.14. Menus</a></li>
+</ul>
+</li>
+<li><a href="#credits">9. Credits</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="tldr"><a class="anchor" href="#tldr"></a><a class="link" href="#tldr">1. TL;DR</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://kakoune.org" class="bare">https://kakoune.org</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Modal editor</strong>&#8201;&#8212;&#8201;<strong>Faster as in fewer keystrokes</strong>&#8201;&#8212;&#8201;<strong>Multiple selections</strong>&#8201;&#8212;&#8201;<strong>Orthogonal design</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/mawww/kakoune.git
+cd kakoune/src
+make
+./kak</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See <a href="https://github.com/mawww/golf" class="bare">https://github.com/mawww/golf</a> for Kakoune solutions to vimgolf challenges,
+regularly beating the best Vim solution.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="doc/design.asciidoc">design document</a> for more information on
+Kakoune&#8217;s philosophy and design.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="introduction"><a class="anchor" href="#introduction"></a><a class="link" href="#introduction">2. Introduction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune is a code editor that implements Vi&#8217;s "keystrokes as a text editing
+language" model. As it is also a modal editor, it is somewhat similar to the
+Vim editor (after which Kakoune was originally inspired).</p>
+</div>
+<div class="paragraph">
+<p>Kakoune can operate in two modes: <strong>normal</strong> and <strong>insertion</strong>. In insertion mode,
+keys are directly inserted into the current buffer. In normal mode, keys
+are used to manipulate the current selection and to enter insertion mode.</p>
+</div>
+<div class="paragraph">
+<p>Kakoune has a strong focus on interactivity. Most commands provide immediate
+and incremental results, while being competitive with Vim in terms of keystroke count.</p>
+</div>
+<div class="paragraph">
+<p>Kakoune works on selections, which are oriented, inclusive ranges of characters.
+Selections have an anchor and a cursor. Most commands move both of
+them except when extending selections, where the anchor character stays fixed
+and the cursor moves around.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://vimeo.com/82711574" class="bare">https://vimeo.com/82711574</a></p>
+</div>
+<div class="paragraph">
+<p>Join us on libera IRC <code>#Kakoune</code></p>
+</div>
+<div class="sect2">
+<h3 id="features"><a class="anchor" href="#features"></a><a class="link" href="#features">2.1. Features</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiple selections as a central way of interacting</p>
+</li>
+<li>
+<p>Powerful selection manipulation primitives</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select all regex matches in current selections</p>
+</li>
+<li>
+<p>Keep selections containing/not containing a match for a given regex</p>
+</li>
+<li>
+<p>Split current selections with a regex</p>
+</li>
+<li>
+<p>Text objects (paragraph, sentence, nestable blocks)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Powerful text manipulation primitives</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Align selections</p>
+</li>
+<li>
+<p>Rotate selection contents</p>
+</li>
+<li>
+<p>Case manipulation</p>
+</li>
+<li>
+<p>Indentation</p>
+</li>
+<li>
+<p>Piping each selection to external filter</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Client-Server architecture</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiple clients on the same editing session</p>
+</li>
+<li>
+<p>Use tmux or your X11 window manager to manage windows</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Simple interaction with external programs</p>
+</li>
+<li>
+<p>Automatic contextual help</p>
+</li>
+<li>
+<p>Automatic as you type completion</p>
+</li>
+<li>
+<p>Macros</p>
+</li>
+<li>
+<p>Hooks</p>
+</li>
+<li>
+<p>Syntax Highlighting</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Supports multiple languages in the same buffer</p>
+</li>
+<li>
+<p>Highlight a buffer differently in different windows</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="screenshots"><a class="anchor" href="#screenshots"></a><a class="link" href="#screenshots">2.2. Screenshots</a></h3>
+<div id="screenshot-i3" class="imageblock">
+<div class="content">
+<img src="_images/screenshot-i3.gif" alt="Kakoune in i3">
+</div>
+<div class="title">Figure 1. Kakoune in i3</div>
+</div>
+<div id="screenshot-tmux" class="imageblock">
+<div class="content">
+<img src="_images/screenshot-tmux.gif" alt="Kakoune in tmux">
+</div>
+<div class="title">Figure 2. Kakoune in tmux</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="getting-started"><a class="anchor" href="#getting-started"></a><a class="link" href="#getting-started">3. Getting started</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="building"><a class="anchor" href="#building"></a><a class="link" href="#building">3.1. Building</a></h3>
+<div class="paragraph">
+<p>Kakoune&#8217;s dependencies are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A C&#43;&#43;20 compliant compiler (GCC &gt;= 10.3 or clang &gt;= 11) along with its
+associated C&#43;&#43; standard library (libstdc++ &gt;= 10 or libc++)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To build, just type <strong>make</strong> in the src directory.
+To generate man pages, type <strong>make man</strong> in the src directory.</p>
+</div>
+<div class="paragraph">
+<p>Kakoune can be built on Linux, MacOS, and Cygwin. Due to Kakoune relying heavily
+on being in a Unix-like environment, no native Windows version is planned.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installing"><a class="anchor" href="#installing"></a><a class="link" href="#installing">3.2. Installing</a></h3>
+<div class="paragraph">
+<p>In order to install <strong>kak</strong> on your system, rather than running it directly from
+its source directory, type <strong>make install</strong>. You can specify the <code>PREFIX</code> and
+<code>DESTDIR</code> if needed.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Homebrew (macOS) or Linuxbrew</div>
+<div class="listingblock">
+<div class="content">
+<pre>brew install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">MacPorts (macOS)</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo port selfupdate
+sudo port install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Fedora supported versions and Rawhide</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Fedora daily builds</div>
+<div class="paragraph">
+<p>Use the <a href="https://copr.fedoraproject.org/coprs/jkonecny/kakoune/">copr</a> repository.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf copr enable jkonecny/kakoune
+dnf install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">RHEL/CentOS 8</div>
+<div class="paragraph">
+<p>Kakoune can be found in the <a href="https://src.fedoraproject.org/rpms/kakoune/tree/epel8">EPEL8 repositories</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Arch Linux</div>
+<div class="paragraph">
+<p>Kakoune is found in the <a href="https://www.archlinux.org/packages/community/x86_64/kakoune/">repositories</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pacman -S kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Gentoo</div>
+<div class="paragraph">
+<p>Kakoune is found in portage as
+<a href="https://packages.gentoo.org/packages/app-editors/kakoune">app-editors/kakoune</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>emerge kakoune</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.gentoo.org/wiki/Kakoune">Installation and Gentoo specific documentation</a> is available.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Exherbo</div>
+<div class="listingblock">
+<div class="content">
+<pre>cave resolve -x repository/mawww
+cave resolve -x kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">openSUSE</div>
+<div class="paragraph">
+<p>Kakoune can be found in the <a href="https://software.opensuse.org/package/kakoune">repositories</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo zypper install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Ubuntu</div>
+<div class="paragraph">
+<p>Kakoune can be found in the Ubuntu repositories.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo apt install kakoune</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to compile from source on 20.04 or earlier, you must force the build to use GCC 10, which is not the default. Also, make sure you have .local/bin in your path so that kak is available after the installation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/mawww/kakoune.git &amp;&amp; cd kakoune/src
+CXX=g++-10 make
+PREFIX=$HOME/.local make install</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Debian</div>
+<div class="paragraph">
+<p>Kakoune can be found in Debian 9 (Stretch) and later releases.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo apt install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">FreeBSD</div>
+<div class="paragraph">
+<p>Kakoune is available in the official ports tree as
+<a href="https://www.freshports.org/editors/kakoune">editors/kakoune</a>.</p>
+</div>
+<div class="paragraph">
+<p>A binary package is also available and can be installed with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pkg install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">OpenBSD</div>
+<div class="paragraph">
+<p>Building on OpenBSD 6.7 amd64.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># pkg_add git gmake
+# git clone https://github.com/mawww/kakoune
+# cd kakoune
+# export CXX=clang++
+# gmake install</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Kakoune is available in the 6.7-current port tree as
+<a href="http://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/editors/kakoune/">editors/kakoune</a></p>
+</div>
+<div class="paragraph">
+<p>A binary package is also available for -current snapshot and can be installed with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># pkg_add kakoune</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running with support for plugins.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># pkg_add dash
+$ export KAKOUNE_POSIX_SHELL=/usr/local/bin/dash
+$ kak</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Solus</div>
+<div class="paragraph">
+<p>Kakoune is available in the Solus stable repository.</p>
+</div>
+<div class="paragraph">
+<p>It can be installed with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>eopkg install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Void</div>
+<div class="paragraph">
+<p>Kakoune is available in the repositories.</p>
+</div>
+<div class="paragraph">
+<p>It can be installed with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>xbps-install -S kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Termux</div>
+<div class="paragraph">
+<p>Kakoune is available in the repositories.</p>
+</div>
+<div class="paragraph">
+<p>It can be installed with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pkg install kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Nix</div>
+<div class="listingblock">
+<div class="content">
+<pre>nix-env -iA nixpkgs.kakoune</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running"><a class="anchor" href="#running"></a><a class="link" href="#running">3.3. Running</a></h3>
+<div class="paragraph">
+<p>Running <strong>kak</strong> launches a new kak session with a client on local terminal.
+Run <strong>kak -help</strong> to discover the valid command line flags.</p>
+</div>
+<div class="sect3">
+<h4 id="configuration"><a class="anchor" href="#configuration"></a><a class="link" href="#configuration">3.3.1. Configuration</a></h4>
+<div class="paragraph">
+<p>There are two directories containing Kakoune&#8217;s scripts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>runtime</code>: located in <code>../share/kak/</code> relative to the <code>kak</code> binary
+contains the system scripts, installed with Kakoune.</p>
+</li>
+<li>
+<p><code>userconf</code>: located in <code>$XDG_CONFIG_HOME/kak/</code>, which will fallback
+to <code>$HOME/.config/kak/</code> if <code>$XDG_CONFIG_HOME</code> is not set, containing
+the user configuration.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Unless <code>-n</code> is specified, Kakoune will load its startup script located
+at <code>${runtime}/kakrc</code> relative to the <code>kak</code> binary. This startup script
+is responsible for loading the user configuration.</p>
+</div>
+<div class="paragraph">
+<p>First, Kakoune will search recursively for <code>.kak</code> files in the <code>autoload</code>
+directory. It will first look for an <code>autoload</code> directory at
+<code>${userconf}/autoload</code> and will fallback to <code>${runtime}/autoload</code> if
+it does not exist.</p>
+</div>
+<div class="paragraph">
+<p>Once all those files are loaded, Kakoune will try to source
+<code>${runtime}/kakrc.local</code>, which is expected to contain distribution provided
+configuration.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the user configuration will load from <code>${userconf}/kakrc</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you create a user <code>autoload</code> directory in <code>${userconf}/autoload</code>,
+the system one at <code>${runtime}/autoload</code> will not load anymore. You can
+add a symbolic link to it (or to individual scripts) inside
+<code>${userconf}/autoload</code> to keep loading system scripts.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="basic-interaction"><a class="anchor" href="#basic-interaction"></a><a class="link" href="#basic-interaction">4. Basic Interaction</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="selections"><a class="anchor" href="#selections"></a><a class="link" href="#selections">4.1. Selections</a></h3>
+<div class="paragraph">
+<p>The main concept in Kakoune is the selection. A selection is an inclusive,
+directed range of characters. A selection has two ends, the anchor and the
+cursor.</p>
+</div>
+<div class="paragraph">
+<p>There is always at least one selection, and a selection is always at least
+one character (in which case the anchor and cursor of the selection are
+on the same character).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="normal-mode"><a class="anchor" href="#normal-mode"></a><a class="link" href="#normal-mode">4.2. Normal Mode</a></h3>
+<div class="paragraph">
+<p>In normal mode, keys are not inserted directly inside the buffer, but are editing
+commands. These commands provide ways to manipulate either the selections themselves
+or the selected text.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="insert-mode"><a class="anchor" href="#insert-mode"></a><a class="link" href="#insert-mode">4.3. Insert Mode</a></h3>
+<div class="paragraph">
+<p>When entering insert mode, keys are now directly inserted before each
+selection&#8217;s cursor. Some additional keys are recognised in insert mode:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;esc&gt;</code>: leave insert mode</p>
+</li>
+<li>
+<p><code>&lt;backspace&gt;</code>: delete characters before cursors</p>
+</li>
+<li>
+<p><code>&lt;del&gt;</code>: delete characters under cursors</p>
+</li>
+<li>
+<p><code>&lt;left&gt;, &lt;right&gt;, &lt;up&gt;, &lt;down&gt;</code>: move cursors in given direction</p>
+</li>
+<li>
+<p><code>&lt;home&gt;</code>: move cursors to line beginning</p>
+</li>
+<li>
+<p><code>&lt;end&gt;</code>: move cursors to line ending</p>
+</li>
+<li>
+<p><code>&lt;c-n&gt;</code>: select next completion candidate</p>
+</li>
+<li>
+<p><code>&lt;c-p&gt;</code>: select previous completion candidate</p>
+</li>
+<li>
+<p><code>&lt;c-x&gt;</code>: explicit insert completion query, followed by:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>f</code>: explicit file completion</p>
+</li>
+<li>
+<p><code>w</code>: explicit word completion</p>
+</li>
+<li>
+<p><code>l</code>: explicit line completion</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>&lt;c-o&gt;</code>: disable automatic completion for this insert session</p>
+</li>
+<li>
+<p><code>&lt;c-r&gt;</code>: insert contents of the register given by next key</p>
+</li>
+<li>
+<p><code>&lt;c-v&gt;</code>: insert next keystroke directly into the buffer,
+without interpreting it</p>
+</li>
+<li>
+<p><code>&lt;c-u&gt;</code>: commit changes up to now as a single undo group</p>
+</li>
+<li>
+<p><code>&lt;a-;&gt;</code>: escape to normal mode for a single command</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="movement"><a class="anchor" href="#movement"></a><a class="link" href="#movement">4.4. Movement</a></h3>
+<div class="paragraph">
+<p>See <a href="#appending">Appending</a> below for instructions on extending (appending to) the current selection in order to select more text.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>h</code>: select the character on the left of selection end</p>
+</li>
+<li>
+<p><code>j</code>: select the character below the selection end</p>
+</li>
+<li>
+<p><code>k</code>: select the character above the selection end</p>
+</li>
+<li>
+<p><code>l</code>: select the character on the right of selection end</p>
+</li>
+<li>
+<p><code>w</code>: select the word and following whitespaces on the right of selection end</p>
+</li>
+<li>
+<p><code>b</code>: select preceding whitespaces and the word on the left of selection end</p>
+</li>
+<li>
+<p><code>e</code>: select preceding whitespaces and the word on the right of selection end</p>
+</li>
+<li>
+<p><code>&lt;a-[wbe]&gt;</code>: same as [wbe], but select WORD instead of word</p>
+</li>
+<li>
+<p><code>f</code>: select to (including) the next occurrence of the given character</p>
+</li>
+<li>
+<p><code>t</code>: select until (excluding) the next occurrence of the given character</p>
+</li>
+<li>
+<p><code>&lt;a-[ft]&gt;</code>: same as [ft] but in the other direction</p>
+</li>
+<li>
+<p><code>m</code>: select to matching character</p>
+</li>
+<li>
+<p><code>M</code>: extend selection to matching character</p>
+</li>
+<li>
+<p><code>x</code>: expand selections to contain full lines (including end-of-lines)</p>
+</li>
+<li>
+<p><code>&lt;a-x&gt;</code>: trim selections to only contain full lines (not including last
+end-of-line)</p>
+</li>
+<li>
+<p><code>%</code>: select whole buffer</p>
+</li>
+<li>
+<p><code>&lt;a-h&gt;</code>: select to line begin</p>
+</li>
+<li>
+<p><code>&lt;a-l&gt;</code>: select to line end</p>
+</li>
+<li>
+<p><code>/</code>: search (select next match)</p>
+</li>
+<li>
+<p><code>&lt;a-/&gt;</code>: search (select previous match)</p>
+</li>
+<li>
+<p><code>?</code>: search (extend to next match)</p>
+</li>
+<li>
+<p><code>&lt;a-?&gt;</code>: search (extend to previous match)</p>
+</li>
+<li>
+<p><code>n</code>: select next match</p>
+</li>
+<li>
+<p><code>N</code>: add a new selection with next match</p>
+</li>
+<li>
+<p><code>&lt;a-n&gt;</code>: select previous match</p>
+</li>
+<li>
+<p><code>&lt;a-N&gt;</code>: add a new selection with previous match</p>
+</li>
+<li>
+<p><code>pageup, &lt;c-b&gt;</code>: scroll one page up</p>
+</li>
+<li>
+<p><code>pagedown, &lt;c-f&gt;</code>: scroll one page down</p>
+</li>
+<li>
+<p><code>&lt;c-u&gt;</code>: scroll half a page up</p>
+</li>
+<li>
+<p><code>&lt;c-d&gt;</code>: scroll half a page down</p>
+</li>
+<li>
+<p><code>)</code>: rotate selections (the main selection becomes the next one)</p>
+</li>
+<li>
+<p><code>(</code>: rotate selections backwards</p>
+</li>
+<li>
+<p><code>;</code>: reduce selections to their cursor</p>
+</li>
+<li>
+<p><code>&lt;a-;&gt;</code>: flip the selections' direction</p>
+</li>
+<li>
+<p><code>&lt;a-:&gt;</code>: ensure selections are in forward direction (cursor after anchor)</p>
+</li>
+<li>
+<p><code>&lt;a-.&gt;</code>: repeat last object or <code>f</code>/<code>t</code> selection command.</p>
+</li>
+<li>
+<p><code>_</code>: trim selections</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A word is a sequence of alphanumeric characters or underscore, a WORD is a
+sequence of non whitespace characters.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="appending"><a class="anchor" href="#appending"></a><a class="link" href="#appending">4.5. Appending</a></h3>
+<div class="paragraph">
+<p>For most <a href="#movement">Movement</a> commands, using <code>Shift</code> extends the current selection
+instead of replacing it.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wWW</code> selects 3 consecutive words: first <code>w</code> selects a word, then <code>WW</code> extends the selection two words further.</p>
+</li>
+<li>
+<p><code>f/F/</code> selects up to and including the second <code>/</code> character forward.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-counts"><a class="anchor" href="#using-counts"></a><a class="link" href="#using-counts">4.6. Using Counts</a></h3>
+<div class="paragraph">
+<p>Most selection commands also support counts, which are entered before the
+command itself.</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>3W</code> selects 3 consecutive words and <code>3w</code> select the third word on
+the right of selection end.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="disabling-hooks"><a class="anchor" href="#disabling-hooks"></a><a class="link" href="#disabling-hooks">4.7. Disabling Hooks</a></h3>
+<div class="paragraph">
+<p>Any normal mode command can be prefixed with <code>\</code> which will disable hook execution
+for the duration for the command (including the duration of modes the command could
+move to, so <code>\i</code> will disable hooks for the whole insert session).</p>
+</div>
+<div class="paragraph">
+<p>As autoindentation is implemented in terms of hooks, this can be used to disable
+it when pasting text.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changes"><a class="anchor" href="#changes"></a><a class="link" href="#changes">4.8. Changes</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>i</code>: enter insert mode before each selection</p>
+</li>
+<li>
+<p><code>a</code>: enter insert mode after each selection</p>
+</li>
+<li>
+<p><code>d</code>: yank and delete each selection</p>
+</li>
+<li>
+<p><code>c</code>: yank and delete each selection and enter insert mode</p>
+</li>
+<li>
+<p><code>.</code>: repeat last insert mode change (<code>i</code>, <code>a</code>, or <code>c</code>, including
+the inserted text)</p>
+</li>
+<li>
+<p><code>&lt;a-d&gt;</code>: delete each selection</p>
+</li>
+<li>
+<p><code>&lt;a-c&gt;</code>: delete each selection and enter insert mode</p>
+</li>
+<li>
+<p><code>I</code>: enter insert mode at each selection begin line start</p>
+</li>
+<li>
+<p><code>A</code>: enter insert mode at each selection end line end</p>
+</li>
+<li>
+<p><code>o</code>: enter insert mode in one (or given count) new lines below
+each selection end</p>
+</li>
+<li>
+<p><code>O</code>: enter insert mode in one (or given count)  new lines above
+each selection begin</p>
+</li>
+<li>
+<p><code>&lt;a-o&gt;</code>: add an empty line below each cursor</p>
+</li>
+<li>
+<p><code>&lt;a-O&gt;</code>: add an empty line above each cursor</p>
+</li>
+<li>
+<p><code>y</code>: yank selections</p>
+</li>
+<li>
+<p><code>p</code>: paste after each selection end</p>
+</li>
+<li>
+<p><code>P</code>: paste before each selection begin</p>
+</li>
+<li>
+<p><code>&lt;a-p&gt;</code>: paste all after each selection end</p>
+</li>
+<li>
+<p><code>&lt;a-P&gt;</code>: paste all before each selection begin</p>
+</li>
+<li>
+<p><code>R</code>: replace each selection with yanked text</p>
+</li>
+<li>
+<p><code>&lt;a-R&gt;</code>: replace each selection with every yanked text</p>
+</li>
+<li>
+<p><code>r</code>: replace each character with the next entered one</p>
+</li>
+<li>
+<p><code>&lt;a-j&gt;</code>: join selected lines</p>
+</li>
+<li>
+<p><code>&lt;a-J&gt;</code>: join selected lines and select spaces inserted
+in place of line breaks</p>
+</li>
+<li>
+<p><code>&lt;a-_&gt;</code>: merge contiguous selections together (works across lines as well)</p>
+</li>
+<li>
+<p><code>&lt;gt&gt; (&gt;)</code>: indent selected lines</p>
+</li>
+<li>
+<p><code>&lt;a-gt&gt;</code>: indent selected lines, including empty lines</p>
+</li>
+<li>
+<p><code>&lt;lt&gt; (&lt;)</code>: deindent selected lines</p>
+</li>
+<li>
+<p><code>&lt;a-lt&gt;</code>: deindent selected lines, do not remove incomplete
+indent (3 leading spaces when indent is 4)</p>
+</li>
+<li>
+<p><code>|</code>: pipe each selection through the given external filter program
+and replace the selection with its output.</p>
+</li>
+<li>
+<p><code>&lt;a-|&gt;</code>: pipe each selection through the given external filter program
+and ignore its output</p>
+</li>
+<li>
+<p><code>!</code>: insert command output before each selection</p>
+</li>
+<li>
+<p><code>&lt;a-!&gt;</code>: append command output after each selection</p>
+</li>
+<li>
+<p><code>u</code>: undo last change</p>
+</li>
+<li>
+<p><code>&lt;c-k&gt;</code>: move backward in history</p>
+</li>
+<li>
+<p><code>U</code>: redo last change</p>
+</li>
+<li>
+<p><code>&lt;c-j&gt;</code>: move forward in history</p>
+</li>
+<li>
+<p><code>&amp;</code>: align selections, align the cursor of selections by inserting
+spaces before the first character of the selection</p>
+</li>
+<li>
+<p><code>&lt;a-&amp;&gt;</code>: copy indent, copy the indentation of the main selection
+(or the count one if a count is given) to all other ones</p>
+</li>
+<li>
+<p><code>`</code>: to lower case</p>
+</li>
+<li>
+<p><code>~</code>: to upper case</p>
+</li>
+<li>
+<p><code>&lt;a-`&gt;</code>: swap case</p>
+</li>
+<li>
+<p><code>@</code>: convert selected tabs to spaces, uses the buffer tabstop option or
+the count parameter for tabstop.</p>
+</li>
+<li>
+<p><code>&lt;a-@&gt;</code>: convert selected spaces to tabs, uses the buffer tabstop option
+or the count parameter for tabstop.</p>
+</li>
+<li>
+<p><code>&lt;a-)&gt;</code>: rotate selections content, if specified, the count groups
+selections, so <code>3&lt;a-)&gt;</code> rotate (1, 2, 3) and (4, 5, 6)
+independently.</p>
+</li>
+<li>
+<p><code>&lt;a-(&gt;</code>: rotate selections content backwards</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="goto-commands"><a class="anchor" href="#goto-commands"></a><a class="link" href="#goto-commands">4.9. Goto Commands</a></h3>
+<div class="paragraph">
+<p>Commands beginning with <code>g</code> are used to goto certain position and or buffer.
+If a count is given prior to hitting <code>g</code>, <code>g</code> will jump to the given line.
+Using <code>G</code> will extend the selection rather than jump.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#goto-commands" class="xref page"><code>:doc keys goto-commands</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="view-commands"><a class="anchor" href="#view-commands"></a><a class="link" href="#view-commands">4.10. View commands</a></h3>
+<div class="paragraph">
+<p>Commands beginning with <code>v</code> permit to center or scroll the current
+view. Using <code>V</code> will lock view mode until <code>&lt;esc&gt;</code> is hit</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#view-commands" class="xref page"><code>:doc keys view-commands</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marks"><a class="anchor" href="#marks"></a><a class="link" href="#marks">4.11. Marks</a></h3>
+<div class="paragraph">
+<p>Current selections position can be saved in a register and restored later on.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#marks" class="xref page"><code>:doc keys marks</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jump-list"><a class="anchor" href="#jump-list"></a><a class="link" href="#jump-list">4.12. Jump list</a></h3>
+<div class="paragraph">
+<p>Some commands, like the goto commands, buffer switch or search commands,
+push the previous selections to the client&#8217;s jump list.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#jump-list" class="xref page"><code>:doc keys jump-list</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multi-selection"><a class="anchor" href="#multi-selection"></a><a class="link" href="#multi-selection">4.13. Multi Selection</a></h3>
+<div class="paragraph">
+<p>Kak was designed from the start to handle multiple selections.
+One way to get a multiselection is via the <code>s</code> key.</p>
+</div>
+<div class="paragraph">
+<p>For example, to change all occurrences of word 'roger' to word 'marcel'
+in a paragraph, here is what can be done:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>select the paragraph with <code>x</code> then enough <code>J</code></p>
+</li>
+<li>
+<p>press <code>s</code> and enter roger, then enter</p>
+</li>
+<li>
+<p>now paragraph selection was replaced with multiselection of each roger in
+the paragraph</p>
+</li>
+<li>
+<p>press <code>c</code> and marcel&lt;esc&gt; to replace rogers with marcels</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A multiselection can also be obtained with <code>S</code>, which splits the current
+selection according to the regex entered. To split a comma separated list,
+use <code>S</code> then ', *'</p>
+</div>
+<div class="paragraph">
+<p>The regex syntax supported by Kakoune is the based on the ECMAScript script
+syntax and is described at <a href="doc/pages/regex.html" class="xref page"><code>:doc regex</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><code>s</code> and <code>S</code> share the search pattern with <code>/</code>, and hence entering an empty
+pattern uses the last one.</p>
+</div>
+<div class="paragraph">
+<p>As a convenience, <code>&lt;a-s&gt;</code> allows you to split the current selections on
+line boundaries.</p>
+</div>
+<div class="paragraph">
+<p>To clear multiple selections, use <code>,</code>. To keep only the nth selection
+use <code>n</code> followed by <code>,</code>, in order to remove a selection, use <code>&lt;a-,&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;a-k&gt;</code> allows you to enter a regex and keep only the selections that
+contains a match for this regex. Using <code>&lt;a-K&gt;</code> you can keep the selections
+not containing a match.</p>
+</div>
+<div class="paragraph">
+<p><code>C</code> duplicates selections on the lines that follow them.
+<code>&lt;a-C&gt;</code> does the same but on the preceding lines.</p>
+</div>
+<div class="paragraph">
+<p><code>$</code> allows you to enter a shell command and pipe each selection to it.
+Selections whose shell command returns 0 will be kept, other will be dropped.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="object-selection"><a class="anchor" href="#object-selection"></a><a class="link" href="#object-selection">4.14. Object Selection</a></h3>
+<div class="paragraph">
+<p>Objects are specific portions of text, like sentences, paragraphs, numbers…
+Kakoune offers many keys allowing you to select various text objects.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#object-selection" class="xref page"><code>:doc keys object-selection</code></a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="commands"><a class="anchor" href="#commands"></a><a class="link" href="#commands">5. Commands</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When pressing <code>:</code> in normal mode, Kakoune will open a prompt to enter a command.</p>
+</div>
+<div class="paragraph">
+<p>Commands are used for non editing tasks, such as opening a buffer, writing the
+current one, quitting, etc.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#prompt-commands" class="xref page"><code>:doc keys prompt-commands</code></a>.</p>
+</div>
+<div class="sect2">
+<h3 id="basic-commands"><a class="anchor" href="#basic-commands"></a><a class="link" href="#basic-commands">5.1. Basic Commands</a></h3>
+<div class="paragraph">
+<p>Some commands take an exclamation mark (<code>!</code>), which can be used to force
+the execution of the command (i.e. to quit a modified buffer, the
+command <code>q!</code> has to be used).</p>
+</div>
+<div class="paragraph">
+<p>Commands starting with horizontal whitespace (e.g. a space) will not be
+saved in the command history.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cd [&lt;directory&gt;]</code>: change the current directory to <code>&lt;directory&gt;</code>, or the home directory if unspecified</p>
+</li>
+<li>
+<p><code>doc &lt;topic&gt;</code>: display documentation about a topic. The completion list
+displays the available topics.</p>
+</li>
+<li>
+<p><code>e[dit][!] &lt;filename&gt; [&lt;line&gt; [&lt;column&gt;]]</code>: open buffer on file, go to given
+line and column. If file is already opened, just switch to this file.
+Use edit! to force reloading.</p>
+</li>
+<li>
+<p><code>w[rite][!] [&lt;filename&gt;]</code>: write buffer to &lt;filename&gt; or use its name if
+filename is not given. If the file is write-protected, its
+permissions are temporarily changed to allow saving the buffer and
+restored afterwards when the write! command is used.</p>
+</li>
+<li>
+<p><code>w[rite]a[ll]</code>: write all buffers that are associated to a file.</p>
+</li>
+<li>
+<p><code>q[uit][!] [&lt;exit status&gt;]</code>: exit Kakoune, use quit! to force quitting even
+if there is some unsaved buffers remaining. If specified, the client exit
+status will be set to &lt;exit status&gt;.</p>
+</li>
+<li>
+<p><code>w[a]q[!] [&lt;exit status&gt;]</code>: write the current buffer (or all buffers when
+<code>waq</code> is used) and quit. If specified, the client exit status will be set
+to &lt;exit status&gt;.</p>
+</li>
+<li>
+<p><code>kill[!]</code>: terminate the current session, all the clients as well as the server,
+use kill! to ignore unsaved buffers</p>
+</li>
+<li>
+<p><code>b[uffer] &lt;name&gt;</code>: switch to buffer &lt;name&gt;</p>
+</li>
+<li>
+<p><code>b[uffer]n[ext]</code>: switch to the next buffer</p>
+</li>
+<li>
+<p><code>b[uffer]p[rev]</code>: switch to the previous buffer</p>
+</li>
+<li>
+<p><code>d[el]b[uf][!] [&lt;name&gt;]</code>: delete the buffer &lt;name&gt;</p>
+</li>
+<li>
+<p><code>source &lt;filename&gt;</code>: execute commands in &lt;filename&gt;</p>
+</li>
+<li>
+<p><code>colorscheme &lt;name&gt;</code>: load named colorscheme.</p>
+</li>
+<li>
+<p><code>rename-client &lt;name&gt;</code>: set current client name</p>
+</li>
+<li>
+<p><code>rename-buffer &lt;name&gt;</code>: set current buffer name</p>
+</li>
+<li>
+<p><code>rename-session &lt;name&gt;</code>: set current session name</p>
+</li>
+<li>
+<p><code>echo [options] &lt;text&gt;</code>: show &lt;text&gt; in status line, with the following options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-markup</code>: expand the markup strings in &lt;text&gt;</p>
+</li>
+<li>
+<p><code>-debug</code>: print the given text to the <code>*debug*</code> buffer</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>nop</code>: does nothing, but as with every other commands, arguments may be
+evaluated. So nop can be used for example to execute a shell command
+while being sure that its output will not be interpreted by kak.
+<code>:%sh{ echo echo tchou }</code> will echo tchou in Kakoune, whereas
+<code>:nop %sh{ echo echo tchou }</code> will not, but both will execute the
+shell command.</p>
+</li>
+<li>
+<p><code>fail &lt;text&gt;</code>: raise an error, uses &lt;text&gt; as its description</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multiple-commands"><a class="anchor" href="#multiple-commands"></a><a class="link" href="#multiple-commands">5.2. Multiple commands</a></h3>
+<div class="paragraph">
+<p>Multiple commands can be separated either by new lines or by semicolons,
+as such a semicolon must be escaped with <code>\;</code> to be considered as a literal
+semicolon argument.</p>
+</div>
+<div class="sect3">
+<h4 id="string-syntax-and-expansions"><a class="anchor" href="#string-syntax-and-expansions"></a><a class="link" href="#string-syntax-and-expansions">5.2.1. String syntax and expansions</a></h4>
+<div class="paragraph">
+<p>Values, options and shell context can be interpolated in strings.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/expansions.html" class="xref page"><code>:doc expansions</code></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-autoloading"><a class="anchor" href="#configuration-autoloading"></a><a class="link" href="#configuration-autoloading">6. Configuration &amp; Autoloading</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="kakrc"><a class="anchor" href="#kakrc"></a><a class="link" href="#kakrc">6.1. Kakrc</a></h3>
+<div class="paragraph">
+<p>If not launched with the <code>-n</code> switch, Kakoune will source the
+<code>../share/kak/kakrc</code> file relative to the <code>kak</code> binary, which
+will source additional files:</p>
+</div>
+<div class="paragraph">
+<p>If the <code>$XDG_CONFIG_HOME/kak/autoload</code> directory exists, load every
+<code>*.kak</code> files in it, and load recursively any subdirectory.</p>
+</div>
+<div class="paragraph">
+<p>If it does not exist, falls back to the site wide autoload directory
+in <code>../share/kak/autoload/</code>.</p>
+</div>
+<div class="paragraph">
+<p>After that, if it exists, source the <code>$XDG_CONFIG_HOME/kak/kakrc</code> file
+which should be used for user configuration.</p>
+</div>
+<div class="paragraph">
+<p>In order to continue autoloading site-wide files with a local autoload
+directory, just add a symbolic link to <code>../share/kak/autoload/</code> into
+your local autoload directory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="color-schemes"><a class="anchor" href="#color-schemes"></a><a class="link" href="#color-schemes">6.2. Color Schemes</a></h3>
+<div class="paragraph">
+<p>Kakoune ships with some color schemes that are installed to
+<code>../share/kak/colors/</code>. If <code>$XDG_CONFIG_HOME/kak/colors/</code> is present
+the builtin command <code>colorscheme</code> will offer completion for those
+color schemes. If a scheme is duplicated in userspace, it will take
+precedence.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="options"><a class="anchor" href="#options"></a><a class="link" href="#options">7. Options</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune can store named and typed values that can be used both to
+customize the core editor behaviour, and to keep data used by extension
+scripts.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/options.html" class="xref page"><code>:doc options</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="advanced-topics"><a class="anchor" href="#advanced-topics"></a><a class="link" href="#advanced-topics">8. Advanced topics</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="faces"><a class="anchor" href="#faces"></a><a class="link" href="#faces">8.1. Faces</a></h3>
+<div class="paragraph">
+<p>Faces describe how characters are displayed on the screen: color, bold, italic&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/faces.html" class="xref page"><code>:doc faces</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="registers"><a class="anchor" href="#registers"></a><a class="link" href="#registers">8.2. Registers</a></h3>
+<div class="paragraph">
+<p>Registers are named lists of text. They are used for various purposes,
+like storing the last yanked text, or the captured groups associated with the selections.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/registers.html" class="xref page"><code>:doc registers</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="macros"><a class="anchor" href="#macros"></a><a class="link" href="#macros">8.3. Macros</a></h3>
+<div class="paragraph">
+<p>Kakoune can record and replay a sequence of key presses.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#macros" class="xref page"><code>:doc keys macros</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="search-selection"><a class="anchor" href="#search-selection"></a><a class="link" href="#search-selection">8.4. Search selection</a></h3>
+<div class="paragraph">
+<p>Using the <code>*</code> key, you can set the search pattern to the current selection.
+See <a href="doc/pages/keys.html#searching" class="xref page"><code>:doc keys searching</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="regex-syntax"><a class="anchor" href="#regex-syntax"></a><a class="link" href="#regex-syntax">8.5. Regex syntax</a></h3>
+<div class="paragraph">
+<p>Kakoune regex syntax is based on the ECMAScript syntax (ECMA-262 standard).
+It always runs on Unicode codepoint sequences, not on bytes.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/regex.html" class="xref page"><code>:doc regex</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exec-and-eval"><a class="anchor" href="#exec-and-eval"></a><a class="link" href="#exec-and-eval">8.6. Exec and Eval</a></h3>
+<div class="paragraph">
+<p>The <code>execute-keys</code> and <code>evaluate-commands</code> are useful for scripting
+in non interactive contexts.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/execeval.html" class="xref page"><code>:doc execeval</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="insert-mode-completion"><a class="anchor" href="#insert-mode-completion"></a><a class="link" href="#insert-mode-completion">8.7. Insert mode completion</a></h3>
+<div class="paragraph">
+<p>Kakoune can propose completions while inserting text: filenames, words, lines…</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/keys.html#insert-mode-completion" class="xref page"><code>:doc keys insert-mode-completion</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="escape-to-normal-mode"><a class="anchor" href="#escape-to-normal-mode"></a><a class="link" href="#escape-to-normal-mode">8.8. Escape to normal mode</a></h3>
+<div class="paragraph">
+<p>From insert mode, pressing <code>&lt;a-;&gt;</code> allows you to execute a single normal mode
+command. This provides a few advantages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The selections are not modified: when leaving insert mode using <code>&lt;esc&gt;</code> the
+selections can change, for example when insert mode was entered with <code>a</code> the
+cursor will go back one char. Or if on an end of line the cursor will go back
+left (if possible).</p>
+</li>
+<li>
+<p>The modes are nested: that means the normal mode can enter prompt (with <code>:</code>),
+or any other modes (using <code>:on-key</code> or <code>:menu</code> for example), and these modes
+will get back to the insert mode afterwards.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This feature is tailored for scripting/macros, as it provides a more predictable
+behaviour than leaving insert mode with <code>&lt;esc&gt;</code>, executing normal mode command
+and entering back insert mode (with which binding ?)</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/modes.html" class="xref page"><code>:doc modes</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="highlighters"><a class="anchor" href="#highlighters"></a><a class="link" href="#highlighters">8.9. Highlighters</a></h3>
+<div class="paragraph">
+<p>Manipulation of the displayed text, such as syntax coloration and wrapping
+is done through highlighters.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/highlighters.html" class="xref page"><code>:doc highlighters</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hooks"><a class="anchor" href="#hooks"></a><a class="link" href="#hooks">8.10. Hooks</a></h3>
+<div class="paragraph">
+<p>Commands can be registered to be executed when certain events arise with hooks.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/hooks.html" class="xref page"><code>:doc hooks</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="key-mapping"><a class="anchor" href="#key-mapping"></a><a class="link" href="#key-mapping">8.11. Key Mapping</a></h3>
+<div class="paragraph">
+<p>Custom key shortcuts can be registered through mappings.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/mapping.html" class="xref page"><code>:doc mapping</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="defining-commands-and-aliases"><a class="anchor" href="#defining-commands-and-aliases"></a><a class="link" href="#defining-commands-and-aliases">8.12. Defining Commands and Aliases</a></h3>
+<div class="paragraph">
+<p>New commands can be created using <code>:define-command</code>.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/commands.html#declaring-new-commands" class="xref page"><code>:doc commands declaring-new-commands</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>They can be given additional short names depending of the scope with <code>:alias</code>.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/commands.html#aliases" class="xref page"><code>:doc commands aliases</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Some helper commands are available to define composite commands.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/commands.html#helpers" class="xref page"><code>:doc commands helpers</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fifo-buffers"><a class="anchor" href="#fifo-buffers"></a><a class="link" href="#fifo-buffers">8.13. FIFO Buffers</a></h3>
+<div class="paragraph">
+<p>FIFO buffers are very useful for running some commands asynchronously while
+progressively displaying their result in Kakoune.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="doc/pages/buffers.html#fifo-buffers" class="xref page"><code>:doc buffers fifo-buffers</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="menus"><a class="anchor" href="#menus"></a><a class="link" href="#menus">8.14. Menus</a></h3>
+<div class="paragraph">
+<p>When a menu is displayed, you can use <code>j</code>, <code>&lt;c-n&gt;</code> or <code>&lt;tab&gt;</code> to select the next
+entry, and <code>k</code>, <code>&lt;c-p&gt;</code> or <code>&lt;shift-tab&gt;</code> to select the previous one.</p>
+</div>
+<div class="paragraph">
+<p>Using the <code>/</code> key, you can enter some regex in order to restrict available choices
+to the matching ones.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="credits"><a class="anchor" href="#credits"></a><a class="link" href="#credits">9. Credits</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Thanks to <a href="https://github.com/p0nce">p0nce</a> for designing the
+<a href="https://github.com/mawww/kakoune/blob/master/doc/kakoune_logo.svg">Kakoune
+logo</a>.</p>
+</div>
+<div class="paragraph">
+<p>And thanks to all the
+<a href="https://github.com/mawww/kakoune/graphs/contributors">contributors</a> who help
+move the project forward!</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

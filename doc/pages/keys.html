@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Keys :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/keys.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Keys</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#key-syntax">1. Key Syntax</a></li>
+<li><a href="#insert-mode">2. Insert mode</a></li>
+<li><a href="#insert-mode-completion">3. Insert mode completion</a></li>
+<li><a href="#using-counts">4. Using Counts</a></li>
+<li><a href="#disabling-hooks">5. Disabling Hooks</a></li>
+<li><a href="#movement">6. Movement</a></li>
+<li><a href="#changes">7. Changes</a></li>
+<li><a href="#changes-through-external-programs">8. Changes through external programs</a></li>
+<li><a href="#searching">9. Searching</a></li>
+<li><a href="#goto-commands">10. Goto commands</a></li>
+<li><a href="#view-commands">11. View commands</a></li>
+<li><a href="#marks">12. Marks</a></li>
+<li><a href="#macros">13. Macros</a></li>
+<li><a href="#jump-list">14. Jump list</a></li>
+<li><a href="#multiple-selections">15. Multiple selections</a></li>
+<li><a href="#object-selection">16. Object Selection</a>
+<ul class="sectlevel2">
+<li><a href="#whole-object">16.1. Whole object</a></li>
+<li><a href="#inner-object">16.2. Inner object</a></li>
+<li><a href="#objects-types">16.3. Objects types</a></li>
+</ul>
+</li>
+<li><a href="#prompt-commands">17. Prompt commands</a></li>
+<li><a href="#user-commands">18. User commands</a></li>
+<li><a href="#cancelling-operations">19. Cancelling operations</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="key-syntax"><a class="anchor" href="#key-syntax"></a><a class="link" href="#key-syntax">1. Key Syntax</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Usual keys are written using their ascii character, including capital
+keys. Non printable keys use an alternate name, written between <strong>&lt;</strong>
+and <strong>&gt;</strong>, such as <strong>&lt;esc&gt;</strong> or <strong>&lt;del&gt;</strong>. Modified keys are written between
+<strong>&lt;</strong> and <strong>&gt;</strong> as well, with the modifier specified as either <strong>c</strong> for
+Control, <strong>a</strong> for Alt, or <strong>s</strong> for Shift, followed by a <strong>-</strong> and the key (either
+its name or ascii character), for example <strong>&lt;c-x&gt;</strong>, <strong>&lt;a-space&gt;</strong>, <strong>&lt;c-a-w&gt;</strong>.</p>
+</div>
+<div class="paragraph">
+<p>In order to bind some keys to arbitrary ones, refer to <a href="mapping.html" class="xref page"><code>:doc mapping</code></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="insert-mode"><a class="anchor" href="#insert-mode"></a><a class="link" href="#insert-mode">2. Insert mode</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;esc&gt;</strong></dt>
+<dd>
+<p>leave insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;backspace&gt;</strong></dt>
+<dd>
+<p>delete characters before cursors</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;del&gt;</strong></dt>
+<dd>
+<p>delete characters under cursors</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;left&gt;</strong>, <strong>&lt;right&gt;</strong>, <strong>&lt;up&gt;</strong>, <strong>&lt;down&gt;</strong></dt>
+<dd>
+<p>move the cursors in given direction</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;home&gt;</strong></dt>
+<dd>
+<p>move cursors to line begin</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;end&gt;</strong></dt>
+<dd>
+<p>move cursors to end of line</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-r&gt;</strong></dt>
+<dd>
+<p>insert contents of the register given by next key</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-v&gt;</strong></dt>
+<dd>
+<p>insert next keystroke directly into the buffer, without interpreting it</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-u&gt;</strong></dt>
+<dd>
+<p>commit changes up to now as a single undo group</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-;&gt;</strong>, <strong>&lt;a-semicolon&gt;</strong></dt>
+<dd>
+<p>escape to normal mode for a single command</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="insert-mode-completion"><a class="anchor" href="#insert-mode-completion"></a><a class="link" href="#insert-mode-completion">3. Insert mode completion</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>completers</code> option controls automatic completion, which kicks in when
+the value specified in the <code>idle_timeout</code> option is reached.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;c-o&gt;</strong></dt>
+<dd>
+<p>toggle automatic completion</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-n&gt;</strong></dt>
+<dd>
+<p>select next completion candidate</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-p&gt;</strong></dt>
+<dd>
+<p>select previous completion candidate</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-x&gt;</strong></dt>
+<dd>
+<p>explicit insert completion query, followed by:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>f</strong></dt>
+<dd>
+<p>explicit file completion</p>
+</dd>
+<dt class="hdlist1"><strong>w</strong></dt>
+<dd>
+<p>explicit word completion (current buffer)</p>
+</dd>
+<dt class="hdlist1"><strong>W</strong></dt>
+<dd>
+<p>explicit word completion (all buffers)</p>
+</dd>
+<dt class="hdlist1"><strong>l</strong></dt>
+<dd>
+<p>explicit line completion (current buffer)</p>
+</dd>
+<dt class="hdlist1"><strong>L</strong></dt>
+<dd>
+<p>explicit line completion (all buffers)</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-counts"><a class="anchor" href="#using-counts"></a><a class="link" href="#using-counts">4. Using Counts</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In normal mode, commands can be prefixed with a numeric <code>count</code>, which can control
+the command behaviour.</p>
+</div>
+<div class="paragraph">
+<p>For example, <strong>3W</strong> selects 3 consecutive words and <strong>3w</strong> select the third word on
+the right of the end of each selection.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disabling-hooks"><a class="anchor" href="#disabling-hooks"></a><a class="link" href="#disabling-hooks">5. Disabling Hooks</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Any normal mode command can be prefixed with <code>\</code> which will disable hook execution
+for the duration for the command (including the duration of modes the command could
+move to, so <code>\i</code> will disable hooks for the whole insert session) (see
+<a href="hooks.html" class="xref page"><code>:doc hooks</code></a>).</p>
+</div>
+<div class="paragraph">
+<p>As autoindentation is implemented in terms of hooks, this can be used to disable
+it when pasting text.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="movement"><a class="anchor" href="#movement"></a><a class="link" href="#movement">6. Movement</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>'word' is a sequence of alphanumeric characters, or those in the <code>extra_word_chars</code>
+option (see <a href="options.html#builtin-options" class="xref page"><code>:doc options builtin-options</code></a>).
+'WORD' is a sequence of non whitespace characters. Generally, a movement on its own
+will move each selection to cover the text moved over, while holding down
+the Shift modifier and moving will extend each selection instead.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>h</strong></dt>
+<dd>
+<p>select the character on the left of the end of each selection
+<code>&lt;left&gt;</code> maps to this by default.
+(See <a href="mapping.html#default-mappings" class="xref page"><code>:doc mapping default-mappings</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>j</strong></dt>
+<dd>
+<p>select the character below the end of each selection
+<code>&lt;down&gt;</code> maps to this by default.
+(See <a href="mapping.html#default-mappings" class="xref page"><code>:doc mapping default-mappings</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>k</strong></dt>
+<dd>
+<p>select the character above the end of each selection
+<code>&lt;up&gt;</code> maps to this by default.
+(See <a href="mapping.html#default-mappings" class="xref page"><code>:doc mapping default-mappings</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>l</strong></dt>
+<dd>
+<p>select the character on the right of the end of each selection
+<code>&lt;right&gt;</code> maps to this by default.
+(See <a href="mapping.html#default-mappings" class="xref page"><code>:doc mapping default-mappings</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>w</strong></dt>
+<dd>
+<p>select the word and following whitespaces on the right of the end of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>b</strong></dt>
+<dd>
+<p>select preceding whitespaces and the word on the left of the end of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>e</strong></dt>
+<dd>
+<p>select preceding whitespaces and the word on the right of the end of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-[wbe]&gt;</strong></dt>
+<dd>
+<p>same as [wbe] but select WORD instead of word</p>
+</dd>
+<dt class="hdlist1"><strong>f</strong></dt>
+<dd>
+<p>select to the next occurrence of given character</p>
+</dd>
+<dt class="hdlist1"><strong>t</strong></dt>
+<dd>
+<p>select until the next occurrence of given character</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-[ft]&gt;</strong></dt>
+<dd>
+<p>same as [ft] but in the other direction</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-.&gt;</strong></dt>
+<dd>
+<p>repeat last object or <strong>f</strong>/<strong>t</strong> selection command</p>
+</dd>
+<dt class="hdlist1"><strong>m</strong></dt>
+<dd>
+<p>select to the next sequence enclosed by matching characters, see the
+<code>matching_pairs</code> option in <a href="options.html" class="xref page"><code>:doc options</code></a></p>
+</dd>
+<dt class="hdlist1"><strong>M</strong></dt>
+<dd>
+<p>extend the current selection to the next sequence enclosed by matching
+character, see the <code>matching_pairs</code> option in <a href="options.html" class="xref page"><code>:doc options</code></a></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-m&gt;</strong></dt>
+<dd>
+<p>select to the previous sequence enclosed by matching characters, see the
+<code>matching_pairs</code> option in <a href="options.html" class="xref page"><code>:doc options</code></a></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-M&gt;</strong></dt>
+<dd>
+<p>extend the current selection to the previous sequence enclosed by matching
+characters, see the <code>matching_pairs</code> option in <a href="options.html" class="xref page"><code>:doc options</code></a></p>
+</dd>
+<dt class="hdlist1"><strong>x</strong></dt>
+<dd>
+<p>expand selections to contain full lines (including end-of-lines)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-x&gt;</strong></dt>
+<dd>
+<p>trim selections to only contain full lines (not including last
+end-of-line)</p>
+</dd>
+<dt class="hdlist1"><strong>%</strong>, <strong>&lt;percent&gt;</strong></dt>
+<dd>
+<p>select whole buffer</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-h&gt;</strong></dt>
+<dd>
+<p>select to line begin
+<code>&lt;home&gt;</code> maps to this by default.
+(See <a href="mapping.html#default-mappings" class="xref page"><code>:doc mapping default-mappings</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-l&gt;</strong></dt>
+<dd>
+<p>select to line end
+<code>&lt;end&gt;</code> maps to this by default.
+(See <a href="mapping.html#default-mappings" class="xref page"><code>:doc mapping default-mappings</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;pageup&gt;, &lt;c-b&gt;</strong></dt>
+<dd>
+<p>scroll one page up</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;pagedown&gt;, &lt;c-f&gt;</strong></dt>
+<dd>
+<p>scroll one page down</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-u&gt;</strong></dt>
+<dd>
+<p>scroll half a page up</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-d&gt;</strong></dt>
+<dd>
+<p>scroll half a page down</p>
+</dd>
+<dt class="hdlist1"><strong>;</strong>, <strong>&lt;semicolon&gt;</strong></dt>
+<dd>
+<p>reduce selections to their cursor</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-;&gt;</strong>, <strong>&lt;a-semicolon&gt;</strong></dt>
+<dd>
+<p>flip the direction of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-:&gt;</strong></dt>
+<dd>
+<p>ensure selections are in forward direction (cursor after anchor)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes"><a class="anchor" href="#changes"></a><a class="link" href="#changes">7. Changes</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yanking (copying) and pasting use the <strong>"</strong> register by default (See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>i</strong></dt>
+<dd>
+<p>enter insert mode before selections</p>
+</dd>
+<dt class="hdlist1"><strong>a</strong></dt>
+<dd>
+<p>enter insert mode after selections</p>
+</dd>
+<dt class="hdlist1"><strong>d</strong></dt>
+<dd>
+<p>yank and delete selections</p>
+</dd>
+<dt class="hdlist1"><strong>c</strong></dt>
+<dd>
+<p>yank and delete selections and enter insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>.</strong></dt>
+<dd>
+<p>repeat last insert mode change (<strong>i</strong>, <strong>a</strong>, or <strong>c</strong>, including the
+inserted text)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-d&gt;</strong></dt>
+<dd>
+<p>delete selections (not yanking)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-c&gt;</strong></dt>
+<dd>
+<p>delete selections and enter insert mode (not yanking)</p>
+</dd>
+<dt class="hdlist1"><strong>I</strong></dt>
+<dd>
+<p>enter insert mode at the beginning of the lines containing
+the start of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>A</strong></dt>
+<dd>
+<p>enter insert mode at the end of the lines containing
+the end of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>o</strong></dt>
+<dd>
+<p>enter insert mode in a new line (or in a given <code>count</code> of new lines)
+below the end of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>O</strong></dt>
+<dd>
+<p>enter insert mode in a new line (or in a given <code>count</code> of new lines)
+above the beginning of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-o&gt;</strong></dt>
+<dd>
+<p>add an empty line below cursor</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-O&gt;</strong></dt>
+<dd>
+<p>add an empty line above cursor</p>
+</dd>
+<dt class="hdlist1"><strong>y</strong></dt>
+<dd>
+<p>yank selections</p>
+</dd>
+<dt class="hdlist1"><strong>p</strong></dt>
+<dd>
+<p>paste after the end of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>P</strong></dt>
+<dd>
+<p>paste before the beginning of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-p&gt;</strong></dt>
+<dd>
+<p>paste all after the end of each selection, and select each pasted string</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-P&gt;</strong></dt>
+<dd>
+<p>paste all before the start of each selection, and select each pasted string</p>
+</dd>
+<dt class="hdlist1"><strong>R</strong></dt>
+<dd>
+<p>replace selections with yanked text</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-R&gt;</strong></dt>
+<dd>
+<p>replace selections with every yanked text</p>
+</dd>
+<dt class="hdlist1"><strong>r</strong></dt>
+<dd>
+<p>replace each character with the next entered one</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-j&gt;</strong></dt>
+<dd>
+<p>join selected lines</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-J&gt;</strong></dt>
+<dd>
+<p>join selected lines and select spaces inserted in place of line breaks</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-_&gt;</strong></dt>
+<dd>
+<p>merge contiguous selections together (works across lines as well)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;+&gt;</strong>, <strong>&lt;plus&gt;</strong></dt>
+<dd>
+<p>duplicate each selection (generating overlapping selections)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-+&gt;</strong>, <strong>&lt;a-plus&gt;</strong></dt>
+<dd>
+<p>merge overlapping selections</p>
+</dd>
+<dt class="hdlist1"><strong>&gt;</strong>, <strong>&lt;gt&gt;</strong></dt>
+<dd>
+<p>indent selected lines</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-\&gt;&gt;</strong>, <strong>&lt;a-gt&gt;</strong></dt>
+<dd>
+<p>indent selected lines, including empty lines</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;</strong>, <strong>&lt;lt&gt;</strong></dt>
+<dd>
+<p>unindent selected lines</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-&lt;&gt;</strong>, <strong>&lt;a-lt&gt;</strong></dt>
+<dd>
+<p>unindent selected lines, do not remove incomplete indent (3 leading
+spaces when indent is 4)</p>
+</dd>
+<dt class="hdlist1"><strong>u</strong></dt>
+<dd>
+<p>undo last change</p>
+</dd>
+<dt class="hdlist1"><strong>U</strong></dt>
+<dd>
+<p>redo last change</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-j&gt;</strong></dt>
+<dd>
+<p>move forward in changes history</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-k&gt;</strong></dt>
+<dd>
+<p>move backward in changes history</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-u&gt;</strong></dt>
+<dd>
+<p>undo last selection change</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-U&gt;</strong></dt>
+<dd>
+<p>redo last selection change</p>
+</dd>
+<dt class="hdlist1"><strong>&amp;</strong></dt>
+<dd>
+<p>align selections, align the cursor of each selection by inserting spaces
+before the first character of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-&amp;&gt;</strong></dt>
+<dd>
+<p>copy indent, copy the indentation of the main selection (or the
+<code>count</code> one if a <code>count</code> is given) to all other ones</p>
+</dd>
+<dt class="hdlist1"><strong>`</strong></dt>
+<dd>
+<p>to lower case</p>
+</dd>
+<dt class="hdlist1"><strong>~</strong></dt>
+<dd>
+<p>to upper case</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-`&gt;</strong></dt>
+<dd>
+<p>swap case</p>
+</dd>
+<dt class="hdlist1"><strong>@</strong></dt>
+<dd>
+<p>convert tabs to spaces in each selection, uses the buffer tabstop
+option or the <code>count</code> parameter for tabstop</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-@&gt;</strong></dt>
+<dd>
+<p>convert spaces to tabs in each selection, uses the buffer tabstop
+option or the <code>count</code> parameter for tabstop</p>
+</dd>
+<dt class="hdlist1"><strong>_</strong></dt>
+<dd>
+<p>unselect whitespace surrounding each selection, drop those that only
+contain whitespace</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-)&gt;</strong></dt>
+<dd>
+<p>rotate selections content, if specified, the <code>count</code> groups selections,
+so the following command</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    3&lt;a-)&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>rotates (1, 2, 3) and (3, 4, 6) independently</pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;a-(&gt;</strong></dt>
+<dd>
+<p>rotate selections content backward</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes-through-external-programs"><a class="anchor" href="#changes-through-external-programs"></a><a class="link" href="#changes-through-external-programs">8. Changes through external programs</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Shell expansions are available, (See <a href="expansions.html#shell-expansions" class="xref page"><code>:doc expansions shell-expansions</code></a>)
+The default command comes from the <strong>|</strong> register (See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>|</strong></dt>
+<dd>
+<p>pipe each selection through the given external filter program and
+replace the selection with its output.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-|&gt;</strong></dt>
+<dd>
+<p>pipe each selection through the given external filter program and
+ignore its output.</p>
+</dd>
+<dt class="hdlist1"><strong>!</strong></dt>
+<dd>
+<p>insert and select command output before each selection.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-!&gt;</strong></dt>
+<dd>
+<p>append and select command output after each selection.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="searching"><a class="anchor" href="#searching"></a><a class="link" href="#searching">9. Searching</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Searches use the <strong>/</strong> register by default (See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>/</strong></dt>
+<dd>
+<p>select next match after each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-/&gt;</strong></dt>
+<dd>
+<p>select previous match before each selection</p>
+</dd>
+<dt class="hdlist1"><strong>?</strong></dt>
+<dd>
+<p>extend to next match after each selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-?&gt;</strong></dt>
+<dd>
+<p>extend to previous match before each selection</p>
+</dd>
+<dt class="hdlist1"><strong>n</strong></dt>
+<dd>
+<p>select next match after the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>N</strong></dt>
+<dd>
+<p>add a new selection with next match after the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-n&gt;</strong></dt>
+<dd>
+<p>select previous match before the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-N&gt;</strong></dt>
+<dd>
+<p>add a new selection with previous match before the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>*</strong></dt>
+<dd>
+<p>set the search pattern to the main selection (automatically
+detects word boundaries)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-</strong>*<strong>&gt;</strong></dt>
+<dd>
+<p>set the search pattern to the main selection (verbatim, no smart
+detection)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="goto-commands"><a class="anchor" href="#goto-commands"></a><a class="link" href="#goto-commands">10. Goto commands</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>g</strong>, <strong>G</strong></dt>
+<dd>
+<p>When a <code>count</code> is specified, <strong>G</strong> only extends the selection to the given line,
+<strong>g</strong> sends the anchor to the given line and a menu is then displayed which waits
+for one of the following additional keys:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>h</strong></dt>
+<dd>
+<p>go to line begin</p>
+</dd>
+<dt class="hdlist1"><strong>l</strong></dt>
+<dd>
+<p>go to line end</p>
+</dd>
+<dt class="hdlist1"><strong>i</strong></dt>
+<dd>
+<p>go to non blank line start</p>
+</dd>
+<dt class="hdlist1"><strong>g</strong>, <strong>k</strong></dt>
+<dd>
+<p>go to the first line</p>
+</dd>
+<dt class="hdlist1"><strong>j</strong></dt>
+<dd>
+<p>go to the last line</p>
+</dd>
+<dt class="hdlist1"><strong>e</strong></dt>
+<dd>
+<p>go to last char of last line</p>
+</dd>
+<dt class="hdlist1"><strong>t</strong></dt>
+<dd>
+<p>go to the first displayed line</p>
+</dd>
+<dt class="hdlist1"><strong>c</strong></dt>
+<dd>
+<p>go to the middle displayed line</p>
+</dd>
+<dt class="hdlist1"><strong>b</strong></dt>
+<dd>
+<p>go to the last displayed line</p>
+</dd>
+<dt class="hdlist1"><strong>a</strong></dt>
+<dd>
+<p>go to the previous (alternate) buffer</p>
+</dd>
+<dt class="hdlist1"><strong>f</strong></dt>
+<dd>
+<p>open the file whose name is selected</p>
+</dd>
+<dt class="hdlist1"><strong>.</strong></dt>
+<dd>
+<p>go to last buffer modification position</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="view-commands"><a class="anchor" href="#view-commands"></a><a class="link" href="#view-commands">11. View commands</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>v</strong>, <strong>V</strong></dt>
+<dd>
+<p><strong>V</strong> enters lock view mode (which will be left when the &lt;esc&gt; is hit),
+and <strong>v</strong> modifies the current view; a menu is then displayed which waits
+for one of the following additional keys:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>v</strong>, <strong>c</strong></dt>
+<dd>
+<p>center the main selection in the window (vertically)</p>
+</dd>
+<dt class="hdlist1"><strong>m</strong></dt>
+<dd>
+<p>center the main selection in the window (horizontally)</p>
+</dd>
+<dt class="hdlist1"><strong>t</strong></dt>
+<dd>
+<p>scroll to put the main selection on the top line of the window</p>
+</dd>
+<dt class="hdlist1"><strong>b</strong></dt>
+<dd>
+<p>scroll to put the main selection on the bottom line of the window</p>
+</dd>
+<dt class="hdlist1"><strong>h</strong></dt>
+<dd>
+<p>scroll the window <code>count</code> columns left</p>
+</dd>
+<dt class="hdlist1"><strong>j</strong></dt>
+<dd>
+<p>scroll the window <code>count</code> line downward</p>
+</dd>
+<dt class="hdlist1"><strong>k</strong></dt>
+<dd>
+<p>scroll the window <code>count</code> line upward</p>
+</dd>
+<dt class="hdlist1"><strong>l</strong></dt>
+<dd>
+<p>scroll the window <code>count</code> columns right</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="marks"><a class="anchor" href="#marks"></a><a class="link" href="#marks">12. Marks</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Current selections position can be saved in a register and restored later on.
+Marks use the <strong>^</strong> register by default (See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Z</strong></dt>
+<dd>
+<p>save selections to the register</p>
+</dd>
+<dt class="hdlist1"><strong>z</strong></dt>
+<dd>
+<p>restore selections from the register</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-z&gt;</strong>, <strong>&lt;a-Z&gt;</strong></dt>
+<dd>
+<p><strong>&lt;a-z&gt;</strong> combines selections from the register with the current ones, whereas
+<strong>&lt;a-Z&gt;</strong> combines current selections with the ones in the register; a menu
+is then displayed which waits for one of the following additional keys:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>a</strong></dt>
+<dd>
+<p>append selections</p>
+</dd>
+<dt class="hdlist1"><strong>u</strong></dt>
+<dd>
+<p>keep a union of selections</p>
+</dd>
+<dt class="hdlist1"><strong>i</strong></dt>
+<dd>
+<p>keep an intersection of selections</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;</strong></dt>
+<dd>
+<p>select the selection with the leftmost cursor for each pair</p>
+</dd>
+<dt class="hdlist1"><strong>&gt;</strong></dt>
+<dd>
+<p>select the selection with the rightmost cursor for each pair</p>
+</dd>
+<dt class="hdlist1"><strong>+</strong></dt>
+<dd>
+<p>select the longest selection</p>
+</dd>
+<dt class="hdlist1"><strong>-</strong></dt>
+<dd>
+<p>select the shortest selection</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="macros"><a class="anchor" href="#macros"></a><a class="link" href="#macros">13. Macros</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Macros use the <strong>@</strong> register by default (See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Q</strong></dt>
+<dd>
+<p>start or end macro recording</p>
+</dd>
+<dt class="hdlist1"><strong>q</strong></dt>
+<dd>
+<p>play a recorded macro</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;esc&gt;</strong></dt>
+<dd>
+<p>end macro recording</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jump-list"><a class="anchor" href="#jump-list"></a><a class="link" href="#jump-list">14. Jump list</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some commands, like the goto commands, buffer switch or search commands,
+push the previous selections to the client&#8217;s jump list. It is possible
+to skim through the jump list using:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;c-i&gt;</strong></dt>
+<dd>
+<p>jump forward</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-o&gt;</strong></dt>
+<dd>
+<p>jump backward</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-s&gt;</strong></dt>
+<dd>
+<p>create a jump step, but also save the current selection to have it be
+restored when the step is subsequently cycled through</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="multiple-selections"><a class="anchor" href="#multiple-selections"></a><a class="link" href="#multiple-selections">15. Multiple selections</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>s</strong>, <strong>S</strong>, <strong>&lt;a-k&gt;</strong> and <strong>&lt;a-K&gt;</strong> use the <strong>/</strong> register by default (See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>s</strong></dt>
+<dd>
+<p>create a selection for each match of the given regex
+(selects the count capture if it is given)</p>
+</dd>
+<dt class="hdlist1"><strong>S</strong></dt>
+<dd>
+<p>split selections with the given regex
+(selects the count capture if it is given)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-s&gt;</strong></dt>
+<dd>
+<p>split selections on line boundaries</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-S&gt;</strong></dt>
+<dd>
+<p>select first and last characters of each selection</p>
+</dd>
+<dt class="hdlist1"><strong>C</strong></dt>
+<dd>
+<p>duplicate selections on the lines that follow them</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-C&gt;</strong></dt>
+<dd>
+<p>duplicate selections on the lines that precede them</p>
+</dd>
+<dt class="hdlist1"><strong>,</strong></dt>
+<dd>
+<p>clear selections to only keep the main one</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-,&gt;</strong></dt>
+<dd>
+<p>clear the main selection</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-k&gt;</strong></dt>
+<dd>
+<p>keep selections that match the given regex</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-K&gt;</strong></dt>
+<dd>
+<p>clear selections that match the given regex</p>
+</dd>
+<dt class="hdlist1"><strong>$</strong></dt>
+<dd>
+<p>pipe each selection to the given shell command and keep the ones
+for which the shell returned 0. Shell expansions are available,
+(See <a href="expansions.html#shell-expansions" class="xref page"><code>:doc expansions shell-expansions</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>)</strong></dt>
+<dd>
+<p>rotate main selection (the main selection becomes the next one)</p>
+</dd>
+<dt class="hdlist1"><strong>(</strong></dt>
+<dd>
+<p>rotate main selection backward (the main selection becomes the previous one)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="object-selection"><a class="anchor" href="#object-selection"></a><a class="link" href="#object-selection">16. Object Selection</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For nestable objects, a <code>count</code> can be used in order to specify which surrounding
+level to select. Object selections are repeatable using <strong>&lt;a-.&gt;</strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="whole-object"><a class="anchor" href="#whole-object"></a><a class="link" href="#whole-object">16.1. Whole object</a></h3>
+<div class="paragraph">
+<p>A 'whole object' is an object <strong>including</strong> its surrounding characters.
+For example, for a quoted string this will select the quotes, and
+for a word this will select trailing spaces.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;a-a&gt;</strong></dt>
+<dd>
+<p>select the whole object</p>
+</dd>
+<dt class="hdlist1"><strong>[</strong></dt>
+<dd>
+<p>select to the whole object start</p>
+</dd>
+<dt class="hdlist1"><strong>]</strong></dt>
+<dd>
+<p>select to the whole object end</p>
+</dd>
+<dt class="hdlist1"><strong>{</strong></dt>
+<dd>
+<p>extend selections to the whole object start</p>
+</dd>
+<dt class="hdlist1"><strong>}</strong></dt>
+<dd>
+<p>extend selections to the whole object end</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="inner-object"><a class="anchor" href="#inner-object"></a><a class="link" href="#inner-object">16.2. Inner object</a></h3>
+<div class="paragraph">
+<p>An 'inner object' is an object <strong>excluding</strong> its surrounding characters.
+For example, for a quoted string this will <strong>not</strong> select the quotes, and
+for a word this will <strong>not</strong> select trailing spaces.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;a-i&gt;</strong></dt>
+<dd>
+<p>select the inner object</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-[&gt;</strong></dt>
+<dd>
+<p>select to the inner object start</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-]&gt;</strong></dt>
+<dd>
+<p>select to the inner object end</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-{&gt;</strong></dt>
+<dd>
+<p>extend selections to the inner object start</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-}&gt;</strong></dt>
+<dd>
+<p>extend selections to the inner object end</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="objects-types"><a class="anchor" href="#objects-types"></a><a class="link" href="#objects-types">16.3. Objects types</a></h3>
+<div class="paragraph">
+<p>After the keys described above, a second key needs to be entered
+in order to specify the wanted object:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>b</strong>, <strong>(</strong>, <strong>)</strong></dt>
+<dd>
+<p>select the enclosing parenthesis</p>
+</dd>
+<dt class="hdlist1"><strong>B</strong>, <strong>{</strong>, <strong>}</strong></dt>
+<dd>
+<p>select the enclosing {} block</p>
+</dd>
+<dt class="hdlist1"><strong>r</strong>, <strong>[</strong>, <strong>]</strong></dt>
+<dd>
+<p>select the enclosing [] block</p>
+</dd>
+<dt class="hdlist1"><strong>a</strong>, <strong>&lt;</strong>, <strong>&gt;</strong></dt>
+<dd>
+<p>select the enclosing &lt;&gt; block</p>
+</dd>
+<dt class="hdlist1"><strong>Q</strong>, <strong>"</strong></dt>
+<dd>
+<p>select the enclosing double quoted string</p>
+</dd>
+<dt class="hdlist1"><strong>q</strong>, <strong>'</strong></dt>
+<dd>
+<p>select the enclosing single quoted string</p>
+</dd>
+<dt class="hdlist1"><strong>g</strong>, <strong>`</strong></dt>
+<dd>
+<p>select the enclosing grave quoted string</p>
+</dd>
+<dt class="hdlist1"><strong>w</strong></dt>
+<dd>
+<p>select the whole word</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-w&gt;</strong></dt>
+<dd>
+<p>select the whole WORD</p>
+</dd>
+<dt class="hdlist1"><strong>s</strong></dt>
+<dd>
+<p>select the sentence</p>
+</dd>
+<dt class="hdlist1"><strong>p</strong></dt>
+<dd>
+<p>select the paragraph</p>
+</dd>
+<dt class="hdlist1"><strong>␣</strong></dt>
+<dd>
+<p>select the whitespaces</p>
+</dd>
+<dt class="hdlist1"><strong>i</strong></dt>
+<dd>
+<p>select the current indentation block</p>
+</dd>
+<dt class="hdlist1"><strong>n</strong></dt>
+<dd>
+<p>select the number</p>
+</dd>
+<dt class="hdlist1"><strong>u</strong></dt>
+<dd>
+<p>select the argument</p>
+</dd>
+<dt class="hdlist1"><strong>c</strong></dt>
+<dd>
+<p>select user defined object, will prompt for open and close text</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-;&gt;</strong>, <strong>&lt;a-semicolon&gt;</strong></dt>
+<dd>
+<p>run a command with additional expansions describing the selection
+context (See <a href="expansions.html" class="xref page"><code>:doc expansions</code></a>)</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>If a punctuation character is entered, it will act as the delimiter.
+For instance, if the cursor is on the <code>o</code> of <code>/home/bar</code>, typing
+<code>&lt;a-a&gt;/</code> will select <code>/home/</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="prompt-commands"><a class="anchor" href="#prompt-commands"></a><a class="link" href="#prompt-commands">17. Prompt commands</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When pressing <code>:</code> in normal mode, Kakoune will open a prompt to enter
+a command.  The executed command line is stored in the <strong>:</strong> register
+(See <a href="registers.html" class="xref page"><code>:doc registers</code></a>).</p>
+</div>
+<div class="paragraph">
+<p>During editing, a transient <strong>clipboard</strong> is available, its content is
+empty at the start of prompt edition, and is not preserved afterwards.</p>
+</div>
+<div class="paragraph">
+<p>The following keys are recognized by this mode to help with editing
+(See <a href="commands.html" class="xref page"><code>:doc commands</code></a>).</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;ret&gt;</strong></dt>
+<dd>
+<p>validate prompt</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;esc&gt;</strong></dt>
+<dd>
+<p>abandon without validating prompt</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;left&gt;</strong>, <strong>&lt;c-b&gt;</strong></dt>
+<dd>
+<p>move cursor to previous character</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;right&gt;</strong>, <strong>&lt;c-f&gt;</strong></dt>
+<dd>
+<p>move cursor to next character</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;home&gt;</strong>, <strong>&lt;c-a&gt;</strong></dt>
+<dd>
+<p>move cursor to first character</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;end&gt;</strong>, <strong>&lt;c-e&gt;</strong></dt>
+<dd>
+<p>move cursor past the last character</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;backspace&gt;</strong>, <strong>&lt;c-h&gt;</strong></dt>
+<dd>
+<p>erase character before cursor</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;del&gt;</strong>, <strong>&lt;c-d&gt;</strong></dt>
+<dd>
+<p>erase character under cursor</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-f&gt;</strong></dt>
+<dd>
+<p>advance to next word begin</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-F&gt;</strong></dt>
+<dd>
+<p>advance to next WORD begin</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-b&gt;</strong></dt>
+<dd>
+<p>go back to previous word begin</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-B&gt;</strong></dt>
+<dd>
+<p>go back to previous WORD begin</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-e&gt;</strong></dt>
+<dd>
+<p>advance to next word end</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-E&gt;</strong></dt>
+<dd>
+<p>advance to next WORD end</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-w&gt;</strong></dt>
+<dd>
+<p>erase to previous word begin, save erased content to <strong>clipboard</strong></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-W&gt;</strong></dt>
+<dd>
+<p>erase to previous WORD begin, save erased content to <strong>clipboard</strong></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-d&gt;</strong></dt>
+<dd>
+<p>erase to next word begin, save erased content to <strong>clipboard</strong></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-D&gt;</strong></dt>
+<dd>
+<p>erase to next WORD begin, save erased content to <strong>clipboard</strong></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-k&gt;</strong></dt>
+<dd>
+<p>erase to end of line, save erased content to <strong>clipboard</strong></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-u&gt;</strong></dt>
+<dd>
+<p>erase to begin of line, save erased content to <strong>clipboard</strong></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-y&gt;</strong></dt>
+<dd>
+<p>insert <strong>clipboard</strong> content before cursor</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;up&gt;</strong>, <strong>&lt;c-p&gt;</strong></dt>
+<dd>
+<p>select previous entry in history</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;down&gt;</strong>, <strong>&lt;c-n&gt;</strong></dt>
+<dd>
+<p>select next entry in history</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;tab&gt;</strong></dt>
+<dd>
+<p>select next completion candidate</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;s-tab&gt;</strong></dt>
+<dd>
+<p>select previous completion candidate</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-r&gt;</strong></dt>
+<dd>
+<p>insert then content of the register given by next key, if next key
+has the Alt modifier, it will insert all values in the register
+joined with spaces, else it will insert the main one</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-v&gt;</strong></dt>
+<dd>
+<p>insert next keystroke without interpreting it</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-x&gt;</strong></dt>
+<dd>
+<p>explicit completion query, followed by:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>f</strong></dt>
+<dd>
+<p>explicit file completion</p>
+</dd>
+<dt class="hdlist1"><strong>w</strong></dt>
+<dd>
+<p>explicit word completion (from current buffer)</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-o&gt;</strong></dt>
+<dd>
+<p>toggle automatic completion</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-!&gt;</strong></dt>
+<dd>
+<p>expand the typed expansions in currently entered text
+(See <a href="expansions.html" class="xref page"><code>:doc expansions</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-;&gt;</strong>, <strong>&lt;a-semicolon&gt;</strong></dt>
+<dd>
+<p>escape to normal mode for a single command</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="user-commands"><a class="anchor" href="#user-commands"></a><a class="link" href="#user-commands">18. User commands</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;space&gt;</strong></dt>
+<dd>
+<p>enter default <code>user mode</code> to access custom commands
+(See <a href="modes.html#user-mode" class="xref page"><code>:doc modes user-mode</code></a>)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cancelling-operations"><a class="anchor" href="#cancelling-operations"></a><a class="link" href="#cancelling-operations">19. Cancelling operations</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These keys are used to cancel long-running operations, either inside
+Kakoune or outside it. Because they are intended as a safety mechanism
+when something goes wrong, these keys are handled very early on in
+Kakoune&#8217;s input processing, and therefore cannot be remapped in any mode.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>&lt;c-c&gt;</strong></dt>
+<dd>
+<p>Stop any external processes. If you ever see Kakoune display a message
+like "waiting for shell command to finish", this key will stop
+that command so you can regain control of Kakoune.
+Technically, this key causes Kakoune to send the SIGINT signal
+to its entire process group.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-g&gt;</strong></dt>
+<dd>
+<p>Cancel a long-running Kakoune operation, such as a regex search on a
+very large file. This also clears Kakoune&#8217;s input buffer, so any
+commands that were waiting for the long-running operation to complete
+will also be cancelled.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

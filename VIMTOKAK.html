@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vi(m) to Kakoune: :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Kakoune</a></li>
+    <li><a href="VIMTOKAK.html">Vi(m) to Kakoune</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/VIMTOKAK.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Vi(m) to Kakoune:</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune is inspired heavily by Vim. It strives to be as efficient as Vim,
+more consistent and simpler. A big difference is that a lot of special
+features in Vim just become regular interactions of basic features in
+Kakoune.</p>
+</div>
+<div class="paragraph">
+<p>Operations and moves are reversed in Kakoune. First select whatever text
+you want to operate on, and then use a modifying operation. That makes
+things more consistent: Vim needs separate x and d operations because
+of the operator &#8594; move order, while Kakoune only needs the d operation.
+Selecting first also allows more complex selections.</p>
+</div>
+<div class="paragraph">
+<p>delete a word:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: dw</p>
+</li>
+<li>
+<p>kak: wd</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>delete a character:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: x</p>
+</li>
+<li>
+<p>kak: d or ;d (; reduces the selection to a single char)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>copy a line:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: yy</p>
+</li>
+<li>
+<p>kak: xy</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>global replace:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: :%s/word/replacement&lt;ret&gt;</p>
+</li>
+<li>
+<p>kak: %sword&lt;ret&gt;creplacement&lt;esc&gt;,</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Explanation: <em>%</em> selects the entire buffer, <em>s</em> opens a prompt for a
+regex, &lt;ret&gt; validates the regex and replaces the selection with one
+per match (hence all occurences of "word" are selected). <em>c</em> deletes
+the selection contents and enters insert mode where "replacement" is
+typed, and &lt;esc&gt; goes back to normal mode. The final <em>,</em> gets rid of
+multiple cursors.</p>
+</div>
+<div class="paragraph">
+<p>Note that the Kakoune version is one key less, and is not a special
+feature per se, but just a nice way Kakoune features work together.</p>
+</div>
+<div class="paragraph">
+<p>global interactive replace:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: :%s/word/replacement/gc&lt;ret&gt;
+and then keep pressing <em>y</em> to accept the change or <em>n</em> to reject.</p>
+</li>
+<li>
+<p>kak: /word&lt;ret&gt;creplacement&lt;esc&gt;
+and then press <em>n</em> to search for the next occurence and either <em>.</em>
+to redo the last insert operation (that is replace <em>word</em> with
+<em>replacement</em>) or <em>n</em> to go to the next match.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>replace in current curly brace block:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: viB:s/word/replacement&lt;ret&gt;</p>
+</li>
+<li>
+<p>kak: &lt;a-i&gt;Bsword&lt;ret&gt;creplacement&lt;esc&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here again, Vim had to rely on a special feature, visual mode.</p>
+</div>
+<div class="paragraph">
+<p>join line with next:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: J</p>
+</li>
+<li>
+<p>kak: &lt;a-J&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>delete to line end:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vim: d$</p>
+</li>
+<li>
+<p>kak: &lt;a-l&gt;d or Gld</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some classic Vim moves are not bound to the same key. Kakoune
+uses shifted moves to extend the selection, so Vim moves that were bound to
+shifted characters had to change.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>% became m (for "matching"). However, m replaces the selection with the next
+block. If you want to get a selection from the current point to the next
+block&#8217;s end, you should use ;M (; reduces the selection to one character).</p>
+</li>
+<li>
+<p>0 and $ became &lt;a-h&gt; and &lt;a-l&gt;. Equivalent bindings are gh and gl.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>:[gv]/re/cmd
+To emulate :g or :v, use % to select the whole buffer, &lt;a-s&gt; to get
+one selection per line, and then &lt;a-k&gt; or &lt;a-K&gt; to keep only the
+selections matching (or not matching) the entered regex.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

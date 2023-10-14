@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Buffers :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="buffers.html">Buffers</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/buffers.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Buffers</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#commands">1. Commands</a></li>
+<li><a href="#scratch-buffers">2. Scratch Buffers</a></li>
+<li><a href="#debug-buffers">3. Debug Buffers</a></li>
+<li><a href="#fifo-buffers">4. FIFO Buffers</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="commands"><a class="anchor" href="#commands"></a><a class="link" href="#commands">1. Commands</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To open buffers or navigate through the buffers list see
+<a href="commands.html#files-and-buffers" class="xref page"><code>:doc commands files-and-buffers</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scratch-buffers"><a class="anchor" href="#scratch-buffers"></a><a class="link" href="#scratch-buffers">2. Scratch Buffers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scratch buffers are useful for volatile data and quick prototyping.
+They are not linked to files, so Kakoune does not warn about unsaved
+changes at exit, and the <code>:write</code> command requires an explicit filename.</p>
+</div>
+<div class="paragraph">
+<p>One particular scratch buffer, named <strong>\*scratch</strong>\*, is automatically created
+when there are no other buffers left in the current session, which is also
+the case when Kakoune starts up without any files to open.</p>
+</div>
+<div class="paragraph">
+<p>A scratch buffer can be created by passing the <code>-scratch</code> switch to the
+<code>:edit</code> command.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="debug-buffers"><a class="anchor" href="#debug-buffers"></a><a class="link" href="#debug-buffers">3. Debug Buffers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Debug buffers are used to gather diagnostics. They have a number of
+restrictions compared to regular buffers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They are skipped when cycling over the buffers list.</p>
+</li>
+<li>
+<p>Their content is not considered for word completions with <code>word=all</code>
+completers.</p>
+</li>
+<li>
+<p>Hooks are not always run (like the <code>BufCreate</code>/<code>BufClose</code> hooks).</p>
+</li>
+<li>
+<p>Display profiling is disabled.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A specific <strong>\*debug</strong>\* buffer is used by Kakoune to write errors or
+warnings.  This is also where the ouput of the <code>:debug</code> and the <code>:echo
+-debug</code> commands will land.</p>
+</div>
+<div class="paragraph">
+<p>A debug buffer can be created by passing the <code>-debug</code> switch to the
+<code>:edit</code> command.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fifo-buffers"><a class="anchor" href="#fifo-buffers"></a><a class="link" href="#fifo-buffers">4. FIFO Buffers</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>:edit</code> command can take a <code>-fifo</code> switch:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:edit -fifo &lt;filename&gt; [-scroll] &lt;buffername&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, a buffer named <code>&lt;buffername&gt;</code> is created which reads
+its content from the FIFO (also called "named pipe") <code>&lt;filename&gt;</code>.
+When the FIFO is written to, the buffer is automatically updated.</p>
+</div>
+<div class="paragraph">
+<p>If the <code>-scroll</code> switch is specified, the window displaying the buffer
+will scroll so that the newest data is always visible.</p>
+</div>
+<div class="paragraph">
+<p>This is very useful for running some commands asynchronously while
+displaying their result in a buffer. See <code>rc/make.kak</code> and <code>rc/grep.kak</code>
+for examples.</p>
+</div>
+<div class="paragraph">
+<p>When the write end of the FIFO is closed, the buffer becomes an ordinary
+<a href="#scratch-buffers">scratch buffer</a>. When the buffer is deleted,
+Kakoune closes the read end of the FIFO. Any program writing to the FIFO
+will receive <code>SIGPIPE</code>, which will terminate the program by default.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

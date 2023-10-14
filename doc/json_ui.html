@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Json-Rpc user interface :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Kakoune</a></li>
+    <li><a href="json_ui.html">JSON UI</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/json_ui.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Json-Rpc user interface</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune user interfaces can be implemented through the
+<a href="https://www.jsonrpc.org/specification">json-rpc 2.0 protocol</a>.</p>
+</div>
+<div class="paragraph">
+<p>By launching Kakoune in client mode with the <code>-ui json</code> option, the launched
+client will write newline separated json-rpc requests on stdout and read
+json-rpc requests on stdin.  Errors will be reported on stderr (not in
+json format).</p>
+</div>
+<div class="paragraph">
+<p>Kakoune requests are always using positional parameters, never named, and
+Kakoune won&#8217;t be able to parse named parameters in requests.</p>
+</div>
+<div class="paragraph">
+<p>Here are the data structures used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Color: a string, either a named color, or #rrggbb, or <em>default</em></p>
+</li>
+<li>
+<p>Attribute: one of {underline, reverse, blink, bold, dim, italic, final_fg, final_bg, final_attr}</p>
+</li>
+<li>
+<p>Face { Color fg; Color bg; Array&lt;Attribute&gt; attributes; }</p>
+</li>
+<li>
+<p>Atom { Face face; String contents; }</p>
+</li>
+<li>
+<p>Line : Array of Atom</p>
+</li>
+<li>
+<p>Coord { int line; int column }</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here are the requests that can be written by the json ui on stdout:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>draw(Array&lt;Line&gt; lines, Face default_face, Face padding_face)
+padding_face is the face of the padding characters <em>~</em> in the
+terminal UI.</p>
+</li>
+<li>
+<p>draw_status(Line status_line, Line mode_line,
+Face default_face)</p>
+</li>
+<li>
+<p>menu_show(Array&lt;Line&gt; items, Coord anchor, Face selected_item_face, Face menu_face,
+          String style)
+style can be:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>prompt: display the menu as a prompt menu (anchor is ignored)</p>
+</li>
+<li>
+<p>inline: display the menu next to (above or below) the anchor coordinate</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>menu_select(int selected)</p>
+</li>
+<li>
+<p>menu_hide()</p>
+</li>
+<li>
+<p>info_show(Line title, Array&lt;Line&gt; content, Coord anchor, Face face, String style)
+style can be:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>prompt: display the info as a prompt info (anchor is ignored)</p>
+</li>
+<li>
+<p>inline: display the info next to (above or below) the anchor coordinate</p>
+</li>
+<li>
+<p>inlineAbove: display the info next to (above) the anchor coordinate</p>
+</li>
+<li>
+<p>inlineBelow: display the info next to (below) the anchor coordinate</p>
+</li>
+<li>
+<p>menuDoc: display the info next to the menu, as a documentation for it</p>
+</li>
+<li>
+<p>modal: display the info in a way that shows Kakoune is waiting for a
+special action related to it.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>info_hide()</p>
+</li>
+<li>
+<p>set_cursor(String mode, Coord coord)
+set the main cursor position
+mode can be:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>prompt: the coordinate line should be 0, and the cursor is in the prompt area</p>
+</li>
+<li>
+<p>buffer: the cursor is in the buffer display area</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>set_ui_options(Map&lt;String, String&gt; options)
+called when ui_options changed with a map of options name to option values</p>
+</li>
+<li>
+<p>refresh(bool force)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The requests that the json ui can interpret on stdin are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>keys(String key1, String key2&#8230;&#8203;): keystrokes</p>
+</li>
+<li>
+<p>resize(int rows, int columns): notify ui resize</p>
+</li>
+<li>
+<p>scroll(int amount): scroll by given line amount</p>
+</li>
+<li>
+<p>mouse_move(int line, int column): line and column relate to the cursor position.</p>
+</li>
+<li>
+<p>mouse_press(String button, int line, int column): line and column relate to
+cursor position, button can be <em>left</em>, <em>middle</em> or <em>right</em></p>
+</li>
+<li>
+<p>mouse_release(String button, int line, int column): same.</p>
+</li>
+<li>
+<p>menu_select(int index): explicit select of given menu entry</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

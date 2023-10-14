@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Changelog :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Kakoune</a></li>
+    <li><a href="changelog.html">Changelog</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/changelog.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Changelog</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#development-version">1. Development version</a></li>
+<li><a href="#kakoune-2023-08-08">2. Kakoune 2023.08.08</a></li>
+<li><a href="#kakoune-2023-07-29">3. Kakoune 2023.07.29</a></li>
+<li><a href="#kakoune-2022-10-31">4. Kakoune 2022.10.31</a></li>
+<li><a href="#kakoune-2021-11-07">5. Kakoune 2021.11.07</a></li>
+<li><a href="#kakoune-2021-10-28">6. Kakoune 2021.10.28</a></li>
+<li><a href="#kakoune-2021-08-28">7. Kakoune 2021.08.28</a></li>
+<li><a href="#kakoune-2020-09-01">8. Kakoune 2020.09.01</a></li>
+<li><a href="#kakoune-2020-08-04">9. Kakoune 2020.08.04</a></li>
+<li><a href="#kakoune-2020-01-16">10. Kakoune 2020.01.16</a></li>
+<li><a href="#kakoune-2019-12-10">11. Kakoune 2019.12.10</a></li>
+<li><a href="#kakoune-2019-07-01">12. Kakoune 2019.07.01</a></li>
+<li><a href="#kakoune-2019-01-20">13. Kakoune 2019.01.20</a></li>
+<li><a href="#kakoune-2018-10-27">14. Kakoune 2018.10.27</a></li>
+<li><a href="#kakoune-2018-09-04">15. Kakoune 2018.09.04</a></li>
+<li><a href="#kakoune-2018-04-13">16. Kakoune 2018.04.13</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This changelog contains major and/or breaking changes to Kakoune between
+released versions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="development-version"><a class="anchor" href="#development-version"></a><a class="link" href="#development-version">1. Development version</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>+</code> only duplicates identical selections a single time to avoid surprising
+and slow exponential growth in the number of selections.</p>
+</li>
+<li>
+<p><code>daemonize-session</code> command makes it possible to convert the current session
+to a deamon one (which will not exit on last client disconnecting)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2023-08-08"><a class="anchor" href="#kakoune-2023-08-08"></a><a class="link" href="#kakoune-2023-08-08">2. Kakoune 2023.08.08</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix compilation errors on FreeBSD and MacOS using clang</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2023-07-29"><a class="anchor" href="#kakoune-2023-07-29"></a><a class="link" href="#kakoune-2023-07-29">3. Kakoune 2023.07.29</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;a-u&gt;</code> and <code>&lt;a-U&gt;</code> now undo/redo selection changes; the previous meaning
+of moving in history tree has been moved to <code>&lt;c-j&gt;</code> and <code>&lt;c-k&gt;</code></p>
+</li>
+<li>
+<p><code>%exp{&#8230;&#8203;}</code> expansions provide flexible quoting for expanded strings
+(as double quoted strings)</p>
+</li>
+<li>
+<p><code>&lt;c-g&gt;</code> cancels the current operation and goes back to the main event
+loop, this provides an escape hatch when Kakoune seems to hang due to
+a costly operation</p>
+</li>
+<li>
+<p><code>show-matching -previous</code> highlighter will fall back onto the character
+preceeding the cursor</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2022-10-31"><a class="anchor" href="#kakoune-2022-10-31"></a><a class="link" href="#kakoune-2022-10-31">4. Kakoune 2022.10.31</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-command</code> (See <a href="commands.html#configuring-command-completion" class="xref page"><code>:doc commands configuring-command-completion</code></a>)</p>
+</li>
+<li>
+<p><code>p</code>, <code>P</code>, <code>!</code> and <code>&lt;a-!&gt;</code> commands now select the inserted text</p>
+</li>
+<li>
+<p><code>x</code> now just extends the selection to contain full lines (as <code>&lt;a-x&gt;</code> did)
+<code>&lt;a-x&gt;</code> trims partial lines from the selection (as <code>&lt;a-X&gt;</code> did)</p>
+</li>
+<li>
+<p>User mappings is now bound to <code>&lt;space&gt;</code> while keeping/removing main selection
+moved to <code>,</code> and <code>&lt;a-,&gt;</code></p>
+</li>
+<li>
+<p>Prompt history registers <code>%reg{colon}</code>, <code>%reg{slash}</code> and <code>%reg{pipe}</code> now
+have reverse chronological order</p>
+</li>
+<li>
+<p>Executing user mode mappings no longer adds to prompt history registers.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2021-11-07"><a class="anchor" href="#kakoune-2021-11-07"></a><a class="link" href="#kakoune-2021-11-07">5. Kakoune 2021.11.07</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Support for curly and separately colored underlines (undocumented in 2021.10.28)</p>
+</li>
+<li>
+<p>Fixes for terminal flickering</p>
+</li>
+<li>
+<p>Fixes for command and response fifo corner cases</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2021-10-28"><a class="anchor" href="#kakoune-2021-10-28"></a><a class="link" href="#kakoune-2021-10-28">6. Kakoune 2021.10.28</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>g</code> and <code>v</code> do not auto lower case the next key, so <code>GL</code> needs to be
+manually mapped to <code>Gl</code> for example.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2021-08-28"><a class="anchor" href="#kakoune-2021-08-28"></a><a class="link" href="#kakoune-2021-08-28">7. Kakoune 2021.08.28</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>command and response fifo support
+(See <a href="expansions.html#command-and-response-fifo" class="xref page"><code>:doc expansions command-and-response-fifo</code></a>)</p>
+</li>
+<li>
+<p>Shell expansions only trim the last trailing newline instead of all of
+them to make is possible to losslessly pass text through <code>%sh{&#8230;&#8203;}</code>.</p>
+</li>
+<li>
+<p><code>set-option -remove</code> support for subtracting/removing from option values</p>
+</li>
+<li>
+<p>Menu completions such as command name completion are now auto-inserted on
+space</p>
+</li>
+<li>
+<p><code>write -atomic</code> was replaced with <code>write -method [replace|overwrite]</code> to
+make both write methods available explicitly</p>
+</li>
+<li>
+<p><code>write &lt;filename&gt;</code> will fail if the given filename already exists and is
+a regular file. Use the <code>-force</code> switch to override that behaviour.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2020-09-01"><a class="anchor" href="#kakoune-2020-09-01"></a><a class="link" href="#kakoune-2020-09-01">8. Kakoune 2020.09.01</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>repl</code> and <code>send-text</code> aliases have been renamed respectively into
+<code>repl-new</code> and <code>repl-send-text</code>.</p>
+</li>
+<li>
+<p>Daemon mode (<code>-d</code> switch) does not fork anymore.</p>
+</li>
+<li>
+<p>Replace NCursesUI with a custom terminal UI implementation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2020-08-04"><a class="anchor" href="#kakoune-2020-08-04"></a><a class="link" href="#kakoune-2020-08-04">9. Kakoune 2020.08.04</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Introduce <code>User</code> hook support.</p>
+</li>
+<li>
+<p>The <code>bold</code> and <code>italic</code> faces are no longer built-in. Highlighters
+are expected to use face attributes (<code>+b</code> and <code>+i</code>, respectively) to
+decorate text.</p>
+</li>
+<li>
+<p>The <code>lint-enable</code> command no longer needs to be called to display
+linting errors. The <code>lint-disable</code> command was renamed into
+<code>lint-hide-diagnostics</code>.</p>
+</li>
+<li>
+<p>The <code>+&lt;length&gt;</code> part of a <code>range-specs</code> highlighter consistently
+refers to the length of the target range.</p>
+</li>
+<li>
+<p>clients stdin is transferred to the server, making it possible
+to pipe into <code>kak -c &lt;session&gt;</code></p>
+</li>
+<li>
+<p>Faces can have an alpha channel, specified using the
+<code>rgba:RRGGBBAA</code> format.</p>
+</li>
+<li>
+<p>replace-ranges highlighter now support empty and multi-lines ranges</p>
+</li>
+<li>
+<p><code>%val{&#8230;&#8203;}</code> now expands to list of strings, <code>$kak_quoted_&#8230;&#8203;</code> now work
+as expected with these.</p>
+</li>
+<li>
+<p><code>*SetOption</code> hooks filter string will contain a value only for options
+of int/str/bool types to avoid performance issue with generating those
+on more complex option types.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2020-01-16"><a class="anchor" href="#kakoune-2020-01-16"></a><a class="link" href="#kakoune-2020-01-16">10. Kakoune 2020.01.16</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Expose history tree through <code>$kak_history</code> and
+<code>$kak_uncommitted_modifications</code></p>
+</li>
+<li>
+<p><code>InsertCompletionHide</code> parameter is the list of inserted
+ranges</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2019-12-10"><a class="anchor" href="#kakoune-2019-12-10"></a><a class="link" href="#kakoune-2019-12-10">11. Kakoune 2019.12.10</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Arrow keys and <code>&lt;home&gt;</code>, <code>&lt;end&gt;</code> are not normal mode commands
+anymore but default key mappings.</p>
+</li>
+<li>
+<p><code>ModeChange</code> hook parameter now takes <code>push:</code> or <code>pop:</code> prefix,
+<code>InsertBegin</code>, <code>InsertEnd</code>, <code>NormalBegin</code> and <code>NormalEnd</code>
+were removed.</p>
+</li>
+<li>
+<p><code>-verbatim</code> switch in <code>evaluate-commands</code> for perfect command
+forwarding to another context.</p>
+</li>
+<li>
+<p><code>WrapMarker</code> face used by <code>wrap -marker</code> highlighter</p>
+</li>
+<li>
+<p><code>info</code> supports markup with the <code>-markup</code> switch</p>
+</li>
+<li>
+<p><code>rename-buffer</code> gained <code>-file</code> and <code>-scratch</code> switches
+to support converting buffer types.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2019-07-01"><a class="anchor" href="#kakoune-2019-07-01"></a><a class="link" href="#kakoune-2019-07-01">12. Kakoune 2019.07.01</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Re-organized bundled script files directory hierarchy.</p>
+</li>
+<li>
+<p>Introduced helpers to write/read from file in scripts with
+<code>%file{&#8230;&#8203;}</code> expansion and <code>echo -to-file &lt;filename&gt;</code>.</p>
+</li>
+<li>
+<p>Added <code>ClientCreate</code> and <code>ClientClose</code> hooks</p>
+</li>
+<li>
+<p><code>edit -scratch</code> with no buffer name will create a new
+scratch buffer with a unique autogenerated name.</p>
+</li>
+<li>
+<p><code>info -placement</code> is now <code>info -style</code> and supports
+<code>menu</code> and <code>modal</code> additional styles.</p>
+</li>
+<li>
+<p><code>completions</code> option type <code>docstring</code> are now arbitrary
+kakoune commands that are run on item select.</p>
+</li>
+<li>
+<p><code>InsertCompletionSelect</code> hook has been removed as
+<code>completions</code> commands now provides a similar feature.</p>
+</li>
+<li>
+<p>Introduced a module system using the <code>provide-module</code> and
+<code>require-module</code> commands that allows for lazily loading language
+support files with dependency resolution.</p>
+</li>
+<li>
+<p>Added a new hook <code>ModuleLoaded</code> which is run after a module is
+loaded, allowing for module specific configuration.</p>
+</li>
+<li>
+<p>Shell quoting of lists is not automatic anymore, <code>$kak_quoted_&#8230;&#8203;</code>
+makes it opt-in, and works for all option types.</p>
+</li>
+<li>
+<p>Lower case function key syntax is not accepted anymore,
+<code>&lt;f1&gt;</code> should be converted to <code>&lt;F1&gt;</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2019-01-20"><a class="anchor" href="#kakoune-2019-01-20"></a><a class="link" href="#kakoune-2019-01-20">13. Kakoune 2019.01.20</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>auto_complete</code> has been renamed to <code>autocomplete</code> for more
+consistency.</p>
+</li>
+<li>
+<p>Start of a builtin key parser in the ncurses ui bypassing
+the ncurses one. Can be favored by setting the ui option
+<code>ncurses_builtin_key_parser</code> to <code>true</code>.</p>
+</li>
+<li>
+<p>Right clicks extend the current selection, the control modifier allows
+merging all the selections after extension.</p>
+</li>
+<li>
+<p>The <code>regex</code> highlighter now supports named capture groups to
+ease readability.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2018-10-27"><a class="anchor" href="#kakoune-2018-10-27"></a><a class="link" href="#kakoune-2018-10-27">14. Kakoune 2018.10.27</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>remove-hooks</code> &lt;group&gt; argument is now a regex and removes all
+hooks whose group matches it.</p>
+</li>
+<li>
+<p><code>exclusive</code> face attribute (e) has been replaced with more
+granular <code>final foreground</code> (f), <code>final background</code> (g), and <code>final
+attributes</code> (a), or the three combined as <code>final</code> (F).  Semantics
+changed slightly as those attributes apply to the existing face as
+well (a final face will not get modified by a following face if that
+following face does not have the final attribute itself.</p>
+</li>
+<li>
+<p><code>&lt;a-m&gt;</code> aka "merge consecutive selections" has been moved to <code>&lt;a-_&gt;</code>.
+The new <code>&lt;a-m&gt;</code> and <code>&lt;a-M&gt;</code> are now symmetrical with <code>m</code> and <code>M</code>.
+Those commands select (or extend) to the matching char backwards.</p>
+</li>
+<li>
+<p><code>define-command</code> switches <code>-shell-completion</code> and <code>-shell-candidates</code>
+have been renamed to <code>-shell-script-completion</code> and
+<code>-shell-script-candidates</code> to make way for a new <code>-shell-completion</code>
+which completes like the shell (shell command name then filename).</p>
+</li>
+<li>
+<p><code>asciidoc</code> is not a dependency anymore, the last file that required
+it (Kakoune&#8217;s manpage) has been converted to troff format.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2018-09-04"><a class="anchor" href="#kakoune-2018-09-04"></a><a class="link" href="#kakoune-2018-09-04">15. Kakoune 2018.09.04</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This version contains a significant overhaul of various Kakoune
+features that can break user configuration. This was a necessary
+change to make Kakoune command model cleaner and more robust.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>%sh{&#8230;&#8203;}</code> strings are not reparsed automatically anymore, they need
+to go through an explicit <code>evaluate-commands</code></p>
+</li>
+<li>
+<p>The <code>-allow-override</code> switch from <code>define-command</code> has been renamed
+<code>-override</code>.</p>
+</li>
+<li>
+<p>The search prompt uses buffer word completion so that fuzzy completion
+can be used to quickly search for a buffer word.</p>
+</li>
+<li>
+<p>The <code>wrap</code> highlighter can accept a new <code>-marker &lt;marker_text&gt;</code> switch.</p>
+</li>
+<li>
+<p>The command line syntax has changed to support robust escaping.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>%sh{&#8230;&#8203;}</code> is not expanded to multiple tokens automatically anymore,
+to evaluate its output as multiple tokens/commands, use the
+<code>evaluate-commands</code> command:</p>
+<div class="literalblock">
+<div class="content">
+<pre>-------------------------------------------------------------
+evaluate-commands %sh{ echo "first command; second command" }
+-------------------------------------------------------------</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Escaping of <code>'</code> in <code>'&#8230;&#8203;'</code> and <code>"</code> and <code>%</code> in <code>"&#8230;&#8203;"</code> strings is done
+by doubling up (<code>''</code>, <code>""</code> and <code>%%</code>) instead of using a backslash</p>
+</li>
+<li>
+<p>Bare words escaping has been tweaked.</p>
+<div class="literalblock">
+<div class="content">
+<pre>See xref:./command-parsing.adoc[`:doc command-parsing`].</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Various lists (options, registers&#8230;&#8203;) in Kakoune are now written using
+the command line syntax:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>set-register</code> now take an arbitrary number of parameters and sets
+the register to multiple strings. <code>%reg</code> expands to a list of strings.</p>
+</li>
+<li>
+<p>the <code>$kak_reg_*</code> environment variable is now a list, <code>$kak_main_reg_*</code>
+provides the previous behaviour.</p>
+</li>
+<li>
+<p><code>%opt</code> expands list options as list of strings.</p>
+</li>
+<li>
+<p>selection descs are whitespaces separated instead of <code>:</code> separated</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Highlighters syntax has changed to permit explicit naming and remove
+highlighter specific name parameters (such as for the group highlighter)
+<code>add-highlighter &lt;path&gt;/&lt;name&gt; &lt;type&gt; &lt;params&gt;</code> is the new syntax.</p>
+</li>
+<li>
+<p>Regions highlighters have been overhauled and are now specified with
+a sequence of commands instead of a single one:</p>
+<div class="literalblock">
+<div class="content">
+<pre>------------------------------------------------------------------
+add-highlighter &lt;path&gt;/&lt;name&gt; regions
+add-highlighter &lt;path&gt;/&lt;name&gt;/&lt;region name&gt; region &lt;begin&gt; &lt;end&gt; \
+&lt;type&gt; &lt;params&gt;
+------------------------------------------------------------------</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The recursion regex is opt-in through a `-recurse &lt;recurse&gt;` flag.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>They also are not necessarily groups anymore, a region can directly
+apply any other highlighter</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>See xref:./highlighters.adoc[`:doc highlighters`]</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Highlighter type names have been unified, types that used <code>_</code> as
+word separators, such as <code>show_whitespaces</code> are now using <code>-</code>
+(<code>show-whitespace</code>).</p>
+</li>
+<li>
+<p><code>a</code> on end of line is not treated specially anymore, it will start
+inserting on the next character, which will be the first character
+of the next line.</p>
+</li>
+<li>
+<p><code>autoshowcompl</code> options has been renamed <code>auto_complete</code> and is
+now a <code>flags(insert|prompt)</code> option, allowing more granular
+configuration of when the completions should be displayed
+automatically.</p>
+</li>
+<li>
+<p>Prompt editing shortcuts have been changed to match readline.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2018-04-13"><a class="anchor" href="#kakoune-2018-04-13"></a><a class="link" href="#kakoune-2018-04-13">16. Kakoune 2018.04.13</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First official Kakoune release.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

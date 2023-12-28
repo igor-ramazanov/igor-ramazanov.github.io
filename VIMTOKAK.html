@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,8 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Vi(m) to Kakoune:</h1>
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
 <p>Kakoune is inspired heavily by Vim. It strives to be as efficient as Vim,
 more consistent and simpler. A big difference is that a lot of special
@@ -203,56 +202,24 @@ of the operator &#8594; move order, while Kakoune only needs the d operation.
 Selecting first also allows more complex selections.</p>
 </div>
 <div class="paragraph">
-<p>delete a word:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: dw</p>
-</li>
-<li>
-<p>kak: wd</p>
-</li>
-</ul>
+<p>delete a word:
+ * vim: dw
+ * kak: wd</p>
 </div>
 <div class="paragraph">
-<p>delete a character:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: x</p>
-</li>
-<li>
-<p>kak: d or ;d (; reduces the selection to a single char)</p>
-</li>
-</ul>
+<p>delete a character:
+ * vim: x
+ * kak: d or ;d (; reduces the selection to a single char)</p>
 </div>
 <div class="paragraph">
-<p>copy a line:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: yy</p>
-</li>
-<li>
-<p>kak: xy</p>
-</li>
-</ul>
+<p>copy a line:
+ * vim: yy
+ * kak: xy</p>
 </div>
 <div class="paragraph">
-<p>global replace:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: :%s/word/replacement&lt;ret&gt;</p>
-</li>
-<li>
-<p>kak: %sword&lt;ret&gt;creplacement&lt;esc&gt;,</p>
-</li>
-</ul>
+<p>global replace:
+ * vim: :%s/word/replacement&lt;ret&gt;
+ * kak: %sword&lt;ret&gt;creplacement&lt;esc&gt;,</p>
 </div>
 <div class="paragraph">
 <p>Explanation: <em>%</em> selects the entire buffer, <em>s</em> opens a prompt for a
@@ -267,63 +234,31 @@ multiple cursors.</p>
 feature per se, but just a nice way Kakoune features work together.</p>
 </div>
 <div class="paragraph">
-<p>global interactive replace:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: :%s/word/replacement/gc&lt;ret&gt;
-and then keep pressing <em>y</em> to accept the change or <em>n</em> to reject.</p>
-</li>
-<li>
-<p>kak: /word&lt;ret&gt;creplacement&lt;esc&gt;
-and then press <em>n</em> to search for the next occurence and either <em>.</em>
-to redo the last insert operation (that is replace <em>word</em> with
-<em>replacement</em>) or <em>n</em> to go to the next match.</p>
-</li>
-</ul>
+<p>global interactive replace:
+ * vim: :%s/word/replacement/gc&lt;ret&gt;
+   and then keep pressing <em>y</em> to accept the change or <em>n</em> to reject.
+ * kak: /word&lt;ret&gt;creplacement&lt;esc&gt;
+   and then press <em>n</em> to search for the next occurence and either <em>.</em>
+   to redo the last insert operation (that is replace <em>word</em> with
+   <em>replacement</em>) or <em>n</em> to go to the next match.</p>
 </div>
 <div class="paragraph">
-<p>replace in current curly brace block:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: viB:s/word/replacement&lt;ret&gt;</p>
-</li>
-<li>
-<p>kak: &lt;a-i&gt;Bsword&lt;ret&gt;creplacement&lt;esc&gt;</p>
-</li>
-</ul>
+<p>replace in current curly brace block:
+ * vim: viB:s/word/replacement&lt;ret&gt;
+ * kak: &lt;a-i&gt;Bsword&lt;ret&gt;creplacement&lt;esc&gt;</p>
 </div>
 <div class="paragraph">
 <p>Here again, Vim had to rely on a special feature, visual mode.</p>
 </div>
 <div class="paragraph">
-<p>join line with next:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: J</p>
-</li>
-<li>
-<p>kak: &lt;a-J&gt;</p>
-</li>
-</ul>
+<p>join line with next:
+ * vim: J
+ * kak: &lt;a-J&gt;</p>
 </div>
 <div class="paragraph">
-<p>delete to line end:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vim: d$</p>
-</li>
-<li>
-<p>kak: &lt;a-l&gt;d or Gld</p>
-</li>
-</ul>
+<p>delete to line end:
+ * vim: d$
+ * kak: &lt;a-l&gt;d or Gld</p>
 </div>
 <div class="paragraph">
 <p>Some classic Vim moves are not bound to the same key. Kakoune
@@ -347,8 +282,6 @@ block&#8217;s end, you should use ;M (; reduces the selection to one character).
 To emulate :g or :v, use % to select the whole buffer, &lt;a-s&gt; to get
 one selection per line, and then &lt;a-k&gt; or &lt;a-K&gt; to keep only the
 selections matching (or not matching) the entered regex.</p>
-</div>
-</div>
 </div>
 </article>
   </div>

@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,27 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Changelog</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#development-version">1. Development version</a></li>
-<li><a href="#kakoune-2023-08-08">2. Kakoune 2023.08.08</a></li>
-<li><a href="#kakoune-2023-07-29">3. Kakoune 2023.07.29</a></li>
-<li><a href="#kakoune-2022-10-31">4. Kakoune 2022.10.31</a></li>
-<li><a href="#kakoune-2021-11-07">5. Kakoune 2021.11.07</a></li>
-<li><a href="#kakoune-2021-10-28">6. Kakoune 2021.10.28</a></li>
-<li><a href="#kakoune-2021-08-28">7. Kakoune 2021.08.28</a></li>
-<li><a href="#kakoune-2020-09-01">8. Kakoune 2020.09.01</a></li>
-<li><a href="#kakoune-2020-08-04">9. Kakoune 2020.08.04</a></li>
-<li><a href="#kakoune-2020-01-16">10. Kakoune 2020.01.16</a></li>
-<li><a href="#kakoune-2019-12-10">11. Kakoune 2019.12.10</a></li>
-<li><a href="#kakoune-2019-07-01">12. Kakoune 2019.07.01</a></li>
-<li><a href="#kakoune-2019-01-20">13. Kakoune 2019.01.20</a></li>
-<li><a href="#kakoune-2018-10-27">14. Kakoune 2018.10.27</a></li>
-<li><a href="#kakoune-2018-09-04">15. Kakoune 2018.09.04</a></li>
-<li><a href="#kakoune-2018-04-13">16. Kakoune 2018.04.13</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -222,12 +202,25 @@ released versions.</p>
 <div class="ulist">
 <ul>
 <li>
+<p><code>shell-script-candidates</code> completion now runs the script asynchronously
+while displaying and updating results live.</p>
+</li>
+<li>
+<p><code>%val{window_range}</code> elements are now emitted as different strings</p>
+</li>
+<li>
 <p><code>+</code> only duplicates identical selections a single time to avoid surprising
 and slow exponential growth in the number of selections.</p>
 </li>
 <li>
 <p><code>daemonize-session</code> command makes it possible to convert the current session
-to a deamon one (which will not exit on last client disconnecting)</p>
+to a daemon one (which will not exit on last client disconnecting)</p>
+</li>
+<li>
+<p>View mode commands and mouse scrolling no longer change selections when those go off-screen.</p>
+</li>
+<li>
+<p>New commands <code>git apply</code>, <code>git edit</code>, <code>git grep</code></p>
 </li>
 </ul>
 </div>

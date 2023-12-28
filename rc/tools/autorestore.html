@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,8 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Automatically restore unsaved work after a crash.</h1>
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
 <p>When Kakoune crashes, it automatically writes out unsaved changes to backup
 files with predictable names. When you edit a file, if such a backup file
@@ -203,8 +202,6 @@ instead.</p>
 <p>If you don&#8217;t want backups to be restored automatically, use the
 <code>autorestore-disable</code> command to disable the feature for the current session,
 or put it in your <code>kakrc</code> to disable the feature forever.</p>
-</div>
-</div>
 </div>
 </article>
   </div>

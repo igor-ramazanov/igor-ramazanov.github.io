@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,15 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Mapping</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#description">1. Description</a></li>
-<li><a href="#mapping-commands">2. Mapping commands</a></li>
-<li><a href="#mappable-keys">3. Mappable keys</a></li>
-<li><a href="#default-mappings">4. Default mappings</a></li>
-</ul>
-</div>
 <div class="sect1">
 <h2 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">1. Description</a></h2>
 <div class="sectionbody">
@@ -228,10 +220,6 @@ unmap &lt;scope&gt; &lt;mode&gt; &lt;key&gt; [&lt;expected&gt;]</pre>
 <dt class="hdlist1"><strong>prompt</strong></dt>
 <dd>
 <p>prompts, such as when entering a command through <strong>:</strong>, or a regex through <strong>/</strong></p>
-</dd>
-<dt class="hdlist1"><strong>menu</strong></dt>
-<dd>
-<p>mode entered when a menu is displayed with the 'menu' command</p>
 </dd>
 <dt class="hdlist1"><strong>user</strong></dt>
 <dd>
@@ -301,7 +289,9 @@ command you invoke with the <code>%val{count}</code> and <code>%val{register}</c
 <h2 id="mappable-keys"><a class="anchor" href="#mappable-keys"></a><a class="link" href="#mappable-keys">3. Mappable keys</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="keys.html" class="xref page"><code>:doc keys</code></a> to discover the list of default bindings.</p>
+<p>See <a href="keys.html" class="xref page"><code>:doc keys</code></a> to learn what each key does in each mode. The keys on
+the right-hand side of the mapping are not affected by other mappings, they
+always perform their original function.</p>
 </div>
 <div class="paragraph">
 <p>For <strong>key</strong> and <strong>keys</strong> in the <strong>map</strong> command, the following key names can

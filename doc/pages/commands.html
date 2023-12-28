@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,23 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Commands</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#files-and-buffers">1. Files and Buffers</a></li>
-<li><a href="#clients-and-sessions">2. Clients and Sessions</a></li>
-<li><a href="#options">3. Options</a></li>
-<li><a href="#commands-and-keys">4. Commands and Keys</a></li>
-<li><a href="#hooks">5. Hooks</a></li>
-<li><a href="#display">6. Display</a></li>
-<li><a href="#helpers">7. Helpers</a></li>
-<li><a href="#module-commands">8. Module commands</a></li>
-<li><a href="#multiple-commands">9. Multiple commands</a></li>
-<li><a href="#declaring-new-commands">10. Declaring new commands</a></li>
-<li><a href="#configuring-command-completion">11. Configuring command completion</a></li>
-<li><a href="#aliases">12. Aliases</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -713,23 +697,6 @@ in shells, or <code>%val{key}</code> in commands.</p>
 <pre>NOTE: The key press must come from the current client context,
 so inside a draft context like `evaluate-commands -draft`, it only
 responds to an `execute-keys` command in the same context.</pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><strong>menu</strong> [&lt;switches&gt;] &lt;label1&gt; &lt;commands1&gt; &lt;label2&gt; &lt;commands2&gt; &#8230;&#8203;</dt>
-<dd>
-<p>display a menu using labels, the selected label’s commands are
-executed. The <strong>menu</strong> command can take an <strong>-auto-single</strong> argument, to automatically
-run commands when only one choice is provided, and a <strong>-select-cmds</strong>
-argument, in which case menu takes three argument per item, the
-last one being a command to execute when the item is selected (but
-not validated)</p>
-<div class="literalblock">
-<div class="content">
-<pre>NOTE: The menu is displayed in and receives input from the
-current client context, so inside a draft context like
-`evaluate-commands -draft`, it is invisible and only responds to
-an `execute-keys` command in the same context.</pre>
 </div>
 </div>
 </dd>

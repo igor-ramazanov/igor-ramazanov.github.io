@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,53 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">FAQ</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#the-project">1. The project</a>
-<ul class="sectlevel2">
-<li><a href="#how-to-pronounce-the-name-of-the-project-and-what-does-it-mean">1.1. How to pronounce the name of the project and what does it mean ?</a></li>
-<li><a href="#is-there-going-to-be-a-windows-port-of-kakoune">1.2. Is there going to be a Windows port of Kakoune ?</a></li>
-</ul>
-</li>
-<li><a href="#interfacing">2. Interfacing</a>
-<ul class="sectlevel2">
-<li><a href="#can-i-use-kakoune-as-a-pager">2.1. Can I use Kakoune as a pager ?</a></li>
-<li><a href="#are-there-any-non-console-based-frontends-available">2.2. Are there any non-console based frontends available?</a></li>
-<li><a href="#why-are-colors-misrendered-in-my-kakoune-clients">2.3. Why are colors misrendered in my Kakoune clients?</a></li>
-<li><a href="#im-using-tmux-and-colors-look-weird">2.4. I&#8217;m using <code>tmux</code> and colors look weird</a></li>
-<li><a href="#why-do-i-see-weird-special-characters-tu-around-clippy">2.5. Why do I see weird special characters (<sub>T</sub>@~U) around Clippy?</a></li>
-<li><a href="#why-does-leaving-insert-mode-take-more-than-half-a-second-in-tmux">2.6. Why does leaving insert mode take more than half a second in <code>tmux</code>?</a></li>
-<li><a href="#can-i-split-the-window-to-display-different-buffers-in-them">2.7. Can I split the window to display different buffers in them?</a></li>
-</ul>
-</li>
-<li><a href="#generic-functionalities">3. Generic functionalities</a>
-<ul class="sectlevel2">
-<li><a href="#something-is-wrong-how-can-i-get-more-debug-information">3.1. Something is wrong, how can I get more debug information?</a></li>
-<li><a href="#how-can-i-explore-the-filesystem-the-way-vims-nerdtree-does">3.2. How can I explore the filesystem the way Vim&#8217;s NerdTree does?</a></li>
-<li><a href="#how-do-i-automatically-indent-code-as-vim-does-with">3.3. How do I automatically indent code, as Vim does with <code>=</code>?</a></li>
-<li><a href="#can-kakoune-automatically-complete-the-parameters-of-my-functions">3.4. Can Kakoune automatically complete the parameters of my functions?</a></li>
-<li><a href="#why-arent-widely-known-command-line-shortcuts-such-as-c-w-or-c-u-available-in-kakoune">3.5. Why aren&#8217;t widely known command line shortcuts such as &lt;c-w&gt; or &lt;c-u&gt; available in Kakoune?</a></li>
-<li><a href="#can-i-disable-auto-indentation-completely">3.6. Can I disable auto-indentation completely?</a></li>
-<li><a href="#how-to-enable-syntax-highlighting">3.7. How to enable syntax highlighting?</a></li>
-<li><a href="#my-file-seems-to-be-highlighted-with-the-wrong-colors-i-thought-syntax-highlighting-was-detected-automatically">3.8. My file seems to be highlighted with the wrong colors, I thought syntax highlighting was detected automatically?</a></li>
-<li><a href="#can-i-disable-syntax-highlighting-completely">3.9. Can I disable syntax highlighting completely?</a></li>
-<li><a href="#can-the-cursor-be-rendered-as-a-beam">3.10. Can the cursor be rendered as a beam?</a></li>
-</ul>
-</li>
-<li><a href="#the-editing-language">4. The editing language</a>
-<ul class="sectlevel2">
-<li><a href="#the-scripting-language-lacks-keywords-when-are-you-going-to-expand-it">4.1. The scripting language lacks keywords, when are you going to expand it?</a></li>
-<li><a href="#why-arent-there-other-scopes-similar-to-sh-e-g-python">4.2. Why aren&#8217;t there other scopes similar to <code>%sh{}</code> e.g. python?</a></li>
-<li><a href="#what-shell-is-used-to-expand-sh-scopes">4.3. What shell is used to expand <code>%sh{}</code> scopes?</a></li>
-<li><a href="#why-does-a-dot-in-a-regex-select-newline-characters">4.4. Why does a dot <code>.</code> in a regex select newline characters?</a></li>
-<li><a href="#why-does-a-extend-the-current-selection-but-i-leaves-it-untouched">4.5. Why does <code>a</code> extend the current selection, but <code>i</code> leaves it untouched?</a></li>
-<li><a href="#how-to-apply-changes-to-all-open-buffers">4.6. How to apply changes to all open buffers?</a></li>
-<li><a href="#why-is-the-text-i-pasted-into-a-buffer-completely-mangled">4.7. Why is the text I pasted into a buffer completely mangled?</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="sect1">
 <h2 id="the-project"><a class="anchor" href="#the-project"></a><a class="link" href="#the-project">1. The project</a></h2>
 <div class="sectionbody">

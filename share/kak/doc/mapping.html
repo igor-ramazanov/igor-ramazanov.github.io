@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mapping :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="mapping.html">Mapping</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/mapping.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Mapping</h1>
+<div class="sect1">
+<h2 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">1. Description</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Creating and removing shortcuts boils down to the following commands,
+respectively:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>map [switches] &lt;scope&gt; &lt;mode&gt; &lt;key&gt; &lt;keys&gt;
+unmap &lt;scope&gt; &lt;mode&gt; &lt;key&gt; [&lt;expected&gt;]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>map</strong> command makes <strong>key</strong> behave as if the <strong>keys</strong> sequence was typed.</p>
+</div>
+<div class="paragraph">
+<p><strong>mode</strong> dictates in what context the mapping will be available:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>insert</strong></dt>
+<dd>
+<p>insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>normal</strong></dt>
+<dd>
+<p>normal mode</p>
+</dd>
+<dt class="hdlist1"><strong>prompt</strong></dt>
+<dd>
+<p>prompts, such as when entering a command through <strong>:</strong>, or a regex through <strong>/</strong></p>
+</dd>
+<dt class="hdlist1"><strong>user</strong></dt>
+<dd>
+<p>mode entered when the user prefix is hit (default: '&lt;space&gt;')</p>
+</dd>
+<dt class="hdlist1"><strong>goto</strong></dt>
+<dd>
+<p>mode entered when the goto key is hit (default: 'g')</p>
+</dd>
+<dt class="hdlist1"><strong>view</strong></dt>
+<dd>
+<p>mode entered when the view key is hit (default: 'v')</p>
+</dd>
+<dt class="hdlist1"><strong>object</strong></dt>
+<dd>
+<p>mode entered when an object selection is triggered (e.g. '&lt;a-i&gt;')</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The context of execution of the above modes is always the current one at the
+time of execution of the mapping, except for <strong>user</strong> mode (always executed
+in a 'normal' context). Refer to <a href="modes.html" class="xref page"><code>:doc modes</code></a> for more details.</p>
+</div>
+<div class="paragraph">
+<p>An optional <strong>-docstring</strong> switch followed by a string can be used
+to describe what the mapping does. This docstring will be used
+in autoinfo boxes.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>unmap</strong> command removes a mapping of <strong>key</strong> in the given <strong>scope</strong> and
+<strong>mode</strong>. If <strong>expected</strong> is specified, the mapping is removed only if it is
+set to the same sequence of keys passed using the <strong>expected</strong> argument.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the values of the <strong>scope</strong> parameter, refer to
+<a href="scopes.html" class="xref page"><code>:doc scopes</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mapping-commands"><a class="anchor" href="#mapping-commands"></a><a class="link" href="#mapping-commands">2. Mapping commands</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s common to use a normal-mode or user-mode mapping to trigger a command,
+like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>map global user n :make-next-error&lt;ret&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you make a normal-mode mapping, you can prefix it with a count or a register
+name like any other normal-mode key. You can forward this information to the
+command you invoke with the <code>%val{count}</code> and <code>%val{register}</code> expansions
+(See <a href="expansions.html" class="xref page"><code>:doc expansions</code></a>). For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>map global normal = ':echo Got count %val{count} and reg %val{register}&lt;ret&gt;'</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mappable-keys"><a class="anchor" href="#mappable-keys"></a><a class="link" href="#mappable-keys">3. Mappable keys</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="keys.html" class="xref page"><code>:doc keys</code></a> to learn what each key does in each mode. The keys on
+the right-hand side of the mapping are not affected by other mappings, they
+always perform their original function.</p>
+</div>
+<div class="paragraph">
+<p>For <strong>key</strong> and <strong>keys</strong> in the <strong>map</strong> command, the following key names can
+be used:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>x</strong>, <strong>&lt;x&gt;</strong></dt>
+<dd>
+<p>Most keys, especially alphabetic keys, represent themselves.
+Keys can also be wrapped in angle-brackets for consistency
+with the non-alphabetic keys below.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-x&gt;</strong></dt>
+<dd>
+<p>Holding down Control while pressing the <strong>x</strong> key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;a-x&gt;</strong></dt>
+<dd>
+<p>Holding down Alt while pressing the <strong>x</strong> key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;s-x&gt;</strong>, <strong>X</strong>, <strong>&lt;X&gt;</strong>, <strong>&lt;s-X&gt;</strong></dt>
+<dd>
+<p>Holding down Shift while pressing the <strong>x</strong> key.
+<strong>&lt;s-x&gt;</strong>, <strong>&lt;s-X&gt;</strong> and <strong>&lt;X&gt;</strong> are treated as the same key. The <strong>s-</strong> modifier
+only works with ASCII letters and cannot be used with other printable keys
+(non-ASCII letters, digits, punctuation) because their shift behaviour
+depends on your keyboard layout. The <strong>s-</strong> modifier <em>can</em> be used with
+special keys like <strong>&lt;up&gt;</strong> and <strong>&lt;tab&gt;</strong>.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;c-a-x&gt;</strong></dt>
+<dd>
+<p>Holding down Control and Alt while pressing the <strong>x</strong> key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;lt&gt;</strong>, <strong>&lt;gt&gt;</strong></dt>
+<dd>
+<p>The <strong>&lt;</strong> and <strong>&gt;</strong> characters.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;plus&gt;</strong>, <strong>&lt;minus&gt;</strong></dt>
+<dd>
+<p>The <strong>+</strong> and <strong>-</strong> characters.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;ret&gt;</strong></dt>
+<dd>
+<p>The Return or Enter key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;space&gt;</strong></dt>
+<dd>
+<p>The space bar.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;tab&gt;</strong></dt>
+<dd>
+<p>The Tab key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;backspace&gt;</strong></dt>
+<dd>
+<p>The Backspace (delete to the left) key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;del&gt;</strong></dt>
+<dd>
+<p>The Delete (to the right) key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;esc&gt;</strong></dt>
+<dd>
+<p>The Escape key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;up&gt;</strong>, <strong>&lt;down&gt;</strong>, <strong>&lt;left&gt;</strong>, <strong>&lt;right&gt;</strong></dt>
+<dt class="hdlist1"><strong>&lt;pageup&gt;</strong>, <strong>&lt;pagedown&gt;</strong>, <strong>&lt;home&gt;</strong>, <strong>&lt;end&gt;</strong></dt>
+<dd>
+<p>The usual cursor-movement keys.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;ins&gt;</strong></dt>
+<dd>
+<p>The Insert key.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;F1&gt;</strong>, <strong>&lt;F2&gt;</strong>, &#8230;&#8203;<strong>&lt;F12&gt;</strong></dt>
+<dd>
+<p>Function keys.</p>
+</dd>
+<dt class="hdlist1"><strong>&lt;semicolon&gt;</strong>, <strong>&lt;percent&gt;</strong></dt>
+<dd>
+<p>The <strong>;</strong> and <strong>%</strong> characters, these keys allow reducing the amount of
+backslash escaping in scripts (for example, <code>exec \%</code> becomes <code>exec
+&lt;percent&gt;</code>)</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Although Kakoune allows many key combinations to be mapped, not every
+possible combination can be triggered. For example, due to limitations in
+the way terminals handle control characters, mappings like <strong>&lt;c-s-a&gt;</strong> are
+unlikely to work in Kakoune&#8217;s terminal UI.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Some keys, like <code>&lt;c-c&gt;</code> and <code>&lt;c-g&gt;</code>, cannot be remapped because they are
+used to cancel operations. See <a href="keys.html#cancelling-operations" class="xref page"><code>:doc keys cancelling-operations</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-mappings"><a class="anchor" href="#default-mappings"></a><a class="link" href="#default-mappings">4. Default mappings</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some mappings exist by default in the global scope:</p>
+</div>
+<div class="paragraph">
+<p>In normal mode:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;left&gt;</code>  maps to <code>h</code></p>
+</li>
+<li>
+<p><code>&lt;right&gt;</code> maps to <code>l</code></p>
+</li>
+<li>
+<p><code>&lt;up&gt;</code>    maps to <code>k</code></p>
+</li>
+<li>
+<p><code>&lt;down&gt;</code>  maps to <code>j</code></p>
+</li>
+<li>
+<p><code>&lt;home&gt;</code>  maps to <code>&lt;a-h&gt;</code></p>
+</li>
+<li>
+<p><code>&lt;end&gt;</code>   maps to <code>&lt;a-l&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Shift version of those mappings exist as well
+(for example <code>&lt;s-left&gt;</code> maps to <code>H</code>).</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

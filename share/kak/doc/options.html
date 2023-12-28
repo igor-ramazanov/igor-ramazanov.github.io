@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Options :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="options.html">Options</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/options.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Options</h1>
+<div class="sect1">
+<h2 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">1. Description</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune can store named and typed values that can be used both to
+customize the core editor behaviour, and to store data used by extension
+scripts.</p>
+</div>
+<div id="set-option" class="paragraph">
+<p>Options can be modified using the <code>set-option</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>set-option [-add|-remove] &lt;scope&gt; &lt;name&gt; &lt;values&gt;...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;scope&gt; can be <strong>global</strong>, <strong>buffer</strong>, <strong>window</strong> or <strong>current</strong> (See
+<a href="scopes.html" class="xref page"><code>:doc scopes</code></a>). <strong>current</strong> relates to the narrowest scope in
+which the option is already set.</p>
+</div>
+<div class="paragraph">
+<p>When the option is a list or a map, multiple &lt;values&gt; can be given as
+separate arguments, or can be omitted altogether in order to empty the
+option.</p>
+</div>
+<div class="paragraph">
+<p>If <code>-add</code> or <code>-remove</code> is specified, the new value is respectively <strong>added</strong>
+to or <strong>removed</strong> from the current one instead of replacing it (the exact
+outcome depends on the type, see below).</p>
+</div>
+<div id="unset-option" class="paragraph">
+<p>Option values can be unset in a specific scope with the <code>unset-option</code>
+command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>unset-option &lt;scope&gt; &lt;name&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unsetting an option will make it fallback to the value of its parent scope,
+hence options cannot be unset from the <strong>global</strong> scope.</p>
+</div>
+<div id="declare-option" class="paragraph">
+<p>New options can be declared using the <code>declare-option</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>declare-option [-hidden] &lt;type&gt; &lt;name&gt; [&lt;value&gt;...]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>-hidden</code> is specified, the option will not be displayed in completion
+suggestions.</p>
+</div>
+<div id="update-option" class="paragraph">
+<p>Certain option type can be <strong>updated</strong>, usually to match potential changes
+in the buffer they relate to. This can be triggered by the <code>update-option</code>
+command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>update-option &lt;scope&gt; &lt;name&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="types"><a class="anchor" href="#types"></a><a class="link" href="#types">2. Types</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All options have a type, which defines how they are translated to/from
+text and their set of valid values.</p>
+</div>
+<div class="paragraph">
+<p>Some types are usable for user defined options while some other types
+are exclusively available to built-in options.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>int</strong></dt>
+<dd>
+<p>an integer number.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` performs a math addition. +
+`set -remove` performs a math substraction. +</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><strong>bool</strong></dt>
+<dd>
+<p>a boolean value, yes/true or no/false</p>
+</dd>
+<dt class="hdlist1"><strong>str</strong></dt>
+<dd>
+<p>a string, some freeform text</p>
+</dd>
+<dt class="hdlist1"><strong>regex</strong></dt>
+<dd>
+<p>as a string but the set commands will complain if the entered text
+is not a valid regex</p>
+</dd>
+<dt class="hdlist1"><strong>coord</strong></dt>
+<dd>
+<p>a line, column pair (separated by a comma)
+Cannot be used with <code>declare-option</code></p>
+</dd>
+<dt class="hdlist1"><strong>&lt;type&gt;-list</strong></dt>
+<dd>
+<p>a list, elements are specified as separate arguments to the command.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` appends the new element to the list. +
+`set -remove` removes each given element from the list. +</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Only `int-list` and `str-list` options can be created with
+`declare-option`.</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><strong>range-specs</strong></dt>
+<dd>
+<p>a timestamp (like <code>%val{timestamp}</code>,
+see <a href="expansions.html#value-expansions" class="xref page"><code>:doc expansions value-expansions</code></a>)
+followed by a list of range descriptors.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Each range descriptor must use the syntax `a.b,c.d|string` or
+`a.b+length|string`, with:</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>a</em> is the line containing the first character</p>
+</li>
+<li>
+<p><em>b</em> is the number of bytes from the start of the line to the
+first byte of the first character</p>
+</li>
+<li>
+<p><em>c</em> is the line containing the last character</p>
+</li>
+<li>
+<p><em>d</em> is the number of bytes from the start of the line to the
+first byte of the last character</p>
+</li>
+<li>
+<p><em>length</em> is the length of the range in bytes, if 0 the range
+is empty, but still valid.</p>
+</li>
+<li>
+<p><em>string</em> is an arbitrary string which is associated with
+the range. Any <code>|</code> or <code>\</code> characters must be escaped as <code>\|</code> or <code>\\</code>.</p>
+<div class="literalblock">
+<div class="content">
+<pre>All numeric fields are 1-based.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>When the command `update-option` is used on an option of this type,
+its ranges get updated according to all the buffer modifications
+that happened since its timestamp.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` appends the new pairs to the list. +
+`set -remove` removes the given pairs from the list. +</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>See xref:./highlighters.adoc#specs-highlighters[`:doc highlighters specs-highlighters`])</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1"><strong>line-specs</strong></dt>
+<dd>
+<p>a list of a line number and a corresponding flag (<code>&lt;line&gt;|&lt;flag
+text&gt;</code>), except for the first element which is just the timestamp
+of the buffer. When <code>update-option</code> is used on an option of this
+type, its lines get updated according to all the buffer modifications
+that happened since its timestamp.
+See <a href="highlighters.html#specs-highlighters" class="xref page"><code>:doc highlighters specs-highlighters</code></a>)</p>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` appends the new specs to the list. +
+`set -remove` removes the given specs from the list. +</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Any `|` or `\` characters that occur within `&lt;flag text&gt;` must be
+escaped as `\|` or `\\`.</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><strong>completions</strong></dt>
+<dd>
+<p>a list of <code>&lt;text&gt;|&lt;select cmd&gt;|&lt;menu text&gt;</code> candidates,
+except for the first element which follows the
+<code>&lt;line&gt;.&lt;column&gt;[+&lt;length&gt;]@&lt;timestamp&gt;</code> format to define where the
+completion apply in the buffer.
+Any <code>|</code> or <code>\</code> characters that occur within the <code>&lt;text&gt;</code>,
+<code>&lt;select cmd&gt;</code>, or <code>&lt;menu text&gt;</code> fields should be escaped as <code>\|</code>
+or <code>\\</code>.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Options of this type are are meant to be added to the `completers`
+option to provide insert mode completion. Candidates are shown if the
+text typed by the user (between `&lt;line&gt;.&lt;column&gt;` and the cursor) is a
+subsequence of `&lt;text&gt;`.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For each remaining candidate, the completion menu displays
+`&lt;text&gt;`, followed by `&lt;menu text&gt;`, which is a Markup string (see
+xref:./faces.adoc#markup-strings[`:doc faces markup-strings`]).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>As the user selects items from the completion menu, the text they typed
+will be replaced with `&lt;text&gt;`, and the Kakoune command in
+`&lt;select cmd&gt;` is executed. The common use case is to display element
+specific documentation.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` adds given completions to the list. +
+`set -remove` removes given completions from the list. +</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><strong>enum(value1|value2|&#8230;&#8203;)</strong></dt>
+<dd>
+<p>an enum, taking one of the given values
+Cannot be used with <code>declare-option</code></p>
+</dd>
+<dt class="hdlist1"><strong>flags(value1|value2|&#8230;&#8203;)</strong></dt>
+<dd>
+<p>a set of flags, taking a combination of the given values joined by a
+'|' character.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` adds the given flags to the combination. +
+`set -remove` removes the given flags to the combination. +</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Cannot be used with `declare-option`</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><strong>&lt;type&gt;-to-&lt;type&gt;-map</strong></dt>
+<dd>
+<p>a list of <code>key=value</code> pairs.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`set -add` adds the given pair to the hashmap or replace an already
+existing key. +
+`set -remove` removes the given pair from the hashmap, if only the
+key is provided it removes that entry regardless of the associated
+value. +</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Only `str-to-str-map` options can be created with `declare-option`.</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="builtin-options"><a class="anchor" href="#builtin-options"></a><a class="link" href="#builtin-options">3. Builtin options</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>tabstop</strong> <code>int</code></dt>
+<dd>
+<p><em>default</em> 8<br>
+width of a tab character</p>
+</dd>
+<dt class="hdlist1"><strong>indentwidth</strong> <code>int</code></dt>
+<dd>
+<p><em>default</em> 4<br>
+width (in spaces) used for indentation, 0 means a tab character</p>
+</dd>
+<dt class="hdlist1"><strong>scrolloff</strong> <code>coord</code></dt>
+<dd>
+<p><em>default</em> 0,0<br>
+number of lines, columns to keep visible around the cursor when
+scrolling</p>
+</dd>
+<dt class="hdlist1"><strong>eolformat</strong> <code>enum(lf|crlf)</code></dt>
+<dd>
+<p><em>default</em> lf<br>
+the format of end of lines when writing a buffer, this is autodetected
+on load; values of this option assigned to the <code>window</code> scope are
+ignored</p>
+</dd>
+<dt class="hdlist1"><strong>BOM</strong> <code>enum(none|utf8)</code></dt>
+<dd>
+<p><em>default</em> none<br>
+define if the file should be written with a unicode byte order mark;
+values of this option assigned to the <code>window</code> scope are ignored</p>
+</dd>
+<dt class="hdlist1"><strong>readonly</strong> <code>bool</code></dt>
+<dd>
+<p><em>default</em> false<br>
+prevent modifications from being saved to disk, all buffers if set
+to <code>true</code> in the <code>global</code> scope, or current buffer if set in the
+<code>buffer</code> scope; values of this option assigned to the <code>window</code>
+scope are ignored</p>
+</dd>
+<dt class="hdlist1"><strong>incsearch</strong> <code>bool</code></dt>
+<dd>
+<p><em>default</em> true<br>
+execute search as it is typed</p>
+</dd>
+<dt class="hdlist1"><strong>aligntab</strong> <code>bool</code></dt>
+<dd>
+<p><em>default</em> false<br>
+use tabs for alignment command</p>
+</dd>
+<dt class="hdlist1"><strong>autoinfo</strong> <code>flags(command|onkey|normal)</code></dt>
+<dd>
+<p><em>default</em> command|onkey<br>
+display automatic information box in the enabled contexts</p>
+</dd>
+<dt class="hdlist1"><strong>autocomplete</strong> <code>flags(insert|prompt)</code></dt>
+<dd>
+<p><em>default</em> insert|prompt<br>
+automatically display possible completions in the enabled modes.</p>
+</dd>
+<dt class="hdlist1"><strong>ignored_files</strong> <code>regex</code></dt>
+<dd>
+<p>filenames matching this regex won&#8217;t be considered as candidates
+on filename completion (except if the text being completed already
+matches it)</p>
+</dd>
+<dt class="hdlist1"><strong>disabled_hooks</strong> <code>regex</code></dt>
+<dd>
+<p>hooks whose group matches this regex won&#8217;t be executed. For example
+indentation hooks can be disabled with <code>.*-indent</code>.
+(See <a href="hooks.html#disabling-hooks" class="xref page"><code>:doc hooks</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>filetype</strong> <code>str</code></dt>
+<dd>
+<p>arbitrary string defining the type of the file. Filetype dependent
+actions should hook on this option changing for activation/deactivation</p>
+</dd>
+<dt class="hdlist1"><strong>path</strong> <code>str-list</code></dt>
+<dd>
+<p><em>default</em> ./ %/ /usr/include<br>
+directories to search for <strong>gf</strong> command and filenames completion
+<code>%/</code> represents the current buffer directory</p>
+</dd>
+<dt class="hdlist1"><strong>completers</strong> <code>completer-list</code></dt>
+<dd>
+<p><em>default</em> filename word=all<br>
+completion engines to use for insert mode completion (they are tried
+in order until one generates candidates). Existing completers are:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>word=all</strong>, <strong>word=buffer</strong></dt>
+<dd>
+<p>which complete using words in all buffers (<strong>word=all</strong>)
+or only the current one (<strong>word=buffer</strong>)</p>
+</dd>
+<dt class="hdlist1"><strong>filename</strong></dt>
+<dd>
+<p>which tries to detect when a filename is being entered and
+provides completion based on local filesystem</p>
+</dd>
+<dt class="hdlist1"><strong>line=all</strong>, <strong>line=buffer</strong></dt>
+<dd>
+<p>which complete using lines in all buffers (<strong>line=all</strong>)
+or only the current one (<strong>line=buffer</strong>)</p>
+</dd>
+<dt class="hdlist1"><strong>option=&lt;opt-name&gt;</strong></dt>
+<dd>
+<p>where <strong>opt-name</strong> is an option of type 'completions' whose
+contents will be used</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>static_words</strong> <code>str-list</code></dt>
+<dd>
+<p>list of words that are always added to completion candidates
+when completing words in insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>extra_word_chars</strong> <code>codepoint-list</code></dt>
+<dd>
+<p>a list of all additional codepoints that should be considered
+part of a word, for the purposes of the <code>w</code>, <code>b</code>, and <code>e</code> commands
+(See <a href="keys.html#movement" class="xref page"><code>:doc keys movement</code></a>).
+If this option is empty, Kakoune pretends it contains an
+underscore, otherwise the value is used as-is.
+This must be set on the buffer, not the window,
+for word completion to offer words containing these codepoints.</p>
+</dd>
+<dt class="hdlist1"><strong>matching_pairs</strong> <code>codepoint-list</code></dt>
+<dd>
+<p><em>default</em> ( ) { } [ ] &lt; &gt;<br>
+a list of codepoints that are to be treated as matching pairs
+for the <strong>m</strong> command.</p>
+</dd>
+<dt class="hdlist1"><strong>autoreload</strong> <code>enum(yes|no|ask)</code></dt>
+<dd>
+<p><em>default</em> ask<br>
+auto reload the buffers when an external modification is detected</p>
+</dd>
+<dt class="hdlist1"><strong>writemethod</strong> <code>enum(overwrite|replace)</code></dt>
+<dd>
+<p><em>default</em> overwrite<br>
+method used to write buffers to file, <code>overwrite</code> will open the
+existing file and write on top of the previous data, <code>replace</code>
+will open a temporary file next to the target file, write it and
+then rename it to the target file.</p>
+</dd>
+<dt class="hdlist1"><strong>debug</strong> <code>flags(hooks|shell|profile|keys|commands)</code></dt>
+<dd>
+<p>dump various debug information in the '*debug*' buffer</p>
+</dd>
+<dt class="hdlist1"><strong>idle_timeout</strong> <code>int</code></dt>
+<dd>
+<p><em>default</em> 50<br>
+timeout, in milliseconds, with no user input that will trigger the
+<strong>PromptIdle</strong>, <strong>InsertIdle</strong> and <strong>NormalIdle</strong> hooks, and autocompletion.</p>
+</dd>
+<dt class="hdlist1"><strong>fs_check_timeout</strong> <code>int</code></dt>
+<dd>
+<p><em>default</em> 500<br>
+timeout, in milliseconds, between checks in normal mode of modifications
+of the file associated with the current buffer on the filesystem.</p>
+</dd>
+<dt class="hdlist1"><strong>modelinefmt</strong> <code>string</code></dt>
+<dd>
+<p>A format string used to generate the mode line, that string is
+first expanded as a command line would be (expanding '%&#8230;&#8203;{&#8230;&#8203;}'
+strings), then markup tags are applied (see
+<a href="faces.html#markup-strings" class="xref page"><code>:doc faces markup-strings</code></a>)
+Two special atoms are available as markup:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong><code>{{mode_info}}</code></strong></dt>
+<dd>
+<p>Information about the current mode, such as <code>insert 3 sel</code> or
+<code>prompt</code>. The faces used are StatusLineMode, StatusLineInfo,
+and StatusLineValue.</p>
+</dd>
+<dt class="hdlist1"><strong><code>{{context_info}}</code></strong></dt>
+<dd>
+<p>Information such as <code>[+][recording (@)][no-hooks][new file][fifo]</code>,
+in face Information.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The default value is '%val{bufname} %val{cursor_line}:%val{cursor_char_column} {{context_info}} {{mode_info}} - %val{client}@[%val{session}]'</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>ui_options</strong> <code>str-to-str-map</code></dt>
+<dd>
+<p>a list of <code>key=value</code> pairs that are forwarded to the user
+interface implementation. The NCurses UI supports the following options:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>terminal_set_title</strong></dt>
+<dd>
+<p>if <strong>yes</strong> or <strong>true</strong>, the terminal emulator title will
+be changed</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_status_on_top</strong></dt>
+<dd>
+<p>if <strong>yes</strong>, or <strong>true</strong> the status line will be placed
+at the top of the terminal rather than at the bottom</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_assistant</strong></dt>
+<dd>
+<p>specify the nice assistant displayed in info boxes,
+can be <strong>clippy</strong> (the default), <strong>cat</strong>, <strong>dilbert</strong> or <strong>none</strong></p>
+</dd>
+<dt class="hdlist1"><strong>terminal_enable_mouse</strong></dt>
+<dd>
+<p>boolean option that enables mouse support</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_shift_function_key</strong></dt>
+<dd>
+<p>Function key from which shifted function key start, if the
+terminal sends F13 for &lt;s-F1&gt;, this should be set to 12.</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_padding_char</strong></dt>
+<dd>
+<p>character used to indicate the area out of the displayed buffer
+(defaults to '~')</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_padding_fill</strong></dt>
+<dd>
+<p>if <strong>yes</strong> or <strong>true</strong>, fill the padding area with the padding character
+instead of displaying a single character at the beginning of the
+padding line (defaults to <strong>false</strong>)</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_synchronized</strong></dt>
+<dd>
+<p>if <strong>yes</strong> or <strong>true</strong>, emit synchronized output escape sequences and
+reduce terminal output with sequences that could trigger flickering
+if unsynchronized (defaults to <strong>false</strong>)</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_info_max_width</strong></dt>
+<dd>
+<p>set the maximum allowable width of an info box. set to zero for
+no limit.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+<div id="startup-info" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>startup_info_version</strong> <code>int</code></dt>
+<dd>
+<p><em>default</em> 0<br>
+Controls which messages will be displayed in the startup info box, only messages
+relating to a Kakoune version greater than this value will be displayed. Versions
+are written as a single number: Like <code>20180413</code> for version <code>2018.04.13</code></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="current-values"><a class="anchor" href="#current-values"></a><a class="link" href="#current-values">4. Current values</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The current value for an option can be viewed using
+<a href="expansions.html#option-expansions" class="xref page"><code>:doc expansions option-expansions</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>For example, the current value of the <code>BOM</code> option can be displayed in the
+status line using the <code>echo</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo %opt{BOM}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The current values for all options can be dumped to the <strong>\*debug</strong>\* buffer using
+the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>debug options</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

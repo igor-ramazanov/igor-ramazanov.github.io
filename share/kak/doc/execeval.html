@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Execute-keys and Evaluate-commands :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="execeval.html">Execute-keys and Evaluate-commands</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/execeval.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Execute-keys and Evaluate-commands</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>execute-keys</strong> [&lt;switches&gt;] &lt;key&gt; &#8230;&#8203;</dt>
+<dd>
+<p>Run keys as if they were pressed.</p>
+</dd>
+<dt class="hdlist1"><strong>evaluate-commands</strong> [&lt;switches&gt;] &lt;command&gt; &#8230;&#8203;</dt>
+<dd>
+<p>Evaluate specified commands as if they were entered into the command
+prompt.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>By default, the execution of both commands happens within the context of
+the current client, and stops when the last key/command is reached or an
+error occurs.</p>
+</div>
+<div class="paragraph">
+<p>Without the <strong>-save-regs</strong> switch, <strong>execute-keys</strong> saves the following registers, which
+are then restored when the keys have been executed: <strong>/</strong>, <strong>"</strong>, <strong>|</strong>, <strong>^</strong>,
+<strong>@</strong>, <strong>:</strong>. <strong>evaluate-commands</strong> doesn&#8217;t save any registers by default.
+(See <a href="registers.html" class="xref page"><code>:doc registers</code></a>)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="switches-for-both-commands"><a class="anchor" href="#switches-for-both-commands"></a><a class="link" href="#switches-for-both-commands">1. Switches for both commands</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>-client</strong> &lt;name&gt;</dt>
+<dd>
+<p>Execute in the context of the client <strong>name</strong>.</p>
+</dd>
+<dt class="hdlist1"><strong>-try-client</strong> &lt;name&gt;</dt>
+<dd>
+<p>Execute in the context of the client <strong>name</strong> if such client exists,
+or else in the current context.</p>
+</dd>
+<dt class="hdlist1"><strong>-draft</strong></dt>
+<dd>
+<p>Execute in a copy of the context of the selected client. Modifications to
+the selections or input state will not affect the client. This permits
+making modifications to the buffer without modifying the user’s
+selection.</p>
+</dd>
+<dt class="hdlist1"><strong>-itersel</strong></dt>
+<dd>
+<p>Execute once per selection, each having its own context. This prevents
+situations where selections get merged.</p>
+</dd>
+<dt class="hdlist1"><strong>-buffer</strong> &lt;names&gt;</dt>
+<dd>
+<p>Execute in the context of each buffer specified in the comma separated
+list <strong>names</strong>. <code><strong></code> can be used as a *name</strong> to iterate over all non-debug
+buffers.
+(See <a href="buffers.html#debug-buffers" class="xref page"><code>:doc buffers</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>-save-regs</strong> &lt;regs&gt;</dt>
+<dd>
+<p><strong>regs</strong> is a string of registers to be restored after execution (overwrites
+the list of registers saved by default).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="switches-specific-to-evaluate-commands"><a class="anchor" href="#switches-specific-to-evaluate-commands"></a><a class="link" href="#switches-specific-to-evaluate-commands">2. Switches specific to <strong>evaluate-commands</strong></a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>-no-hooks</strong></dt>
+<dd>
+<p>Disable hook execution while executing the keys/commands.
+(See <a href="hooks.html#disabling-hooks" class="xref page"><code>:doc hooks</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>-verbatim</strong></dt>
+<dd>
+<p>Don&#8217;t reparse and split positional arguments. Forward them exactly
+as specified.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="switches-specific-to-execute-keys"><a class="anchor" href="#switches-specific-to-execute-keys"></a><a class="link" href="#switches-specific-to-execute-keys">3. Switches specific to <strong>execute-keys</strong></a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>-with-maps</strong></dt>
+<dd>
+<p>Use a custom key mapping instead of the built-in one.
+(See <a href="mapping.html" class="xref page"><code>:doc mapping</code></a>)</p>
+</dd>
+<dt class="hdlist1"><strong>-with-hooks</strong></dt>
+<dd>
+<p>Execute keys and trigger existing hooks.
+(See <a href="hooks.html" class="xref page"><code>:doc hooks</code></a>)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

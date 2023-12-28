@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,25 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Writing kak scripts</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#dependencies">1. Dependencies</a></li>
-<li><a href="#naming-convention">2. Naming convention</a></li>
-<li><a href="#documentation">3. Documentation</a></li>
-<li><a href="#posix-shell">4. POSIX shell</a></li>
-<li><a href="#common-shell-patterns">5. Common shell patterns</a>
-<ul class="sectlevel2">
-<li><a href="#printing-variables">5.1. Printing variables</a></li>
-<li><a href="#variable-base-name">5.2. Variable base name</a></li>
-<li><a href="#testing">5.3. Testing</a></li>
-<li><a href="#standard-error-redirection">5.4. Standard error redirection</a></li>
-<li><a href="#regular-expression">5.5. Regular expression</a></li>
-<li><a href="#running-a-process-in-the-background">5.6. Running a process in the background</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">

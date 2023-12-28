@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../../../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -187,36 +188,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Keys</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#key-syntax">1. Key Syntax</a></li>
-<li><a href="#insert-mode">2. Insert mode</a></li>
-<li><a href="#insert-mode-completion">3. Insert mode completion</a></li>
-<li><a href="#using-counts">4. Using Counts</a></li>
-<li><a href="#disabling-hooks">5. Disabling Hooks</a></li>
-<li><a href="#movement">6. Movement</a></li>
-<li><a href="#changes">7. Changes</a></li>
-<li><a href="#changes-through-external-programs">8. Changes through external programs</a></li>
-<li><a href="#searching">9. Searching</a></li>
-<li><a href="#goto-commands">10. Goto commands</a></li>
-<li><a href="#view-commands">11. View commands</a></li>
-<li><a href="#marks">12. Marks</a></li>
-<li><a href="#macros">13. Macros</a></li>
-<li><a href="#jump-list">14. Jump list</a></li>
-<li><a href="#multiple-selections">15. Multiple selections</a></li>
-<li><a href="#object-selection">16. Object Selection</a>
-<ul class="sectlevel2">
-<li><a href="#whole-object">16.1. Whole object</a></li>
-<li><a href="#inner-object">16.2. Inner object</a></li>
-<li><a href="#objects-types">16.3. Objects types</a></li>
-</ul>
-</li>
-<li><a href="#prompt-commands">17. Prompt commands</a></li>
-<li><a href="#user-commands">18. User commands</a></li>
-<li><a href="#cancelling-operations">19. Cancelling operations</a></li>
-</ul>
-</div>
 <div class="sect1">
 <h2 id="key-syntax"><a class="anchor" href="#key-syntax"></a><a class="link" href="#key-syntax">1. Key Syntax</a></h2>
 <div class="sectionbody">

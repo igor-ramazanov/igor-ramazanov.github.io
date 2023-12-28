@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hooks :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="hooks.html">Hooks</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/hooks.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Hooks</h1>
+<div class="sect1">
+<h2 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">1. Description</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Commands can be registered to be executed when certain events arise. To
+register a hook use the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>hook [&lt;switches&gt;] &lt;scope&gt; &lt;hook_name&gt; &lt;filtering_regex&gt; &lt;commands&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>scope</strong> can be one of <strong>global</strong>, <strong>buffer</strong> or <strong>window</strong> (See
+<a href="scopes.html" class="xref page"><code>:doc scopes</code></a>).</p>
+</div>
+<div class="paragraph">
+<p><strong>hook_name</strong> must be one of the hook names in the list below, like <code>InsertKey</code>
+or <code>BufSetOption</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>filtering_regex</strong> must match the entire parameter string in order for the
+commands to be executed.</p>
+</div>
+<div class="paragraph">
+<p><strong>command</strong> is a string containing the commands to execute when the hook
+is called.</p>
+</div>
+<div class="paragraph">
+<p>For <strong>switches</strong>, see <a href="commands.html#hooks" class="xref page"><code>:doc commands hooks</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>If a hook is registered with the <code>-group</code> switch, it can later be removed with
+the <code>remove-hooks</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>remove-hooks &lt;scope&gt; &lt;group&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command removes all hooks originally registered in <strong>scope</strong> whose
+<code>-group</code> switch matches the regex <strong>group</strong>.</p>
+</div>
+<div class="paragraph">
+<p>For example to automatically use line numbering with .cc files, use the
+following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>hook global WinCreate .*\.cc %{ add-highlighter number-lines }</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-hooks"><a class="anchor" href="#default-hooks"></a><a class="link" href="#default-hooks">2. Default hooks</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The parameter string associated with each hook is described after the hook
+name. Hooks with no description will always use an empty string.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>NormalIdle</strong></dt>
+<dd>
+<p>a certain duration has passed since the last keypress in normal mode</p>
+</dd>
+<dt class="hdlist1"><strong>NormalKey</strong> <code>key</code></dt>
+<dd>
+<p>a key is received in normal mode. This hook will not trigger when the user
+presses a key on the left-hand side of a normal-mode mapping (see
+<a href="mapping.html" class="xref page"><code>:doc mapping</code></a>), but will trigger for keys on the right-hand
+side. See also <code>RawKey</code> below.</p>
+</dd>
+<dt class="hdlist1"><strong>InsertIdle</strong></dt>
+<dd>
+<p>a certain duration has passed since the last keypress in insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>InsertKey</strong> <code>key</code></dt>
+<dd>
+<p>a key is received in insert mode. This hook will not trigger when the user
+presses a key on the left-hand side of a insert-mode mapping (see
+<a href="mapping.html" class="xref page"><code>:doc mapping</code></a>), but will trigger for keys on the right-hand
+side. See also <code>RawKey</code> below.</p>
+</dd>
+<dt class="hdlist1"><strong>InsertChar</strong> <code>char</code></dt>
+<dd>
+<p>a character is received in insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>InsertDelete</strong> <code>deleted char</code></dt>
+<dd>
+<p>a character is deleted in insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>InsertMove</strong> <code>move key</code></dt>
+<dd>
+<p>the cursor moved (without inserting) in insert mode</p>
+</dd>
+<dt class="hdlist1"><strong>PromptIdle</strong></dt>
+<dd>
+<p>a certain duration has passed since the last keypress in prompt mode</p>
+</dd>
+<dt class="hdlist1"><strong>WinCreate</strong> <code>buffer name</code></dt>
+<dd>
+<p>a window was created. This hook is executed in draft context, so any
+changes to selections or input state will be discarded.</p>
+</dd>
+<dt class="hdlist1"><strong>WinClose</strong> <code>buffer name</code></dt>
+<dd>
+<p>a window was destroyed. This hook is executed in a draft context, so any
+changes to selections or input state will be discarded.</p>
+</dd>
+<dt class="hdlist1"><strong>WinResize</strong> <code>&lt;line&gt;.&lt;column&gt;</code></dt>
+<dd>
+<p>a window was resized. This hook is executed in a draft context, so any
+changes to selections or input state will be discarded.</p>
+</dd>
+<dt class="hdlist1"><strong>WinDisplay</strong> <code>buffer name</code></dt>
+<dd>
+<p>a client switched to displaying the given buffer.</p>
+</dd>
+<dt class="hdlist1"><strong>WinSetOption</strong> <code>&lt;option_name&gt;=&lt;new_value&gt;</code></dt>
+<dd>
+<p>an option was set in a window context. This hook is executed in a draft
+context, so any changes to selections or input state will be discarded.</p>
+</dd>
+<dt class="hdlist1"><strong>GlobalSetOption</strong> <code>&lt;option_name&gt;=&lt;new_value&gt;</code></dt>
+<dd>
+<p>an option was set at the global scope</p>
+</dd>
+<dt class="hdlist1"><strong>BufSetOption</strong> <code>&lt;option_name&gt;=&lt;new_value&gt;</code></dt>
+<dd>
+<p>an option was set in a buffer context</p>
+</dd>
+<dt class="hdlist1"><strong>BufNewFile</strong> <code>filename</code></dt>
+<dd>
+<p>a buffer for a new file has been created</p>
+</dd>
+<dt class="hdlist1"><strong>BufOpenFile</strong> <code>filename</code></dt>
+<dd>
+<p>a buffer for an existing file has been created</p>
+</dd>
+<dt class="hdlist1"><strong>BufCreate</strong> <code>filename</code></dt>
+<dd>
+<p>a buffer has been created</p>
+</dd>
+<dt class="hdlist1"><strong>BufWritePre</strong> <code>filename</code></dt>
+<dd>
+<p>executed just before a buffer is written</p>
+</dd>
+<dt class="hdlist1"><strong>BufWritePost</strong> <code>filename</code></dt>
+<dd>
+<p>executed just after a buffer is written</p>
+</dd>
+<dt class="hdlist1"><strong>BufReload</strong> <code>filename</code></dt>
+<dd>
+<p>executed after a buffer reload has been triggered by an external
+modification to its file</p>
+</dd>
+<dt class="hdlist1"><strong>BufClose</strong> <code>buffer name</code></dt>
+<dd>
+<p>executed when a buffer is deleted, while it is still valid</p>
+</dd>
+<dt class="hdlist1"><strong>BufOpenFifo</strong> <code>buffer name</code></dt>
+<dd>
+<p>executed when a buffer opens a fifo</p>
+</dd>
+<dt class="hdlist1"><strong>BufReadFifo</strong> <code>&lt;start line&gt;.&lt;start column&gt;,&lt;end line&gt;.&lt;end column&gt;</code></dt>
+<dd>
+<p>executed after some data has been read from a fifo and inserted in
+the buffer. The hook param contains the range of text that was just
+inserted, in a format compatible with the <code>select</code> command.</p>
+</dd>
+<dt class="hdlist1"><strong>BufCloseFifo</strong></dt>
+<dd>
+<p>executed when a fifo buffer closes its fifo file descriptor either
+because the buffer is being deleted or the writing end has been closed</p>
+</dd>
+<dt class="hdlist1"><strong>ClientCreate</strong> <code>client name</code></dt>
+<dd>
+<p>executed when a new client is created.</p>
+</dd>
+<dt class="hdlist1"><strong>ClientClose</strong> <code>client name</code></dt>
+<dd>
+<p>executed when a client is closed, after it was removed from the client
+list.</p>
+</dd>
+<dt class="hdlist1"><strong>RuntimeError</strong> <code>error message</code></dt>
+<dd>
+<p>an error was encountered while executing a user command</p>
+</dd>
+<dt class="hdlist1"><strong>ModeChange</strong> <code>[push|pop]:&lt;old mode&gt;:&lt;new mode&gt;</code></dt>
+<dd>
+<p>Triggered whenever a mode is pushed or removed from the mode stack.
+The mode name can be things like 'normal' or 'insert' for regular
+interactive modes, or 'next-key[&lt;name&gt;]' for sub-modes where Kakoune
+prompts for a key. For example, <code>g</code> in normal mode pushes 'next-key[goto]'
+mode, the <code>enter-user-mode foo</code> command pushes 'next-key[user.foo]' mode,
+and the <code>on-key -mode-name bar</code> command pushes 'next-key[bar]' mode.</p>
+</dd>
+<dt class="hdlist1"><strong>KakBegin</strong> <code>session name</code></dt>
+<dd>
+<p>Kakoune has started, this hook is called just after reading the user
+configuration files</p>
+</dd>
+<dt class="hdlist1"><strong>KakEnd</strong></dt>
+<dd>
+<p>Kakoune is quitting</p>
+</dd>
+<dt class="hdlist1"><strong>FocusIn</strong> <code>client name</code></dt>
+<dd>
+<p>on supported clients, triggered when the client gets focused</p>
+</dd>
+<dt class="hdlist1"><strong>FocusOut</strong> <code>client name</code></dt>
+<dd>
+<p>on supported clients, triggered when the client gets unfocused</p>
+</dd>
+<dt class="hdlist1"><strong>InsertCompletionShow</strong></dt>
+<dd>
+<p>Triggered when the insert completion menu gets displayed</p>
+</dd>
+<dt class="hdlist1"><strong>InsertCompletionHide</strong> <code>completion</code></dt>
+<dd>
+<p>Triggered when the insert completion menu gets hidden, the list of
+inserted completions text ranges is passed as filtering text, in the
+same format the <code>select</code> command expects.</p>
+</dd>
+<dt class="hdlist1"><strong>RawKey</strong> <code>key</code></dt>
+<dd>
+<p>Triggered whenever a key is pressed by the user, regardless of what mode
+Kakoune is in, or what mappings are present (see
+<a href="mapping.html" class="xref page"><code>:doc mapping</code></a>). It cannot be triggered by <code>execute-keys</code>,
+even with the <code>-with-hooks</code> option (see
+<a href="execeval.html#execute-keys-specific-switches" class="xref page"><code>:doc execeval execute-keys-specific-switches</code></a>).</p>
+</dd>
+<dt class="hdlist1"><strong>RegisterModified</strong> <code>register</code></dt>
+<dd>
+<p>Triggered after a register has been written to.</p>
+</dd>
+<dt class="hdlist1"><strong>ModuleLoaded</strong> <code>module</code></dt>
+<dd>
+<p>Triggered after a module is evaluated by the first <code>require-module</code> call</p>
+</dd>
+<dt class="hdlist1"><strong>User</strong> <code>param</code></dt>
+<dd>
+<p>Triggered  via the <code>trigger-user-hook</code> command. Provides a way for plugins
+to introduce custom hooks by specifying what <strong>param</strong> would be.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Note that some hooks will not consider underlying scopes depending on what
+context they are bound to be run into, e.g. the <code>BufWritePost</code> hook is a buffer
+hook, and will not consider the <code>window</code> scope.</p>
+</div>
+<div class="paragraph">
+<p>While defining hook commands with a <code>%sh{}</code> block, some additional env
+vars are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>kak_hook_param</code>: filtering text passed to the currently executing hook</p>
+</li>
+<li>
+<p><code>kak_hook_param_capture_N</code>: text captured by the hook filter regex capturing
+group N, N can either be the capturing group number, or its name
+(See <a href="regex.html#groups" class="xref page"><code>:doc regex groups</code></a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disabling-hooks"><a class="anchor" href="#disabling-hooks"></a><a class="link" href="#disabling-hooks">3. Disabling Hooks</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hooks can be disabled temporarily by prefixing any normal mode command by <code>\</code>
+(see <a href="keys.html" class="xref page"><code>:doc keys</code></a>) and permanently by setting the <code>disabled_hooks</code> option
+which accepts a regex describing which hooks won&#8217;t be executed. For example
+indentation hooks can be disabled with '.*-indent'.</p>
+</div>
+<div class="paragraph">
+<p>Finally, hook execution can be disabled while using the <code>execute-keys</code> or
+<code>evaluate-commands</code> commands by using the <code>-no-hooks</code> switch.
+(See <a href="execeval.html" class="xref page"><code>:doc execeval</code></a>)</p>
+</div>
+<div class="paragraph">
+<p>As an exception to these rules, hooks declared with the <code>-always</code> switch
+are triggered no matter what. A good use case is doing some cleanup on <code>BufCloseFifo</code>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

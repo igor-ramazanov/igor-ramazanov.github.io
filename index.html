@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="../..">Kakoune Docs</a>
-      <button class="navbar-burger" data-target="topbar-nav">
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,6 +52,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Kakoune</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -258,7 +259,6 @@
 <li><a href="#key-mapping">8.11. Key Mapping</a></li>
 <li><a href="#defining-commands-and-aliases">8.12. Defining Commands and Aliases</a></li>
 <li><a href="#fifo-buffers">8.13. FIFO Buffers</a></li>
-<li><a href="#menus">8.14. Menus</a></li>
 </ul>
 </li>
 <li><a href="#credits">9. Credits</a></li>
@@ -1279,10 +1279,16 @@ and ignore its output</p>
 <p><code>&lt;c-k&gt;</code>: move backward in history</p>
 </li>
 <li>
+<p><code>&lt;a-u&gt;</code>: undo selection changes</p>
+</li>
+<li>
 <p><code>U</code>: redo last change</p>
 </li>
 <li>
 <p><code>&lt;c-j&gt;</code>: move forward in history</p>
+</li>
+<li>
+<p><code>&lt;a-U&gt;</code>: redo selection changes</p>
 </li>
 <li>
 <p><code>&amp;</code>: align selections, align the cursor of selections by inserting
@@ -1775,17 +1781,6 @@ progressively displaying their result in Kakoune.</p>
 </div>
 <div class="paragraph">
 <p>See <a href="doc/pages/buffers.html#fifo-buffers" class="xref page"><code>:doc buffers fifo-buffers</code></a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="menus"><a class="anchor" href="#menus"></a><a class="link" href="#menus">8.14. Menus</a></h3>
-<div class="paragraph">
-<p>When a menu is displayed, you can use <code>j</code>, <code>&lt;c-n&gt;</code> or <code>&lt;tab&gt;</code> to select the next
-entry, and <code>k</code>, <code>&lt;c-p&gt;</code> or <code>&lt;shift-tab&gt;</code> to select the previous one.</p>
-</div>
-<div class="paragraph">
-<p>Using the <code>/</code> key, you can enter some regex in order to restrict available choices
-to the matching ones.</p>
 </div>
 </div>
 </div>

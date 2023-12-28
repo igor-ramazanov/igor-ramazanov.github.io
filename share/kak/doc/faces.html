@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Faces :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="faces.html">Faces</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/faces.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Faces</h1>
+<div class="sect1">
+<h2 id="declaration"><a class="anchor" href="#declaration"></a><a class="link" href="#declaration">1. Declaration</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong>face</strong> determines how text is displayed. It has a foreground color,
+a background color, and some attributes. The value of a face has the
+following format:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[fg_color][,bg_color[,underline_color]][+attributes][@base]</pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">fg_color, bg_color, underline_color</dt>
+<dd>
+<p>A color whose value can be:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">A named color</dt>
+<dd>
+<p><strong>black</strong>, <strong>red</strong>, <strong>green</strong>, <strong>yellow</strong>, <strong>blue</strong>, <strong>magenta</strong>, <strong>cyan</strong>,
+<strong>white</strong> <strong>bright-black</strong>, <strong>bright-red</strong>, <strong>bright-green</strong>,
+<strong>bright-yellow</strong> <strong>bright-blue</strong>, <strong>bright-magenta</strong>, <strong>bright-cyan</strong>,
+<strong>bright-white</strong></p>
+</dd>
+<dt class="hdlist1">The color of the base face (see below)</dt>
+<dd>
+<p><strong>default</strong></p>
+</dd>
+<dt class="hdlist1">A hexadecimal value</dt>
+<dd>
+<p>        <strong>rgb:RRGGBB</strong>, <strong>rgba:RRGGBBAA</strong>
+If left unspecified, the value of <strong>default</strong> is used.
+Alpha values are used to blend the face onto either its base or else onto
+whatever color happens to be used at the moment. For technical reasons,
+alpha values must be &gt;16.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">attributes</dt>
+<dd>
+<p>A string whose individual letters each set an attribute:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>u</strong></dt>
+<dd>
+<p>underline</p>
+</dd>
+<dt class="hdlist1"><strong>c</strong></dt>
+<dd>
+<p>curly underline
+Note: This takes precedence over underline if both are specified.</p>
+</dd>
+<dt class="hdlist1"><strong>r</strong></dt>
+<dd>
+<p>reverse</p>
+</dd>
+<dt class="hdlist1"><strong>b</strong></dt>
+<dd>
+<p>bold</p>
+</dd>
+<dt class="hdlist1"><strong>B</strong></dt>
+<dd>
+<p>blink</p>
+</dd>
+<dt class="hdlist1"><strong>d</strong></dt>
+<dd>
+<p>dim</p>
+</dd>
+<dt class="hdlist1"><strong>i</strong></dt>
+<dd>
+<p>italic</p>
+</dd>
+<dt class="hdlist1"><strong>s</strong></dt>
+<dd>
+<p>strikethrough</p>
+</dd>
+<dt class="hdlist1"><strong>F</strong></dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">final</dt>
+<dd>
+<p>Override the previous face instead of merging with it. Can
+only be replaced if another face with the final attribute
+is applied.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>f</strong></dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">final foreground</dt>
+<dd>
+<p>Same as final, but only applies to a face&#8217;s foreground color.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>g</strong></dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">final background</dt>
+<dd>
+<p>Same as final, but only applies to a face&#8217;s background color.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>a</strong></dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">final attributes</dt>
+<dd>
+<p>Same as final, but only applies to a face&#8217;s attributes.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">base</dt>
+<dd>
+<p>The face onto which other faces apply. Its value can be any face name,
+as long as no cycle is introduced. A face can reference itself, in which
+case it&#8217;ll apply on top of the version of the parent scope.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="built-in-faces"><a class="anchor" href="#built-in-faces"></a><a class="link" href="#built-in-faces">2. Built-in faces</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following faces are used by color schemes to highlight certain areas of
+the user interface:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Default</strong></dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">default colors</dt>
+<dd>
+<p>The default foreground and background colors. If the value of <strong>default</strong>
+is used here, then the colors used will be your terminal&#8217;s defaults.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>PrimarySelection</strong></dt>
+<dd>
+<p>Main selection face for every selected character except the cursor.</p>
+</dd>
+<dt class="hdlist1"><strong>SecondarySelection</strong></dt>
+<dd>
+<p>Secondary selection face for every selected character except the cursor.</p>
+</dd>
+<dt class="hdlist1"><strong>PrimaryCursor</strong></dt>
+<dd>
+<p>Cursor of the primary selection.</p>
+</dd>
+<dt class="hdlist1"><strong>SecondaryCursor</strong></dt>
+<dd>
+<p>Cursor of the secondary selection.</p>
+</dd>
+<dt class="hdlist1"><strong>PrimaryCursorEol</strong></dt>
+<dd>
+<p>Cursor of the primary selection when it lies on an EOL (end of line)
+character.</p>
+</dd>
+<dt class="hdlist1"><strong>SecondaryCursorEol</strong></dt>
+<dd>
+<p>Cursor of the secondary selection when it lies on an EOL (end of line)
+character.</p>
+</dd>
+<dt class="hdlist1"><strong>MenuForeground</strong></dt>
+<dd>
+<p>Face for items selected in menus.</p>
+</dd>
+<dt class="hdlist1"><strong>MenuBackground</strong></dt>
+<dd>
+<p>Face for items not selected in menus.</p>
+</dd>
+<dt class="hdlist1"><strong>MenuInfo</strong></dt>
+<dd>
+<p>Face for the additional information displayed when selecting items in menus.</p>
+</dd>
+<dt class="hdlist1"><strong>Information</strong></dt>
+<dd>
+<p>Face for windows and messages displaying other information.</p>
+</dd>
+<dt class="hdlist1"><strong>InlineInformation</strong></dt>
+<dd>
+<p>Face for windows and messages displaying inline information.</p>
+</dd>
+<dt class="hdlist1"><strong>Error</strong></dt>
+<dd>
+<p>Face for errors reported by Kakoune in the status line.</p>
+</dd>
+<dt class="hdlist1"><strong>DiagnosticError</strong></dt>
+<dd>
+<p>Face for errors reported by external tools in the buffer.</p>
+</dd>
+<dt class="hdlist1"><strong>DiagnosticWarning</strong></dt>
+<dd>
+<p>Face for warnings reported by external tools in the buffer.</p>
+</dd>
+<dt class="hdlist1"><strong>StatusLine</strong></dt>
+<dd>
+<p>Face for the status line.</p>
+</dd>
+<dt class="hdlist1"><strong>StatusLineMode</strong></dt>
+<dd>
+<p>Face for the current mode, except normal mode.</p>
+</dd>
+<dt class="hdlist1"><strong>StatusLineInfo</strong></dt>
+<dd>
+<p>Face for special information.</p>
+</dd>
+<dt class="hdlist1"><strong>StatusLineValue</strong></dt>
+<dd>
+<p>Face for special values (numeric prefixes, registers, etc.).</p>
+</dd>
+<dt class="hdlist1"><strong>StatusCursor</strong></dt>
+<dd>
+<p>Face for the status line cursor.</p>
+</dd>
+<dt class="hdlist1"><strong>Prompt</strong></dt>
+<dd>
+<p>Face for the prompt displayed on the status line.</p>
+</dd>
+<dt class="hdlist1"><strong>BufferPadding</strong></dt>
+<dd>
+<p>Face applied on the <strong>~</strong> characters that follow the last line of a buffer.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="built-in-highlighter-faces"><a class="anchor" href="#built-in-highlighter-faces"></a><a class="link" href="#built-in-highlighter-faces">2.1. Built-in highlighter faces</a></h3>
+<div class="paragraph">
+<p>The following faces are used by built-in highlighters if enabled.
+(See <a href="highlighters.html" class="xref page"><code>:doc highlighters</code></a>).</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>LineNumbers</strong></dt>
+<dd>
+<p>Face used by the <strong>number-lines</strong> highlighter.</p>
+</dd>
+<dt class="hdlist1"><strong>LineNumberCursor</strong></dt>
+<dd>
+<p>Face used to highlight the line number of the main selection.</p>
+</dd>
+<dt class="hdlist1"><strong>LineNumbersWrapped</strong></dt>
+<dd>
+<p>Face used to highlight the line number of wrapped lines.</p>
+</dd>
+<dt class="hdlist1"><strong>MatchingChar</strong></dt>
+<dd>
+<p>Face used by the <strong>show-matching</strong> highlighter.</p>
+</dd>
+<dt class="hdlist1"><strong>Whitespace</strong></dt>
+<dd>
+<p>Face used by the <strong>show-whitespaces</strong> highlighter.</p>
+</dd>
+<dt class="hdlist1"><strong>WrapMarker</strong></dt>
+<dd>
+<p>Face used by the <strong>wrap-marker</strong> highlighter.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="markup-strings"><a class="anchor" href="#markup-strings"></a><a class="link" href="#markup-strings">3. Markup strings</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In certain contexts, Kakoune can understand markup strings, which are strings
+containing formatting information. In these strings, the {facename} syntax
+will enable the face facename until another face gets activated, or the end
+of the string is reached.</p>
+</div>
+<div class="paragraph">
+<p>For example, the following command displays the text "default" in the
+<strong>Default</strong> face, and "error" in the <strong>Error</strong> face:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo -markup 'default {Error}error{Default} default'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inside a markup string, a literal <code>{</code> character is written as <code>\{</code>, and a
+literal backslash (<code>\</code>) character is written as <code>\\</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>{\}</code> string disables markup processing for the rest of the line. It
+can be used to avoid having to escape text that might be mistaken for markup
+instructions.</p>
+</div>
+<div class="paragraph">
+<p>For example, this will prevent any <code>{</code> in the current buffer name from being
+incorrectly interpreted as markup.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo -markup "{Information}name:{\} %val{bufname}"</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

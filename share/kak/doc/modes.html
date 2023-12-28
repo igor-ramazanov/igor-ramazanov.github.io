@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Modes :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="modes.html">Modes</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/modes.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Modes</h1>
+<div class="sect1">
+<h2 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">1. Description</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune is a modal editor which means that keys have different effects depending
+on the current mode. Therefore, modes can be conceptualized as a way to group
+related behaviors together during a text editing workflow.</p>
+</div>
+<div class="paragraph">
+<p>Kakoune starts in Normal mode. A few keys let users enter other modes
+where they can focus on a specific task before going back to Normal mode.</p>
+</div>
+<div class="paragraph">
+<p>Modes are stored in a stack with the top of the stack being the active mode.
+So in some scenarios, the Normal mode may feel <strong>nested</strong> in another one.
+The <code>ModeChange</code> hook is triggered each time a mode is popped or pushed
+on this stack. See <a href="hooks.html" class="xref page"><code>:doc hooks</code></a></p>
+</div>
+<div class="paragraph">
+<p>To get a comprehensive list of commands available for each modes, see
+<a href="keys.html" class="xref page"><code>:doc keys</code></a>. Most of them are described in <strong>info</strong> boxes in
+real-time if the <code>autoinfo</code> option is set.</p>
+</div>
+<div class="paragraph">
+<p>To customize key mappings in various modes, refer to <a href="mapping.html" class="xref page"><code>:doc mapping</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="builtin-modes"><a class="anchor" href="#builtin-modes"></a><a class="link" href="#builtin-modes">2. Builtin modes</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="normal-mode"><a class="anchor" href="#normal-mode"></a><a class="link" href="#normal-mode">2.1. Normal mode</a></h3>
+<div class="paragraph">
+<p>Normal mode is the default mode. It provides commands to manipulate
+selections, such as general movement, text object selection, searching,
+splitting, and commands to manipulate the text underlying the current
+selections, such as yanking, pasting, deleting…</p>
+</div>
+<div class="paragraph">
+<p>It also provides commands to enter other modes.</p>
+</div>
+<div class="paragraph">
+<p>See normal commands <a href="keys.html#movement" class="xref page"><code>:doc keys movement</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="insert-mode"><a class="anchor" href="#insert-mode"></a><a class="link" href="#insert-mode">2.2. Insert mode</a></h3>
+<div class="paragraph">
+<p>Insert mode provides an efficient way to interactively write text into
+the buffer. Most keys will insert their corresponding characters before
+every selections cursors. It also provides completion support for inserted
+text along with some commands for basic movement.</p>
+</div>
+<div class="paragraph">
+<p>Insert mode can be entered from Normal modes through a set of commands
+such as <code>i</code> to insert before selection, <code>a</code> to insert after selection,
+<code>o</code> to insert in a new line below selections… It can then be exited with
+<code>&lt;esc&gt;</code> to return to Normal mode.</p>
+</div>
+<div class="paragraph">
+<p>See changes <a href="keys.html#changes" class="xref page"><code>:doc keys changes</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>From Insert mode, <code>&lt;a-;&gt;</code> provides a way to temporarily enter a new
+Normal mode for a single command, before returning to Insert mode.</p>
+</div>
+<div class="paragraph">
+<p>See insert commands <a href="keys.html#insert-mode" class="xref page"><code>:doc keys insert-mode</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="goto-mode"><a class="anchor" href="#goto-mode"></a><a class="link" href="#goto-mode">2.3. Goto mode</a></h3>
+<div class="paragraph">
+<p>Goto mode provides commands dedicated to jumping either inside a buffer
+(such as jumping to buffer start/end, window top/bottom) or to another
+(such as jumping to the file whose path is currently selected).</p>
+</div>
+<div class="paragraph">
+<p>See goto commands <a href="keys.html#goto-commands" class="xref page"><code>:doc keys goto-commands</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="view-mode"><a class="anchor" href="#view-mode"></a><a class="link" href="#view-mode">2.4. View mode</a></h3>
+<div class="paragraph">
+<p>View mode provides commands dedicated to controlling the window, such
+as scrolling or centering the main selection cursor.</p>
+</div>
+<div class="paragraph">
+<p>See view commands <a href="keys.html#view-commands" class="xref page"><code>:doc keys view-commands</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="prompt-mode"><a class="anchor" href="#prompt-mode"></a><a class="link" href="#prompt-mode">2.5. Prompt mode</a></h3>
+<div class="paragraph">
+<p>Mode entered with <code>:</code>, <code>/</code> or the <code>prompt</code> command. During prompt mode a
+line of text is edited and then validated with <code>&lt;ret&gt;</code> or abandoned with
+<code>&lt;esc&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>See prompt commands <a href="keys.html#prompt-commands" class="xref page"><code>:doc keys prompt-commands</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="object-mode"><a class="anchor" href="#object-mode"></a><a class="link" href="#object-mode">2.6. Object mode</a></h3>
+<div class="paragraph">
+<p>Mode entered with <code>&lt;a-i&gt;</code>, <code>&lt;a-a&gt;</code> and various combinations of <code>[]{}</code> keys.
+It aims at crafting semantic selections, often called <strong>text-objects</strong>.</p>
+</div>
+<div class="paragraph">
+<p>See object commands <a href="keys.html#object-selection" class="xref page"><code>:doc keys object-selection</code></a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-mode"><a class="anchor" href="#user-mode"></a><a class="link" href="#user-mode">2.7. User mode</a></h3>
+<div class="paragraph">
+<p>Mode entered with <code>&lt;space&gt;</code>. The user mode is empty by default and is the
+opportunity to store custom mappings with no risk to shadow builtin ones.
+The context of execution is always the Normal mode.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="user-modes"><a class="anchor" href="#user-modes"></a><a class="link" href="#user-modes">3. User modes</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following two commands are useful in advanced use cases, when the
+builtin User mode gets too crowded by mappings competing for the same
+key that deserves to be split in more meaningful collections. It&#8217;s
+mostly useful for plugin authors who want to bind their new commands in
+extensible menus.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>declare-user-mode &lt;name&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Declare a new custom mode that can later be referred by the <strong>map</strong> command.
+For example a <code>grep</code> custom mode to attach keys like <code>n</code> or <code>p</code> to skim
+through the output results.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>enter-user-mode &lt;name&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enable the designated mode for the next key. Docstrings are shown in the
+automatic info box to increase discoverability. To keep illustrating
+the aforementioned fictional <code>grep</code> mode, a normal mapping on <code>&lt;a-g&gt;</code>
+could be used to enter this mode.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

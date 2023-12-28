@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Command Parsing :: Kakoune Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Kakoune Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Kakoune" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Kakoune</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/commands.html">Commands</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/expansions.html">Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/execeval.html">Exec Eval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/scopes.html">Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faces.html">Faces</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/buffers.html">Buffers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/registers.html">Registers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/mapping.html">Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/hooks.html">Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/command-parsing.html">Command Parsing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keys.html">Keys</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/regex.html">Regex</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/options.html">Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/highlighters.html">Highlighters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/modes.html">Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/keymap.html">KEYMAP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/pages/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/design.html">Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/coding-style.html">Coding Style</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/writing_scripts.html">Writing Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/json_ui.html">JSON UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/autoedit.html">Autoedit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../doc/interfacing.html">Interfacing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/lint.html">Linting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/autorestore.html">Autorestore</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../rc/tools/doc.html">Doc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../test/tests.html">Tests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../VIMTOKAK.html">Vi(m) to Kakoune</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Kakoune</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Kakoune</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Kakoune</a></li>
+    <li><a href="command-parsing.html">Command Parsing</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/command-parsing.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Command Parsing</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kakoune commands, either loaded from a script or written in the command
+prompt, are parsed according to the following rules:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="basic-parsing"><a class="anchor" href="#basic-parsing"></a><a class="link" href="#basic-parsing">1. Basic parsing</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Commands are terminated by a <code>;</code> or an end of line.</p>
+</li>
+<li>
+<p>Words (command names and parameters) are delimited by whitespaces.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="quoted-strings"><a class="anchor" href="#quoted-strings"></a><a class="link" href="#quoted-strings">2. Quoted Strings</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a word starts with <code>'</code>, <code>"</code>, or <code>%X</code> with <code>X</code> a <em>non-nestable</em> punctuation
+character (see <a href="#balanced-strings">Balanced Strings</a> below for
+nestable characters), it is parsed as a quoted string whose delimiter is,
+respectively, <code>'</code>, <code>"</code>, or <code>X</code>.</p>
+</div>
+<div class="paragraph">
+<p>A quoted string contains every character (including whitespaces).  Doubling
+a closing delimiter escapes it.  Thus, for example, entering two closing
+delimiters at the end of a quoted string will render one of the characters
+literally; that is, it will be considered as part of the quoted string&#8217;s
+content.</p>
+</div>
+<div class="paragraph">
+<p>Inside double quotes, <code>%</code>-strings are processed unless the <code>%</code> is escaped by
+doubling it.  Double quotes inside these nested strings must also be escaped.</p>
+</div>
+<div class="paragraph">
+<p>No other escaping takes place in quoted strings.</p>
+</div>
+<div class="sect2">
+<h3 id="quoted-strings-examples"><a class="anchor" href="#quoted-strings-examples"></a><a class="link" href="#quoted-strings-examples">2.1. Quoted Strings Examples</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>'foo'</code> contains <strong>foo</strong>.</p>
+</li>
+<li>
+<p><code>foo&#8217;bar'</code> is read verbatim, so it contains <strong>foo&#8217;bar'</strong>.</p>
+</li>
+<li>
+<p><code>foo%|bar|</code> is read verbatim, so it contains <strong>foo%|bar|</strong>.</p>
+</li>
+<li>
+<p><code>'foo''bar'</code> is a single word whose content is <strong>foo&#8217;bar</strong>.</p>
+</li>
+<li>
+<p><code>"baz"""</code> is a single word whose content is <strong>baz"</strong>.</p>
+</li>
+<li>
+<p><code>%|foo||bar|</code> is a single word whose content is <strong>foo|bar</strong>.</p>
+</li>
+<li>
+<p><code>"foo %|""bar| %%,baz,"</code> is a single word whose content is <strong>foo "bar %,baz,</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="balanced-strings"><a class="anchor" href="#balanced-strings"></a><a class="link" href="#balanced-strings">3. Balanced Strings</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a word starts with <code>%X</code> with <code>X</code> a <em>nestable</em> punctuation character (one
+of <code>(</code>, <code>[</code>, <code>{</code> and <code>&lt;</code>), it is parsed as a balanced string whose closing
+delimiter matches that of its opening delimiter (respectively, <code>)</code>, <code>]</code>,
+<code>}</code>, and <code>&gt;</code>).</p>
+</div>
+<div class="paragraph">
+<p>There is no way to escape the opening and closing characters, even if they
+are nested inside some other kind of string.</p>
+</div>
+<div class="sect2">
+<h3 id="balanced-strings-examples"><a class="anchor" href="#balanced-strings-examples"></a><a class="link" href="#balanced-strings-examples">3.1. Balanced Strings Examples</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>%{foo}</code> contains <strong>foo</strong>.</p>
+</li>
+<li>
+<p><code>%{foo{bar}}</code> contains <strong>foo{bar}</strong>.</p>
+</li>
+<li>
+<p><code>foo%{bar}</code> contains <strong>foo%{bar}</strong>.</p>
+</li>
+<li>
+<p><code>"foo %{bar}"</code> is a single word whose content is <strong>foo bar</strong>.</p>
+</li>
+<li>
+<p><code>%{foo\{}</code> is a parse error, since the <code>{}</code> delimiters are not balanced.</p>
+</li>
+<li>
+<p><code>%[foo\{]</code> contains <strong>foo\{</strong>, since it uses different delimiters.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="non-quoted-words"><a class="anchor" href="#non-quoted-words"></a><a class="link" href="#non-quoted-words">4. Non-Quoted words</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Other words are non-quoted.  Non-quoted words are terminated by either a
+whitespace or a <code>;</code>.</p>
+</div>
+<div class="paragraph">
+<p>If they start with a <code>\</code> followed by a <code>%</code>, <code>'</code>, or <code>"</code>, then that leading
+<code>\</code> escapes those characters and is discarded.</p>
+</div>
+<div class="paragraph">
+<p>If a whitespace or <code>;</code> is preceded by a <code>\</code>, then the <code>\</code> is discarded, and
+the whitespace or <code>;</code> becomes part of the word.  Any other <code>\</code> is treated
+as a literal <code>\</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="typed-expansions"><a class="anchor" href="#typed-expansions"></a><a class="link" href="#typed-expansions">5. Typed Expansions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Quoted and Balanced strings starting with <code>%</code> might have an optional
+alphabetic <strong>expansion type</strong> between the <code>%</code> and their delimiter (which is
+always a punctuation character).  This <strong>expansion type</strong> defines how the
+string&#8217;s content is going to be expanded.  Rules for expanding and escaping
+expansion types are the same as for <code>%</code>-strings.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the <strong>expansion type</strong> is empty, the string content is used verbatim.</p>
+</li>
+<li>
+<p>If the <strong>expansion type</strong> is one of <code>sh</code>, <code>reg</code>, <code>opt</code>, <code>val</code> or <code>arg</code>,
+the string is expanded as described in <a href="expansions.html" class="xref page"><code>:doc expansions</code></a>.</p>
+</li>
+<li>
+<p>For any other <strong>expansion type</strong>, a parsing error is raised.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

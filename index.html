@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title> Kakoune   :: Kakoune Docs</title>
+    <title> Kakoune    :: Kakoune Docs</title>
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -159,7 +159,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Kakoune</a>
+      <div class="title"><a href="index.html">Kakoune</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">latest</a>
@@ -180,14 +180,14 @@
     <li><a href="index.html">Getting Started</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page"><span class="image"><a class="image" href="https://kakoune.org"><img src="https://rawgit.com/mawww/kakoune/master/doc/kakoune_logo.svg" alt="K" width="30" height="30" title="Kakoune logo by p0nce"></a></span> Kakoune <span class="image"><a class="image" href="https://cirrus-ci.com/github/mawww/kakoune"><img src="https://api.cirrus-ci.com/github/mawww/kakoune.svg" alt="kakoune"></a></span> <span class="image"><a class="image" href="https://web.libera.chat/?channels=kakoune"><img src="https://img.shields.io/badge/IRC-%23kakoune-blue.svg" alt="IRC %23kakoune blue"></a></span></h1>
+<h1 class="page"><span class="image"><a class="image" href="https://kakoune.org"><img src="https://rawgit.com/mawww/kakoune/master/doc/kakoune_logo.svg" alt="K" width="30" height="30" title="Kakoune logo by p0nce"></a></span> Kakoune <span class="image"><a class="image" href="https://cirrus-ci.com/github/mawww/kakoune"><img src="https://api.cirrus-ci.com/github/mawww/kakoune.svg" alt="kakoune"></a></span> <span class="image"><a class="image" href="https://builds.sr.ht/~mawww/kakoune?"><img src="https://builds.sr.ht/~mawww/kakoune.svg" alt="kakoune"></a></span> <span class="image"><a class="image" href="https://web.libera.chat/?channels=kakoune"><img src="https://img.shields.io/badge/IRC-%23kakoune-blue.svg" alt="IRC %23kakoune blue"></a></span></h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -276,9 +276,9 @@
 <div class="listingblock">
 <div class="content">
 <pre>git clone https://github.com/mawww/kakoune.git
-cd kakoune/src
+cd kakoune
 make
-./kak</pre>
+./src/kak</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -659,7 +659,7 @@ cave resolve -x kakoune</pre>
 <div class="content">
 <pre>git clone https://github.com/mawww/kakoune.git &amp;&amp; cd kakoune/src
 CXX=g++-10 make
-PREFIX=$HOME/.local make install</pre>
+make PREFIX=$HOME/.local install</pre>
 </div>
 </div>
 </td>
@@ -1420,7 +1420,7 @@ contains a match for this regex. Using <code>&lt;a-K&gt;</code> you can keep the
 not containing a match.</p>
 </div>
 <div class="paragraph">
-<p><code>C</code> duplicates selections on the lines that follow them.
+<p><code>C</code> duplicates selections on the lines that follow them, column-wise.
 <code>&lt;a-C&gt;</code> does the same but on the preceding lines.</p>
 </div>
 <div class="paragraph">

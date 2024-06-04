@@ -159,7 +159,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">Kakoune</a>
+      <div class="title"><a href="../../index.html">Kakoune</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">latest</a>
@@ -180,7 +180,7 @@
     <li><a href="scopes.html">Scopes</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/scopes.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/doc/pages/scopes.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -257,6 +257,20 @@ Windows store a set of selections and the scroll position.</pre>
 <dd>
 <p>global context linked to the instance of Kakoune</p>
 </dd>
+<dt class="hdlist1"><strong>local</strong></dt>
+<dd>
+<p>A local scope is inserted by each <strong>evaluate-commands</strong> invocations
+for its duration. Nested <strong>evaluate-commands</strong> each inject a new
+local scope whose parent is the previous local scope. User declared
+commands defined with <strong>define-command</strong> also introduce a local scope
+while executing.</p>
+<div class="literalblock">
+<div class="content">
+<pre>A local scope is intended for temporarily overwriting some scoped
+value, such as an option or an alias.</pre>
+</div>
+</div>
+</dd>
 </dl>
 </div>
 <div class="paragraph">
@@ -264,13 +278,14 @@ Windows store a set of selections and the scroll position.</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>window ]&gt; buffer ]&gt; global</pre>
+<pre>local ]&gt; window ]&gt; buffer ]&gt; global</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The above priority line implies that objects can have individual values that
-will be resolved first in the <strong>window</strong> scope (highest priority), then in
-the <strong>buffer</strong> scope, and finally in the <strong>global</strong> scope (lowest priority).</p>
+<p>The above priority line implies that objects can have individual values
+that will be resolved first in the <strong>local</strong> scope (if it exists), then the
+<strong>window</strong> scope, then in the <strong>buffer</strong> scope, and finally in the <strong>global</strong>
+scope.</p>
 </div>
 <div class="paragraph">
 <p>Normally, the <strong>buffer</strong> scope keyword means the scope associated with the

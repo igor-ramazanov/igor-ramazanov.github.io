@@ -159,7 +159,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Kakoune</a>
+      <div class="title"><a href="../index.html">Kakoune</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">latest</a>
@@ -180,7 +180,7 @@
     <li><a href="tests.html">Tests</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/test/tests.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/test/tests.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -199,6 +199,7 @@
 └── compose
     └── …
         ├── [enabled]    → applicability
+        ├── [env]        → environment setup
         ├── [rc]         → configuration
         ├── [in]         → start file
         ├── cmd          → command
@@ -232,6 +233,10 @@ the test is assumed to be not applicable to the current environment
 (for example, a test for OS-specific integration
 isn&#8217;t useful on a different OS)
 and will be silently skipped.</p>
+</div>
+<div class="paragraph">
+<p><code>env</code> is optional.
+If it exists, it will be sourced before starting Kakoune.</p>
 </div>
 <div class="paragraph">
 <p><code>rc</code> is optional

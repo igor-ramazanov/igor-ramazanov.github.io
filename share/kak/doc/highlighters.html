@@ -159,7 +159,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../../index.html">Kakoune</a>
+      <div class="title"><a href="../../../index.html">Kakoune</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../../index.html">latest</a>
@@ -180,7 +180,7 @@
     <li><a href="highlighters.html">Highlighters</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/share/kak/doc/highlighters.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/highlighters.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -268,6 +268,11 @@ using the <code>Whitespace</code> face, with the following <strong>options</stro
 <dt class="hdlist1"><strong>-tabpad</strong> &lt;separator&gt;</dt>
 <dd>
 <p>a one character long separator that will be appended to tabulations to honor the <strong>tabstop</strong> option</p>
+</dd>
+<dt class="hdlist1"><strong>-indent</strong> &lt;separator&gt;</dt>
+<dd>
+<p>a one character long separator that will replace the first space in indentation according to the <strong>indentwidth</strong> option
+This will use the <code>WhitespaceIndent</code> face.</p>
 </dd>
 <dt class="hdlist1"><strong>-only-trailing</strong></dt>
 <dd>

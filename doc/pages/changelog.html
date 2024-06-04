@@ -159,7 +159,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">Kakoune</a>
+      <div class="title"><a href="../../index.html">Kakoune</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">latest</a>
@@ -180,7 +180,7 @@
     <li><a href="changelog.html">Changelog</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/modules/ROOT/pages/doc/pages/changelog.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/doc/pages/changelog.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -197,10 +197,25 @@ released versions.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="development-version"><a class="anchor" href="#development-version"></a><a class="link" href="#development-version">1. Development version</a></h2>
+<h2 id="kakoune-2024-05-18"><a class="anchor" href="#kakoune-2024-05-18"></a><a class="link" href="#kakoune-2024-05-18">1. Kakoune 2024.05.18</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
+<li>
+<p>Fixed tests on Alpine Linux and *BSD</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kakoune-2024-05-09"><a class="anchor" href="#kakoune-2024-05-09"></a><a class="link" href="#kakoune-2024-05-09">2. Kakoune 2024.05.09</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>flag-lines -after</code> switch to display text after the line</p>
+</li>
 <li>
 <p><code>shell-script-candidates</code> completion now runs the script asynchronously
 while displaying and updating results live.</p>
@@ -220,14 +235,26 @@ to a daemon one (which will not exit on last client disconnecting)</p>
 <p>View mode commands and mouse scrolling no longer change selections when those go off-screen.</p>
 </li>
 <li>
-<p>New commands <code>git apply</code>, <code>git edit</code>, <code>git grep</code></p>
+<p>New commands <code>git apply</code>, <code>git blame-jump</code>, <code>git edit</code> and <code>git grep</code>.</p>
+</li>
+<li>
+<p><code>git blame</code> now also works in <code>git-diff</code> and <code>git-log</code> buffers.</p>
+</li>
+<li>
+<p>Completions provided via <code>shell-script-candidates</code> or <code>completers</code> are no longer sorted if the typed text is empty.</p>
+</li>
+<li>
+<p>The <code>terminal</code> alias has been replaced with a command that selects terminal program and placement based on windowing options.</p>
+</li>
+<li>
+<p><code>local</code> scopes in <code>commands</code> and <code>evaluate-commands</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2023-08-08"><a class="anchor" href="#kakoune-2023-08-08"></a><a class="link" href="#kakoune-2023-08-08">2. Kakoune 2023.08.08</a></h2>
+<h2 id="kakoune-2023-08-08"><a class="anchor" href="#kakoune-2023-08-08"></a><a class="link" href="#kakoune-2023-08-08">3. Kakoune 2023.08.08</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -239,7 +266,7 @@ to a daemon one (which will not exit on last client disconnecting)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2023-07-29"><a class="anchor" href="#kakoune-2023-07-29"></a><a class="link" href="#kakoune-2023-07-29">3. Kakoune 2023.07.29</a></h2>
+<h2 id="kakoune-2023-07-29"><a class="anchor" href="#kakoune-2023-07-29"></a><a class="link" href="#kakoune-2023-07-29">4. Kakoune 2023.07.29</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -265,7 +292,7 @@ preceeding the cursor</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2022-10-31"><a class="anchor" href="#kakoune-2022-10-31"></a><a class="link" href="#kakoune-2022-10-31">4. Kakoune 2022.10.31</a></h2>
+<h2 id="kakoune-2022-10-31"><a class="anchor" href="#kakoune-2022-10-31"></a><a class="link" href="#kakoune-2022-10-31">5. Kakoune 2022.10.31</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -295,7 +322,7 @@ have reverse chronological order</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2021-11-07"><a class="anchor" href="#kakoune-2021-11-07"></a><a class="link" href="#kakoune-2021-11-07">5. Kakoune 2021.11.07</a></h2>
+<h2 id="kakoune-2021-11-07"><a class="anchor" href="#kakoune-2021-11-07"></a><a class="link" href="#kakoune-2021-11-07">6. Kakoune 2021.11.07</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -313,7 +340,7 @@ have reverse chronological order</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2021-10-28"><a class="anchor" href="#kakoune-2021-10-28"></a><a class="link" href="#kakoune-2021-10-28">6. Kakoune 2021.10.28</a></h2>
+<h2 id="kakoune-2021-10-28"><a class="anchor" href="#kakoune-2021-10-28"></a><a class="link" href="#kakoune-2021-10-28">7. Kakoune 2021.10.28</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -326,7 +353,7 @@ manually mapped to <code>Gl</code> for example.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2021-08-28"><a class="anchor" href="#kakoune-2021-08-28"></a><a class="link" href="#kakoune-2021-08-28">7. Kakoune 2021.08.28</a></h2>
+<h2 id="kakoune-2021-08-28"><a class="anchor" href="#kakoune-2021-08-28"></a><a class="link" href="#kakoune-2021-08-28">8. Kakoune 2021.08.28</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -358,7 +385,7 @@ a regular file. Use the <code>-force</code> switch to override that behaviour.</
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2020-09-01"><a class="anchor" href="#kakoune-2020-09-01"></a><a class="link" href="#kakoune-2020-09-01">8. Kakoune 2020.09.01</a></h2>
+<h2 id="kakoune-2020-09-01"><a class="anchor" href="#kakoune-2020-09-01"></a><a class="link" href="#kakoune-2020-09-01">9. Kakoune 2020.09.01</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -377,7 +404,7 @@ a regular file. Use the <code>-force</code> switch to override that behaviour.</
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2020-08-04"><a class="anchor" href="#kakoune-2020-08-04"></a><a class="link" href="#kakoune-2020-08-04">9. Kakoune 2020.08.04</a></h2>
+<h2 id="kakoune-2020-08-04"><a class="anchor" href="#kakoune-2020-08-04"></a><a class="link" href="#kakoune-2020-08-04">10. Kakoune 2020.08.04</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -423,7 +450,7 @@ on more complex option types.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2020-01-16"><a class="anchor" href="#kakoune-2020-01-16"></a><a class="link" href="#kakoune-2020-01-16">10. Kakoune 2020.01.16</a></h2>
+<h2 id="kakoune-2020-01-16"><a class="anchor" href="#kakoune-2020-01-16"></a><a class="link" href="#kakoune-2020-01-16">11. Kakoune 2020.01.16</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -440,7 +467,7 @@ ranges</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2019-12-10"><a class="anchor" href="#kakoune-2019-12-10"></a><a class="link" href="#kakoune-2019-12-10">11. Kakoune 2019.12.10</a></h2>
+<h2 id="kakoune-2019-12-10"><a class="anchor" href="#kakoune-2019-12-10"></a><a class="link" href="#kakoune-2019-12-10">12. Kakoune 2019.12.10</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -472,7 +499,7 @@ to support converting buffer types.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2019-07-01"><a class="anchor" href="#kakoune-2019-07-01"></a><a class="link" href="#kakoune-2019-07-01">12. Kakoune 2019.07.01</a></h2>
+<h2 id="kakoune-2019-07-01"><a class="anchor" href="#kakoune-2019-07-01"></a><a class="link" href="#kakoune-2019-07-01">13. Kakoune 2019.07.01</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -524,7 +551,7 @@ makes it opt-in, and works for all option types.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2019-01-20"><a class="anchor" href="#kakoune-2019-01-20"></a><a class="link" href="#kakoune-2019-01-20">13. Kakoune 2019.01.20</a></h2>
+<h2 id="kakoune-2019-01-20"><a class="anchor" href="#kakoune-2019-01-20"></a><a class="link" href="#kakoune-2019-01-20">14. Kakoune 2019.01.20</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -550,7 +577,7 @@ ease readability.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2018-10-27"><a class="anchor" href="#kakoune-2018-10-27"></a><a class="link" href="#kakoune-2018-10-27">14. Kakoune 2018.10.27</a></h2>
+<h2 id="kakoune-2018-10-27"><a class="anchor" href="#kakoune-2018-10-27"></a><a class="link" href="#kakoune-2018-10-27">15. Kakoune 2018.10.27</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -586,7 +613,7 @@ it (Kakoune&#8217;s manpage) has been converted to troff format.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2018-09-04"><a class="anchor" href="#kakoune-2018-09-04"></a><a class="link" href="#kakoune-2018-09-04">15. Kakoune 2018.09.04</a></h2>
+<h2 id="kakoune-2018-09-04"><a class="anchor" href="#kakoune-2018-09-04"></a><a class="link" href="#kakoune-2018-09-04">16. Kakoune 2018.09.04</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This version contains a significant overhaul of various Kakoune
@@ -721,7 +748,7 @@ automatically.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="kakoune-2018-04-13"><a class="anchor" href="#kakoune-2018-04-13"></a><a class="link" href="#kakoune-2018-04-13">16. Kakoune 2018.04.13</a></h2>
+<h2 id="kakoune-2018-04-13"><a class="anchor" href="#kakoune-2018-04-13"></a><a class="link" href="#kakoune-2018-04-13">17. Kakoune 2018.04.13</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>First official Kakoune release.</p>

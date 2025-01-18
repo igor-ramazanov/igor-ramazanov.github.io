@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Regex :: Kakoune Docs</title>
-    <meta name="generator" content="Antora 3.1.3">
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
   </head>
   <body class="article">
@@ -262,8 +262,8 @@ in the character class.</p>
 </div>
 <div class="paragraph">
 <p>Literals match themselves, including syntax characters, so <code>^</code>
-does not need to be escaped in a character class. <code>[*+]</code> matches both
-the <code>\*</code> character and the <code>+</code> character. Literal escape sequences are
+does not need to be escaped in a character class. <code>[\*]` matches both
+the `\*` character and the `</code> character. Literal escape sequences are
 supported, so <code>[\n\r]</code> matches both the newline and carriage return
 characters.</p>
 </div>
@@ -278,8 +278,8 @@ uppercase basic letters and all basic digits.</p>
 </div>
 <div class="paragraph">
 <p>The <code>-</code> characters in a character class that are not specifying a
-range are treated as literal <code>-</code>, so <code>[A-Z-+]</code> matches all upper case
-characters, the <code>-</code> character, and the <code>+</code> character.</p>
+range are treated as literal <code>-</code>, so <code>[A-Z-]` matches all upper case
+characters, the `-` character, and the `</code> character.</p>
 </div>
 <div class="paragraph">
 <p>Supported character class escapes are:</p>
@@ -522,7 +522,7 @@ literal string <code>.^$</code>, followed by an end of line.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Kakoune&#8217;s syntax tries to follow the ECMAScript regex syntax, as defined
-by &lt;<a href="https://www.ecma-international.org/ecma-262/8.0/&gt;" class="bare">https://www.ecma-international.org/ecma-262/8.0/&gt;</a>; some divergence
+by <a href="https://www.ecma-international.org/ecma-262/8.0/" class="bare">https://www.ecma-international.org/ecma-262/8.0/</a>; some divergence
 exists for ease of use, or performance reasons:</p>
 </div>
 <div class="ulist">

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Highlighters :: Kakoune Docs</title>
-    <meta name="generator" content="Antora 3.1.3">
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
   </head>
   <body class="article">
@@ -251,19 +251,23 @@ using the <code>Whitespace</code> face, with the following <strong>options</stro
 <dl>
 <dt class="hdlist1"><strong>-lf</strong> &lt;separator&gt;</dt>
 <dd>
-<p>a one character long separator that will replace line feeds</p>
+<p>a one character long separator that will replace line feeds,
+or an empty string to ignore them.</p>
 </dd>
 <dt class="hdlist1"><strong>-spc</strong> &lt;separator&gt;</dt>
 <dd>
-<p>a one character long separator that will replace spaces</p>
+<p>a one character long separator that will replace spaces,
+or an empty string to ignore them.</p>
 </dd>
 <dt class="hdlist1"><strong>-nbsp</strong> &lt;separator&gt;</dt>
 <dd>
-<p>a one character long separator that will replace non-breakable spaces</p>
+<p>a one character long separator that will replace non-breakable spaces,
+or an empty string to ignore them.</p>
 </dd>
 <dt class="hdlist1"><strong>-tab</strong> &lt;separator&gt;</dt>
 <dd>
-<p>a one character long separator that will replace tabulations</p>
+<p>a one character long separator that will replace tabulations,
+or an empty string to ignore them.</p>
 </dd>
 <dt class="hdlist1"><strong>-tabpad</strong> &lt;separator&gt;</dt>
 <dd>
@@ -271,7 +275,8 @@ using the <code>Whitespace</code> face, with the following <strong>options</stro
 </dd>
 <dt class="hdlist1"><strong>-indent</strong> &lt;separator&gt;</dt>
 <dd>
-<p>a one character long separator that will replace the first space in indentation according to the <strong>indentwidth</strong> option
+<p>a one character long separator that will replace the first space in indentation
+according to the <strong>indentwidth</strong> option, or an empty string to ignore them.
 This will use the <code>WhitespaceIndent</code> face.</p>
 </dd>
 <dt class="hdlist1"><strong>-only-trailing</strong></dt>

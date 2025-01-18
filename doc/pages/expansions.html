@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Expansions :: Kakoune Docs</title>
-    <meta name="generator" content="Antora 3.1.3">
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../../_/css/site.css">
   </head>
   <body class="article">
@@ -409,8 +409,11 @@ the shell&#8217;s argument variables to the items from <code>$kak_selections</co
 <code>while</code> loop with <code>shift</code> iterates through the arguments one by one.</p>
 </div>
 <div class="paragraph">
-<p>Only variables actually mentioned in the body of the shell expansion will
-be exported into the shell&#8217;s environment. For example:</p>
+<p>Only variables actually mentioned in the body of the shell expansion or
+in passed arguments will be exported into the shell&#8217;s environment.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -420,7 +423,7 @@ be exported into the shell&#8217;s environment. For example:</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>will find none of Kakoune&#8217;s special environment variables, but:</p>
+<p>will not find any of Kakoune&#8217;s special environment variables, but:</p>
 </li>
 </ol>
 </div>
@@ -434,6 +437,21 @@ be exported into the shell&#8217;s environment. For example:</p>
 <li>
 <p>will find the <code>$kak_session</code> variable because it was mentioned by name
 in a comment, even though it wasn&#8217;t directly used.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>define-command -params .. eval-shell %{ echo %sh{ eval "$@" } }
+eval-shell 'echo $kak_session'</pre>
+</div>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>will also find the <code>$kak_session</code> variable because it was mentioned by name
+in the command arguments, which are automatically made available to shell blocks
+as "$@"</p>
 </li>
 </ol>
 </div>
@@ -520,8 +538,7 @@ number of lines in the current buffer</p>
 </dd>
 <dt class="hdlist1"><strong>%val{buflist}</strong></dt>
 <dd>
-<p>quoted list of the names of currently-open buffers (as seen in
-<code>%val{bufname}</code>)</p>
+<p>list of the names of currently-open buffers (as seen in %val{bufname})</p>
 </dd>
 <dt class="hdlist1"><strong>%val{bufname}</strong></dt>
 <dd>
@@ -788,7 +805,7 @@ cannot contain any special characters that would require quoting.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Expansions with the type <code>exp</code> expand their content, the same way doubly
-quoted strings do.</p>
+quoted strings do except that double quotes don&#8217;t need to be escaped.</p>
 </div>
 </div>
 </div>

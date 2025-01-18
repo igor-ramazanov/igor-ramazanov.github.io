@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Options :: Kakoune Docs</title>
-    <meta name="generator" content="Antora 3.1.3">
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../../_/css/site.css">
   </head>
   <body class="article">
@@ -628,7 +628,7 @@ then rename it to the target file.</p>
 </dd>
 <dt class="hdlist1"><strong>debug</strong> <code>flags(hooks|shell|profile|keys|commands)</code></dt>
 <dd>
-<p>dump various debug information in the '*debug*' buffer</p>
+<p>dump various debug information in the <code>*debug*</code> buffer</p>
 </dd>
 <dt class="hdlist1"><strong>idle_timeout</strong> <code>int</code></dt>
 <dd>
@@ -680,6 +680,11 @@ interface implementation. The NCurses UI supports the following options:</p>
 <dd>
 <p>if <strong>yes</strong> or <strong>true</strong>, the terminal emulator title will
 be changed</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_title</strong></dt>
+<dd>
+<p>if set, the terminal title will be set to this string
+else it will be derived from the modeline.</p>
 </dd>
 <dt class="hdlist1"><strong>terminal_status_on_top</strong></dt>
 <dd>
@@ -757,7 +762,7 @@ status line using the <code>echo</code> command:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The current values for all options can be dumped to the <strong>\*debug</strong>\* buffer using
+<p>The current values for all options can be dumped to the <code>*debug*</code> buffer using
 the following command:</p>
 </div>
 <div class="listingblock">

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Json-Rpc user interface :: Kakoune Docs</title>
-    <meta name="generator" content="Antora 3.1.3">
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
   <body class="article">
@@ -211,7 +211,7 @@ Kakoune won&#8217;t be able to parse named parameters in requests.</p>
 <p>Color: a string, either a named color, or #rrggbb, or <em>default</em></p>
 </li>
 <li>
-<p>Attribute: one of {underline, reverse, blink, bold, dim, italic, final_fg, final_bg, final_attr}</p>
+<p>Attribute: one of {underline, curly_underline, double_underline, reverse, blink, bold, dim, italic, final_fg, final_bg, final_attr}</p>
 </li>
 <li>
 <p>Face { Color fg; Color bg; Array&lt;Attribute&gt; attributes; }</p>
@@ -328,7 +328,8 @@ called when ui_options changed with a map of options name to option values</p>
 <p>resize(int rows, int columns): notify ui resize</p>
 </li>
 <li>
-<p>scroll(int amount): scroll by given line amount</p>
+<p>scroll(int amount, int line, int colum): scroll by given line amount, line and
+column relate to cursor position</p>
 </li>
 <li>
 <p>mouse_move(int line, int column): line and column relate to the cursor position.</p>

@@ -180,7 +180,7 @@
     <li><a href="expansions.html">Expansions</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/expansions.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/expansions.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -631,6 +631,12 @@ of the  creation of the history entry, <em>redo_child</em> is the index of the
 child which will be visited for <code>U</code> (always <code>-</code> at the leaves of the
 history), and each <em>modification</em> is presented as in
 <code>%val{uncommitted_modifications}</code>.</p>
+</dd>
+<dt class="hdlist1"><strong>%val{history_since_id}</strong></dt>
+<dd>
+<p><em>in buffer, window scope</em><br>
+a partial history of the buffer in the same format as <code>%val{history}</code>
+starting after entry <em>id</em></p>
 </dd>
 <dt class="hdlist1"><strong>%val{history_id}</strong></dt>
 <dd>

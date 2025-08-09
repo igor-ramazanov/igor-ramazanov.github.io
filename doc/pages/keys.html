@@ -180,7 +180,7 @@
     <li><a href="keys.html">Keys</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/doc/pages/keys.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/kakoune/doc_gen/modules/ROOT/pages/doc/pages/keys.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1364,9 +1364,10 @@ empty at the start of prompt edition, and is not preserved afterwards.</p>
 </dd>
 <dt class="hdlist1"><strong>&lt;c-r&gt;</strong></dt>
 <dd>
-<p>insert then content of the register given by next key, if next key
-has the Alt modifier, it will insert all values in the register
-joined with spaces, else it will insert the main one</p>
+<p>insert the content of the register given by next key, if next key has
+the Alt modifier, it will insert all values in the register joined with
+spaces, else it will insert the main one. if it has the Control modifier,
+it will quote the inserted value(s).</p>
 </dd>
 <dt class="hdlist1"><strong>&lt;c-v&gt;</strong></dt>
 <dd>

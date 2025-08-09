@@ -180,7 +180,7 @@
     <li><a href="options.html">Options</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/doc/pages/options.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/kakoune/doc_gen/modules/ROOT/pages/doc/pages/options.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -673,7 +673,7 @@ in face Information.</p>
 <dt class="hdlist1"><strong>ui_options</strong> <code>str-to-str-map</code></dt>
 <dd>
 <p>a list of <code>key=value</code> pairs that are forwarded to the user
-interface implementation. The NCurses UI supports the following options:</p>
+interface implementation. The Terminal UI supports the following options:</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>terminal_set_title</strong></dt>
@@ -726,6 +726,11 @@ if unsynchronized (defaults to <strong>false</strong>)</p>
 <dd>
 <p>set the maximum allowable width of an info box. set to zero for
 no limit.</p>
+</dd>
+<dt class="hdlist1"><strong>terminal_cursor_native</strong></dt>
+<dd>
+<p>if <strong>yes</strong> or <strong>true</strong>, use native terminal cursor visibility control
+instead of Kakoune&#8217;s cursor management (defaults to <strong>false</strong>)</p>
 </dd>
 </dl>
 </div>

@@ -180,7 +180,7 @@
     <li><a href="commands.html">Commands</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/commands.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/commands.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -194,6 +194,12 @@
 <p>Some commands take an exclamation mark (<strong>!</strong>), which can be used to force
 the execution of the command (i.e. to quit a modified buffer, the
 command <strong>q!</strong> has to be used). Aliases are mentioned below each command.</p>
+</div>
+<div class="paragraph">
+<p>For all commands that accept switches, a parameter beginning with
+a single dash (<strong>-</strong>) will be interpreted as a switch. Any unknown switches
+will cause an error. To force the remaining parameters to not be interpreted as
+switches even if they begin with a dash, you can pass two dashes (<strong>--</strong>) as a parameter.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -616,7 +622,9 @@ define a face in <strong>scope</strong>
 </dd>
 <dt class="hdlist1"><strong>colorscheme</strong> &lt;name&gt;</dt>
 <dd>
-<p>load named colorscheme</p>
+<p>load named colorscheme<br>
+Colorschemes are just <code>.kak</code> scripts that set faces. Colorschemes are searched for in <code>%val{config}/colors</code> and <code>%val{runtime}/colors</code>.<br>
+(See <a href="faces.html" class="xref page"><code>:doc faces</code></a> and <a href="expansions.html" class="xref page"><code>:doc expansions</code></a>)</p>
 </dd>
 <dt class="hdlist1"><strong>add-highlighter</strong> [&lt;switches&gt;] &lt;highlighter_path&gt; &lt;highlighter_parameters&gt; &#8230;&#8203;</dt>
 <dd>

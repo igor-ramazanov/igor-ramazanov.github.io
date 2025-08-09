@@ -180,7 +180,7 @@
     <li><a href="execeval.html">Execute-keys and Evaluate-commands</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/execeval.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/igor/personal/kakoune/kakoune/doc_gen/modules/ROOT/pages/share/kak/doc/execeval.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -221,9 +221,10 @@ are then restored when the keys have been executed: <strong>/</strong>, <strong>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><strong>-client</strong> &lt;name&gt;</dt>
+<dt class="hdlist1"><strong>-client</strong> &lt;names&gt;</dt>
 <dd>
-<p>Execute in the context of the client <strong>name</strong>.</p>
+<p>Execute in the context of each client specified in the comma separated
+list <strong>names</strong>. '*' can be used as *names* to iterate overall clients.</p>
 </dd>
 <dt class="hdlist1"><strong>-try-client</strong> &lt;name&gt;</dt>
 <dd>
@@ -245,7 +246,7 @@ situations where selections get merged.</p>
 <dt class="hdlist1"><strong>-buffer</strong> &lt;names&gt;</dt>
 <dd>
 <p>Execute in the context of each buffer specified in the comma separated
-list <strong>names</strong>. '*' can be used as a *name* to iterate over all non-debug
+list <strong>names</strong>. '*' can be used as *names* to iterate over all non-debug
 buffers.
 (See <a href="buffers.html#debug-buffers" class="xref page"><code>:doc buffers</code></a>)</p>
 </dd>
